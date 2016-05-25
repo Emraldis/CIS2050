@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Alpheaus Feltham, 0903594*/
+
 typedef struct FractionInfo{
 	int numerator;
 	int denominator;

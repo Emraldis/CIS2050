@@ -1,5 +1,7 @@
 #include "fraction.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 /*Creates a new Fraction
 precondition: Denominator value must not be 0
 postcondition: Fraction must not be NULL or empty, denominator must not be 0
