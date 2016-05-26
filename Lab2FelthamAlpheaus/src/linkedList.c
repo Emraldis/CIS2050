@@ -33,7 +33,7 @@ int getLength(List * list){
 	if(currentPos != NULL){
 		while(currentPos->next != NULL){
 			i++;
-			currentPost = currentPost->next;
+			currentPos = currentPos->next;
 		}
 	}
 	
@@ -43,7 +43,7 @@ int getLength(List * list){
 void printList(List * list){
 	List * currentPos = list;
 	
-	if(currentPost != NULL){
+	if(currentPos != NULL){
 		while(currentPos->next != NULL){
 			printf("\n%s",list->value);
 		}
