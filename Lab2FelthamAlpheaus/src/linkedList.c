@@ -9,7 +9,7 @@ List * createList(char * value){
 	list->next = NULL;
 	list->value = value;
 	
-	return(List);
+	return(list);
 }
 
 List * destroyList(){
@@ -30,7 +30,7 @@ int getLength(List * list){
 	int i = 0;
 	List * currentPos = list;
 	
-	if(currentPost != NULL){
+	if(currentPos != NULL){
 		while(currentPos->next != NULL){
 			i++;
 			currentPost = currentPost->next;
@@ -41,7 +41,7 @@ int getLength(List * list){
 }
 
 void printList(List * list){
-	List * currentPost = list;
+	List * currentPos = list;
 	
 	if(currentPost != NULL){
 		while(currentPos->next != NULL){
