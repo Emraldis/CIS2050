@@ -1,4 +1,4 @@
-typedef Struct ListData{
+typedef struct ListData{
 	char * value
 	ListData * next
 }List;
