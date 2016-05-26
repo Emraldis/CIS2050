@@ -1,6 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct ListData{
 	char * value;
-	ListData * next;
+	struct ListData * next;
 }List;
 
 List * createList(char * value);
