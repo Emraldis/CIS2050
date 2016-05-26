@@ -3,9 +3,12 @@
 #include "linkedList.h"
 
 List * createList(char * value){
-	List = malloc(sizeof(List));
-	List->next = NULL;
-	List->value = value;
+	List * list;
+	
+	list = malloc(sizeof(List));
+	list->next = NULL;
+	list->value = value;
+	
 	return(List);
 }
 
