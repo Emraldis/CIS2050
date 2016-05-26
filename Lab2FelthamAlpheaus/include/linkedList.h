@@ -1,6 +1,6 @@
-Struct ListData{
+typedef Struct ListData{
 	char * value
-	List * next
+	ListData * next
 }List;
 
 List * createList(char * value);
