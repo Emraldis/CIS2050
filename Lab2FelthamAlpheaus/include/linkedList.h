@@ -1,6 +1,6 @@
 typedef struct ListData{
-	char * value
-	ListData * next
+	char * value;
+	ListData * next;
 }List;
 
 List * createList(char * value);
