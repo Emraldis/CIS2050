@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "linkedList.h"
 
 /*Creates a new List element
@@ -11,7 +9,8 @@ List * createList(char * value){
 	
 	list = malloc(sizeof(List));
 	list->next = NULL;
-	list->value = value;
+	list->value = malloc(sizeof(char) * (strlen(value)));
+	strcpy(list->value,value);
 	
 	return(list);
 }
@@ -29,9 +28,15 @@ precondition: list must exist (if element is NULL it won't do anything to the li
 postcondition: Must have properly added the element to the front of the list, and then return the list head
 */
 List * addToFront(List * element, List * list){
-	element->next = list->next;
-	list->next = element;
-	return(list);
+    if(element != NULL){
+        if(list != NULL){
+        	element->next = list->next;
+    	    list->next = element;
+        }else{
+            list = element;
+        }
+    }
+   	return(list);
 }
 
 /*Returns the value of the first element in the list
@@ -43,7 +48,7 @@ char * readFirstValue(List * list){
 		return(list->value);
 	}
 	
-	return(NULL);
+	return("Empty");
 }
 
 /*Returns the length of the list
@@ -55,6 +60,7 @@ int getLength(List * list){
 	List * currentPos = list;
 	
 	if(currentPos != NULL){
+	    i = 1;
 		while(currentPos->next != NULL){
 			i++;
 			currentPos = currentPos->next;
@@ -71,12 +77,15 @@ postcondition: Must properly print the list values
 void printList(List * list){
 	List * currentPos = list;
 	if(currentPos == NULL){
-		printf("\n Empty List");
-		return();
-	}
-	if(currentPos->next != NULL){
-		while(currentPos->next != NULL){
-			printf("\n%s",list->value);
+		printf("\nEmpty List");
+	}else{
+    	if(currentPos->next != NULL){
+	    	while(currentPos->next != NULL){
+		    	printf("\n%s",currentPos->value);
+		    	currentPos = currentPos->next;
+		    }
+		}else{
+		    printf("\n%s",currentPos->value);
 		}
 	}
 }
