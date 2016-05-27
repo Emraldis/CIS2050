@@ -1,5 +1,7 @@
 #include "linkedList.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 /*Creates a new List element
 precondition: none
 postcondition: Must output a valid list element with the correct value stored

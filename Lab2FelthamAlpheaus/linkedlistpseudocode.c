@@ -1,3 +1,5 @@
+/*Alpheaus Feltham, 0903594*/
+
 Struct List{
 	char * value
 	List * next

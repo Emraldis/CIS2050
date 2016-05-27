@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "linkedList.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 int main (void){
 	
 	List * list;
