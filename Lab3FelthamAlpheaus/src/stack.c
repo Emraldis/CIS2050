@@ -55,7 +55,7 @@ void deleteStack(Stack * stack){
 	Stack * tempStack;
 	Stack * currentStack;
 	
-	if(stack != NULL)
+	if(stack != NULL){
 		tempStack = stack->top;
 		currentStack = tempStack;
 		while(currentStack != NULL){
