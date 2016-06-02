@@ -5,7 +5,7 @@ Stack * createStack(char * value){
 	
 	stack = malloc(sizeof(stack));
 	stack->value = malloc(sizeof(char) * 128);
-	stack->value = value;
+	strcpy(stack->value,value);
 	stack->previous = NULL;
 	stack->top = stack;
 	
