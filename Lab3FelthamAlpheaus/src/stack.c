@@ -11,7 +11,11 @@ Stack * createStack(char * value){
 	
 	stack = malloc(sizeof(stack));
 	stack->value = malloc(sizeof(char) * 128);
-	strcpy(stack->value,value);
+	if(value != NULL){
+		strcpy(stack->value,value);
+	}else{
+		strcpy(stack->value,"EMPTY");
+	}
 	stack->previous = NULL;
 	stack->top = stack;
 	
