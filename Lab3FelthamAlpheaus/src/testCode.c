@@ -29,13 +29,13 @@ int main(void){
 	getchar();
 	printf("\nDeleting the stack, and then printing again");
 	getchar();	
-	deleteStack(stack);
+	stack = deleteStack(stack);
 	printStack(stack);
 	printf("\nThe value of the element on top of the stack is: %s",getTopValue(stack));
 	getchar();
 	printf("\nAttempting to delete an empty stack");
 	getchar();
-	deleteStack(stack);
+	stack = deleteStack(stack);
 	printf("\nAttempting to remove the top element of an empty stack");
 	getchar();
 	stack = removeFromTop(stack);

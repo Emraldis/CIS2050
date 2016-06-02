@@ -55,7 +55,7 @@ Stack * removeFromTop(Stack * stack){
 	return(stack);
 }
 
-void deleteStack(Stack * stack){
+Stack * deleteStack(Stack * stack){
 	Stack * tempStack;
 	Stack * currentStack;
 	
@@ -71,6 +71,8 @@ void deleteStack(Stack * stack){
 	}else{
 		printf("\nNothing to delete");
 	}
+	
+	return(NULL);
 }
 
 void printStack(Stack * stack){
