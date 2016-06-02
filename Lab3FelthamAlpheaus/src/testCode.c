@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "stack.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 int main(void){
 	Stack * stack;
 	char * tempValue;
@@ -47,6 +49,12 @@ int main(void){
 	printf("\nPrinting the stack");
 	getchar();	
 	printStack(stack);
+	printf("\nAdding an element with an empty value");
+	getchar();
+	stack = addToStack(NULL,stack);
+	printf("\nThe value of the element on top of the stack is: %s",getTopValue(stack));
+	getchar();
+	printf("\n");
 	
 	return(0);
 }
