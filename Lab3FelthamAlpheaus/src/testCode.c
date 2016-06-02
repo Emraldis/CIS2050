@@ -17,42 +17,35 @@ int main(void){
 	}
 	
 	printf("\nThe value of the element on top of the stack is: %s",getTopValue(stack));
-	
+	getchar();
 	printf("\nPrinting the stack");
-	
+	getchar();
 	printStack(stack);
-	
 	printf("\nRemoving the top element of the stack, and printing again");
-	
+	getchar();	
 	stack = removeFromTop(stack);
-	
 	printStack(stack);
-	
 	printf("\nThe value of the element on top of the stack is: %s",getTopValue(stack));
-	
+	getchar();
 	printf("\nDeleting the stack, and then printing again");
-	
+	getchar();	
 	deleteStack(stack);
-	
 	printStack(stack);
 	printf("\nThe value of the element on top of the stack is: %s",getTopValue(stack));
-	
+	getchar();
 	printf("\nAttempting to delete an empty stack");
-	
+	getchar();
 	deleteStack(stack);
-	
 	printf("\nAttempting to remove the top element of an empty stack");
-	
+	getchar();
 	stack = removeFromTop(stack);
-	
 	printf("\nAttempting to add an element to an empty stack");
-	
-	stack = addToStack("1",stack);
-	
+	getchar();	
+	stack = addToStack("1",stack);	
 	printf("\nThe value of the element on top of the stack is: %s",getTopValue(stack));
-	
+	getchar();
 	printf("\nPrinting the stack");
-	
+	getchar();	
 	printStack(stack);
 	
 	return(0);
