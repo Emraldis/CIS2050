@@ -16,17 +16,25 @@ Stack * addToStack(char * value, Stack * stack){
 	Stack * element;
 	
 	element = createStack(value);
-	element->previous = stack->top;
-	stack->top = element;
+	if(stack != NULL){
+		element->previous = stack->top;
+		stack->top = element;
+	}else{
+		stack = element;
+	}
 	
 	return(stack);
 }
 
 char * getTopValue(Stack * stack){
-	return(stack->top->value);
+	if(stack != NULL){
+		return(stack->top->value);
+	}else{
+		return("EMPTY");
+	}
 }
 
-Stack * removeFromTOp(Stack * stack){
+Stack * removeFromTop(Stack * stack){
 	Stack * tempStack;
 	
 	if(stack->previous != NULL){
@@ -47,24 +55,30 @@ void deleteStack(Stack * stack){
 	Stack * tempStack;
 	Stack * currentStack;
 	
-	tempStack = stack->top;
-	currentStack = tempStack;
-	while(currentStack != NULL){
-		free(tempStack->value);
-		currentStack = currentStack->previous;
-		free(tempStack);
-		tempStack = currentStack;
+	if(stack != NULL)
+		tempStack = stack->top;
+		currentStack = tempStack;
+		while(currentStack != NULL){
+			free(tempStack->value);
+			currentStack = currentStack->previous;
+			free(tempStack);
+			tempStack = currentStack;
+		}
+	}else{
+		printf("\nNothing to delete");
 	}
-	
 }
 
 void printStack(Stack * stack){
 	Stack * currentStack;
 	
-	currentStack = stack->top;
-	
-	while(currentStack != NULL){
-		printf("\n%s",currentStack->value);
-		currentStack = currentStack->previous;
+	if(stack != NULL){
+		currentStack = stack->top;
+		while(currentStack != NULL){
+			printf("\n%s",currentStack->value);
+			currentStack = currentStack->previous;
+		}
+	}else{
+		printf("\nEmpty stack");
 	}
 }
