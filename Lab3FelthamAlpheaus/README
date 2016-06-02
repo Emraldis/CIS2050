@@ -1,1 +1,4 @@
 Alpheaus Feltham, 0903594
+
+This program was fully tested using the test code provided. The test code tests all functions with stacks of varying sizes, including entirely empty stacks, and stacks with 100 elements. Each function performed perfectly. All of the required functions were implemented.
+The ability of the ADT to handle empty element values was also tested, and performed well.
