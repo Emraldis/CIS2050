@@ -11,6 +11,7 @@ int main(void){
 	
 	for(i=2;i<101;i++){
 		sprintf(tempValue,"%d",i);
+		printf("\nStoring %d into a new element",tempValue);
 		stack = addToStack(tempValue,stack);
 	}
 	
