@@ -49,7 +49,7 @@ Stack * removeFromTop(Stack * stack){
 			stack = NULL;
 		}
 	}else{
-		printf("\nEmpty Stack");
+		printf("\nNothing in stack to delete");
 	}
 	
 	return(stack);
