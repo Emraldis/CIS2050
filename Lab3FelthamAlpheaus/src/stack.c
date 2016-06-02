@@ -37,15 +37,19 @@ char * getTopValue(Stack * stack){
 Stack * removeFromTop(Stack * stack){
 	Stack * tempStack;
 	
-	if(stack->previous != NULL){
-		tempStack = stack->top;
-		stack->top = stack->top->previous;
-		free(tempStack->value);
-		free(tempStack);
+	if(stack != NULL){
+		if(stack->top->previous != NULL){
+			tempStack = stack->top;
+			stack->top = stack->top->previous;
+			free(tempStack->value);
+			free(tempStack);
+		}else{
+			free(stack->value);
+			free(stack);
+			stack = NULL;
+		}
 	}else{
-		free(stack->value);
-		free(stack);
-		stack = NULL;
+		printf("\nEmpty Stack");
 	}
 	
 	return(stack);
