@@ -16,6 +16,6 @@ char * getTopValue(Stack * stack);
 
 Stack * removeFromTop(Stack * stack);
 
-void deleteStack(Stack * stack);
+Stack * deleteStack(Stack * stack);
 
 void printStack(Stack * stack);
