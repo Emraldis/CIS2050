@@ -52,7 +52,6 @@ int main(void){
 	printf("\nAdding an element with an empty value");
 	getchar();
 	stack = addToStack(NULL,stack);
-	getchar();
 	printf("\nThe value of the element on top of the stack is: %s",getTopValue(stack));
 	getchar();
 	printf("\nPrinting the stack");
