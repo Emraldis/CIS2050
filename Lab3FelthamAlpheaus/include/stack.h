@@ -3,8 +3,8 @@
 
 typedef struct Stackinfo{
 	char * value;
-	struct Stackinfo previous;
-	struct Stackinfo top;
+	struct Stackinfo * previous;
+	struct Stackinfo * top;
 }Stack;
 
 Stack * createStack(char * value);
