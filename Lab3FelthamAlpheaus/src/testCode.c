@@ -7,6 +7,7 @@ int main(void){
 	int i;
 	
 	stack = createStack("1");
+	tempValue = malloc(sizeof(char) * 128);
 	
 	for(i=2;i<101;i++){
 		sprintf(tempValue,"%d",i);
