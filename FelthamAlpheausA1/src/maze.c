@@ -17,11 +17,7 @@ int main(void){
 	getchar();
 	if(mazeData != NULL){
 		while (string != NULL){
-			printf("\ntest1");
-			getchar();
 			fgets(string,128,mazeData);
-			printf("\ntest2");
-			getchar();
 			printf("\n%s",string);
 		}
 	}else{
