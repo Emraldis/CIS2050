@@ -35,6 +35,21 @@ int main(void){
 	printData(getValueFront(list));
 	printf("\nLast value is:");
 	printData(getValueBack(list));
+	Printf("\nTesting remove from front:");
+	list = removeFromFront(list);
+	printf("\nFirst value is:");
+	printData(getValueFront(list));
+	Printf("\nTesting remove from back:");
+	list = removeFromBack(list);
+	printf("\nLast value is:");
+	printData(getValueBack(list));
+	printf("\nPrinting List:");
+	currentPos = list;
+	while(currentPos != NULL){
+		printData(currentPos->structPtr);
+		currentPos = currentPos->next;
+	}
+	
 	
 	return(0);
 }
