@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "listADT.h"
+#include "list.h"
 #include "maze.h"
 #include "stackADT.h"
 

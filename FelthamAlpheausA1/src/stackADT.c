@@ -15,5 +15,6 @@ void deleteStack(Stack * stack){
 	
 }
 void * readFromTop(Stack * stack){
-	return(Ptr);
+	void * ptr;
+	return(ptr);
 }
