@@ -16,5 +16,9 @@ void deleteStruct(Test * input){
 }
 
 void printData(Test * input){
-	printf("\n%s",input->value);
+	if(input != NULL){
+		printf("\n%s",input->value);
+	}else{
+		printf("\nEMPTY");
+	}
 }

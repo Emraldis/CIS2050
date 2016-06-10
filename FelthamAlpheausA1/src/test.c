@@ -49,7 +49,30 @@ int main(void){
 		printData(currentPos->structPtr);
 		currentPos = currentPos->next;
 	}
-	
+	printf("\nDeleting list");
+	deleteList(list);
+	printf("\nFirst value is:");
+	printData(getValueFront(list));
+	printf("\nLast value is:");
+	printData(getValueBack(list));
+	printf("\nPrinting List:");
+	currentPos = list;
+	while(currentPos != NULL){
+		printData(currentPos->structPtr);
+		currentPos = currentPos->next;
+	}
+	printf("\nTesting add to back");
+	for(i=1;i<101;i++){
+		sprintf(string,"%d",i);
+		data = create(string);
+		list = addToBack(data,list,sizeof(data));
+	}
+	printf("\nPrinting List:");
+	currentPos = list;
+	printf("\nFirst value is:");
+	printData(getValueFront(list));
+	printf("\nLast value is:");
+	printData(getValueBack(list));
 	
 	return(0);
 }
