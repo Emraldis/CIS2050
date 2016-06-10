@@ -104,7 +104,7 @@ int main(void){
 	stack = removeFromStack(stack);
 	printf("\nTop value is:");
 	printData(readFromTop(stack));
-	printf("Deleting Stack");
+	printf("\nDeleting Stack");
 	stack = deleteStack(stack);
 	printf("\nPrinting Stack");
 	tempStack = stack;
