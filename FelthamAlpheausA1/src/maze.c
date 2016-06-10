@@ -12,7 +12,7 @@ int main(void){
 	char * * maze;
 	char * mazeLayer;
 	int sizeX = 0;
-	int sizeY = 0;
+	int sizeY = 1;
 	int i = 0;
 	int j = 0;
 	int startX;
@@ -41,7 +41,7 @@ int main(void){
 	}else{
 		printf("\nERROR opening file");
 	}
-	printf("\nDone");
+	printf("\n");
 	
 	return(0);
 }
