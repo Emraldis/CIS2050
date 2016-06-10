@@ -98,7 +98,7 @@ int main(void){
 		printData(tempStack->structPtr);
 		tempStack = tempStack->under;
 	}
-	prinf("\nTop value is:");
+	printf("\nTop value is:");
 	printData(readFromTop(stack));
 	printf("\nRemoving top Element:");
 	stack = removeFromStack(stack);
