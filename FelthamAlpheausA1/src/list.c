@@ -72,11 +72,11 @@ Element * deleteList(Element * list){
 		free(tempElement->ptrSize);
 		free(tempElement);
 	}
-	/*printf("\nList correctly deleted");
+	printf("\nList correctly deleted");
 	getchar();
 	list = NULL;
 	printf("\nList set to NULL");
-	getchar();*/
+	getchar();
 	return(list);
 	
 }
