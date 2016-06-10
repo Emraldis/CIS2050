@@ -23,7 +23,7 @@ int main(void){
 	}else{
 		printf("ERROR opening file");
 	}
-	printf("\n");
+	printf("\nDone");
 	
 	return(0);
 }
