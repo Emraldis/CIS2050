@@ -118,6 +118,7 @@ int main(void){
 	stack = removeFromStack(stack);
 	printf("\nIf no segfaults occured, then the stack test was successful.\n");
 	printf("\n********************************Testing Complete********************************");
+	printf("\n");
 	
 	return(0);
 }
