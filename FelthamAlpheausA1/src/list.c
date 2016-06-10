@@ -2,16 +2,17 @@
 #include <stdlib.h>
 #include "list.h"
 
-Element * createList(void * structPtr){
+Element * createList(void * structPtr, int ptrSize){
 	Element * list;
 	
 	list = malloc(sizeof(Element));
-	list->&structPtr = &structPtr;
+	memcpy(list->structPtr,structPtr,ptrSize);
+	list->ptrSize = ptrSize;
 	list->next = NULL;
 	
 	return(list);
 }
-Element * addToFront(void * structPtr,Element * list){
+Element * addToFront(void * structPtr,Element * list, int ptrSize){
 	Element * element;
 	
 	element = createList(structPtr);
@@ -19,7 +20,7 @@ Element * addToFront(void * structPtr,Element * list){
 	
 	return(element);
 }
-Element * addToBack(void * structPtr,Element * list){
+Element * addToBack(void * structPtr,Element * list, int ptrSize){
 	Element * currentPos;
 	Element * element;
 	currentPos = list;
@@ -72,7 +73,7 @@ void deleteList(Element * list){
 }
 void * getValueFront(Element * list){
 	void * ptr;
-	&ptr = list->&structPtr;
+	memcpy(ptr,list->structPtr,ptrSize);
 	return (ptr);
 }
 void * getValueBack(Element * list){
@@ -80,7 +81,7 @@ void * getValueBack(Element * list){
 	Element * tempElement;
 	tempElement = list;
 	while(tempElement != NULL){
-		&ptr = tempElement->&structPtr;
+		memcpy(ptr,list->structPtr,ptrSize);
 		tempElement = tempElement->next;
 	}
 	return (ptr);

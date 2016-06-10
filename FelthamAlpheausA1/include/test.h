@@ -2,7 +2,7 @@
 
 typedef struct TestStruct{
 	char * value;
-}Test
+}Test;
 /*Creates a new test struct
 precondition: none
 postcondition: Must output a valid struct with the correct stored data.
