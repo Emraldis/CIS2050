@@ -13,6 +13,8 @@ int main(void){
 	mazeData = fopen("maze","r");
 	string = malloc(sizeof(char) * 128);
 	
+	printf("opening maze file");
+	getchar();
 	while (string != NULL){
 		fgets(string,128,mazeData);
 		printf("\n%s",string);
