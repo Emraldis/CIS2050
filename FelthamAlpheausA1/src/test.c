@@ -10,7 +10,7 @@ int main(void){
 	Test * data;
 	Element * list;
 	void * dataPtr;
-	Test * currentPos;
+	Element * currentPos;
 	
 	string = malloc(sizeof(char) * 128);
 	list = NULL;
@@ -21,7 +21,7 @@ int main(void){
 	for(i=1;i<101;i++){
 		sprintf(string,"%d",i);
 		data = create(string);
-		&dataPtr = &data;
+		memcpy(dataPtr,data);
 		list = addToFront(dataPtr,list,sizeof(dataPtr));
 	}
 	getchar();
