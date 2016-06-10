@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "ListADT.h"
+#include "listADT.h"
 
 Element * createList(void * structPtr){
 	Element * list;
