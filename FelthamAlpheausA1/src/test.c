@@ -29,6 +29,7 @@ int main(void){
 	currentPos = list;
 	while(currentPos != NULL){
 		printData(currentPos->structPtr);
+		currentPos = currentPos->next;
 	}
 	
 	return(0);
