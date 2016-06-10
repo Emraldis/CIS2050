@@ -8,8 +8,8 @@ Element * createList(void * structPtr, int ptrSize){
 	
 	test = sizeof(structPtr);
 	list = malloc(sizeof(Element));
-	list->structPtr = malloc(test);
-	memcpy(list->structPtr,structPtr,test);
+	list->structPtr = malloc(ptrSize);
+	memcpy(list->structPtr,structPtr,ptrSize);
 	list->ptrSize = ptrSize;
 	list->next = NULL;
 	
@@ -85,7 +85,7 @@ void * getValueBack(Element * list){
 	Element * tempElement;
 	tempElement = list;
 	while(tempElement != NULL){
-		memcpy(ptr,list->structPtr,list->ptrSize);
+		memcpy(ptr,tempElement->structPtr,tempElement->ptrSize);
 		tempElement = tempElement->next;
 	}
 	return (ptr);
