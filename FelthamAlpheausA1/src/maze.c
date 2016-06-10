@@ -15,13 +15,17 @@ int main(void){
 	
 	printf("\nopening maze file");
 	getchar();
-	while (string != NULL){
-		printf("\ntest1");
-		getchar();
-		fgets(string,128,mazeData);
-		printf("\ntest2");
-		getchar();
-		printf("\n%s",string);
+	if(mazeData != NULL){
+		while (string != NULL){
+			printf("\ntest1");
+			getchar();
+			fgets(string,128,mazeData);
+			printf("\ntest2");
+			getchar();
+			printf("\n%s",string);
+		}
+	}else{
+		printf("ERROR opening file");
 	}
 	printf("\n");
 	
