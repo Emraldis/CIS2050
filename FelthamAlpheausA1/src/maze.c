@@ -33,7 +33,7 @@ int main(void){
 			strcpy(mazeLayer,string);
 			getchar();
 			sizeY++;
-			realloc(maze,sizeof(char) * sizeY);
+			realloc(maze,sizeof(char *) * sizeY);
 			strcpy(maze[i],mazeLayer);
 			printf("%s",maze[i]);
 			i++;
