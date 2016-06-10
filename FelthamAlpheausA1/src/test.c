@@ -53,6 +53,8 @@ int main(void){
 	}
 	printf("\nDeleting list");
 	list = deleteList(list);
+	printf("\nSttempting to Delete list again");
+	list = deleteList(list);
 	printf("\nFirst value is:");
 	printData(getValueFront(list));
 	printf("\nLast value is:");
@@ -105,6 +107,8 @@ int main(void){
 	printf("\nTop value is:");
 	printData(readFromTop(stack));
 	printf("\nDeleting Stack");
+	stack = deleteStack(stack);
+	printf("\nAttempting to Delete Stack again");
 	stack = deleteStack(stack);
 	printf("\nPrinting Stack");
 	tempStack = stack;

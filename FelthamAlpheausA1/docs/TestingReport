@@ -1,0 +1,1 @@
+All testing was completed successfully. Both the stack and the list ADTs work correctly (with void pointers as well). Both were tested thouroughly, with each function tested when the lists were empty, as well as when they were filled with large quantities of elements.
