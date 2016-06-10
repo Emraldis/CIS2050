@@ -114,7 +114,10 @@ int main(void){
 	}
 	printf("\nTop value is:");
 	printData(readFromTop(stack));
-	printf("\nIf no segfaults occured, then thestack test was successful.\n");
+	printf("\nAttempting to Remove top Element:");
+	stack = removeFromStack(stack);
+	printf("\nIf no segfaults occured, then the stack test was successful.\n");
+	printf("\n********************************Testing Complete********************************");
 	
 	return(0);
 }
