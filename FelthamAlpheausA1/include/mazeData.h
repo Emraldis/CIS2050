@@ -18,4 +18,9 @@ Path * create(char * value);
 precondition: Must have a struct to free and delete
 postcondition: Must properly free and delete the struct
 */
-void deleteStruct(Path * struct);
+void deleteStruct(Path * path);
+/*Deletes a struct and frees the memory
+precondition: Must have a struct to free and delete
+postcondition: Must properly free and delete the struct
+*/
+char * getOptions(char * * maze, int posX, int posY);

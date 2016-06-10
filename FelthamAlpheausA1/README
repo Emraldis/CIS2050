@@ -1,0 +1,14 @@
+Alpheaus Feltham, 0903594
+
+Test code: Fully functional, see test report (in docs folder) for details on results
+
+Maze code: WIP
+
+Compiling:
+the test code can be compiled using the command: "gcc src/test.c src/list.c src/stackADT.c src/testData.c -Wall -pedantic -std=c99 -Iinclude -o bin/test", or alternatively, with the command: "make test"
+the maze code can be compiled using the command: "gcc src/maze.c src/list.c src/stackADT.c src/mazeData.c -Wall -pedantic -std=c99 -Iinclude -o bin/maze", or alternatively, with the command: "make maze"
+alternatively, both can be compiled at the same time, with the command: "make all"
+
+Running:
+the test code can be run using the command: "./bin/test" from the "FelthamAlpheausA1" folder
+the test code can be run using the command: "./bin/maze" from the "FelthamAlpheausA1" folder

@@ -53,7 +53,7 @@ int main(void){
 	}
 	printf("\nDeleting list");
 	list = deleteList(list);
-	printf("\nSttempting to Delete list again");
+	printf("\nAttempting to Delete list again");
 	list = deleteList(list);
 	printf("\nFirst value is:");
 	printData(getValueFront(list));
