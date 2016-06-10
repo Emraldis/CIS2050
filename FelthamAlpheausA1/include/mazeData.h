@@ -19,8 +19,8 @@ precondition: Must have a struct to free and delete
 postcondition: Must properly free and delete the struct
 */
 void deleteStruct(Path * path);
-/*Deletes a struct and frees the memory
-precondition: Must have a struct to free and delete
-postcondition: Must properly free and delete the struct
+/*Scans the area around the current position in the maze for available routes
+precondition: must have a maze, and a position therein.
+postcondition: Must return a list of available positions.
 */
 char * getOptions(char * * maze, int posX, int posY);
