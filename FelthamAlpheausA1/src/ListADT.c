@@ -22,17 +22,21 @@ Element * addToFront(void * structPtr,Element * list){
 Element * addToBack(void * structPtr,Element * list){
 	Element * currentPos;
 	currentPos = list;
-	
-	while(currentPos->next != NULL){
-		currentPos = currentPost->next;
+	if(list != NULL){
+		while(currentPos->next != NULL){
+			currentPos = currentPost->next;
+		}
+		currentPos->next = createList(structPtr);
+	}else{
+		list = element;
 	}
-	currentPos->next = createList(structPtr);
 	return (list);
 }
 Element * removeFromFront(Element * list){
 	Element * tempElement;
 	tempElement = list;
 	list = list->next;
+	free(tempElement->structPtr);
 	free(tempElement);
 	return (list);
 }
