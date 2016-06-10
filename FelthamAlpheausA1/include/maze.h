@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-typedef struct TestStruct{
-	char * value;
-}Test
+typedef struct PathStruct{
+	char choice;
+	char * available;
+	char * used;
+}Path
 /*Creates a new test struct
 precondition: none
 postcondition: Must output a valid struct with the correct stored data.
