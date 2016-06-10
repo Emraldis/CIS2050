@@ -70,9 +70,12 @@ Element * deleteList(Element * list){
 		list = list->next;
 		free(tempElement->structPtr);
 		free(tempElement);
-		tempElement = NULL;
 	}
+	printf("\nList correctly deleted");
+	getchar();
 	list = NULL;
+	printf("\nList set to NULL");
+	getchar();
 	return(list);
 	
 }
