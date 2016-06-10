@@ -39,26 +39,34 @@ Element * addToBack(void * structPtr,Element * list, int ptrSize){
 }
 Element * removeFromFront(Element * list){
 	Element * tempElement;
-	tempElement = list;
-	list = list->next;
-	free(tempElement->structPtr);
-	free(tempElement);
+	if(list != NULL){
+		tempElement = list;
+		list = list->next;
+		free(tempElement->structPtr);
+		free(tempElement);
+	}else{
+		printf("\nList is already empty");
+	}
 	return (list);
 }
 Element * removeFromBack(Element * list){
 	Element * currentPos;
 	Element * tempElement;
 	currentPos = list;
-	if(currentPos->next != NULL){
-		while(currentPos->next->next != NULL){
-			currentPos = currentPos->next;
+	if(list != NULL){
+		if(currentPos->next != NULL){
+			while(currentPos->next->next != NULL){
+				currentPos = currentPos->next;
+			}
+		}else{
+			return(NULL);
 		}
+		tempElement = currentPos->next;
+		currentPos->next = NULL;
+		free(tempElement);
 	}else{
-		return(NULL);
+		printf("\nList is already empty");
 	}
-	tempElement = currentPos->next;
-	currentPos->next = NULL;
-	free(tempElement);
 	
 	return (list);
 }
@@ -71,11 +79,6 @@ Element * deleteList(Element * list){
 		free(tempElement->structPtr);
 		free(tempElement);
 	}
-	printf("\nList correctly deleted");
-	getchar();
-	list = NULL;
-	printf("\nList set to NULL");
-	getchar();
 	return(list);
 	
 }

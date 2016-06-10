@@ -61,6 +61,10 @@ int main(void){
 		printData(currentPos->structPtr);
 		currentPos = currentPos->next;
 	}
+	printf("\nTesting remove from front:");
+	list = removeFromFront(list);
+	printf("\nTesting remove from back:");
+	list = removeFromBack(list);
 	printf("\nTesting add to back");
 	for(i=1;i<101;i++){
 		sprintf(string,"%d",i);
@@ -77,6 +81,8 @@ int main(void){
 	printData(getValueFront(list));
 	printf("\nLast value is:");
 	printData(getValueBack(list));
+	printf("\nIf no segfaults occured, then the list test was successful, deleting list.\n");
+	list = deleteList(list);
 	
 	return(0);
 }
