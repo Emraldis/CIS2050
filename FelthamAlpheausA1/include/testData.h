@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct PathStruct{
-	char choice;
-	char * available;
-	char * used;
-}Path;
+typedef struct TestStruct{
+	char * value;
+}Test;
 /*Creates a new test struct
 precondition: none
 postcondition: Must output a valid struct with the correct stored data.
@@ -15,4 +13,9 @@ Test * create(char * value);
 precondition: Must have a struct to free and delete
 postcondition: Must properly free and delete the struct
 */
-void deleteStruct(Path * struct);
+void deleteStruct(Test * input);
+/*Prints the value of the struct given
+precondition: Must have a struct to read from
+postcondition: Must properly print the stored value
+*/
+void printData(Test * input);

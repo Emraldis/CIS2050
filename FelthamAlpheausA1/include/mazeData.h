@@ -10,7 +10,7 @@ typedef struct PathStruct{
 precondition: none
 postcondition: Must output a valid struct with the correct stored data.
 */
-Test * create(char * value);
+Path * create(char * value);
 /*Deletes a struct and frees the memory
 precondition: Must have a struct to free and delete
 postcondition: Must properly free and delete the struct
