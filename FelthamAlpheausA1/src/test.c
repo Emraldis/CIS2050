@@ -14,6 +14,7 @@ int main(void){
 	
 	string = malloc(sizeof(char) * 128);
 	list = NULL;
+	dataPtr = NULL;
 	
 	printf("/nTesting List ADT:");
 	getchar();
