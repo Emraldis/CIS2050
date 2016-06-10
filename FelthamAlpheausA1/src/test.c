@@ -29,7 +29,7 @@ int main(void){
 		//memcpy(dataPtr,data,sizeof(data));
 		//printf("step three");
 		//getchar();
-		list = addToFront(data,list,sizeof(data));
+		list = addToFront(&data,list,sizeof(data));
 		printf("step four");
 		getchar();
 	}
