@@ -11,14 +11,12 @@ int main(void){
 	char * string;
 	Test * data;
 	Element * list;
-	void * dataPtr;
 	Element * currentPos;
 	Stack * stack;
 	Stack * tempStack;
 	
 	string = malloc(sizeof(char) * 128);
 	list = NULL;
-	dataPtr = NULL;
 	
 	printf("\n********************************Testing List ADT********************************");
 	//getchar();
@@ -104,7 +102,7 @@ int main(void){
 	printData(readFromTop(stack));
 	printf("\nRemoving top Element:");
 	stack = removeFromStack(stack);
-	prinf("\nTop value is:");
+	printf("\nTop value is:");
 	printData(readFromTop(stack));
 	return(0);
 }
