@@ -13,6 +13,7 @@ Element * createList(void * structPtr, int ptrSize){
 	list = malloc(sizeof(Element));
 	printf("\nList step three");
 	getchar();
+	list->structPtr = malloc(test);
 	memcpy(list->structPtr,structPtr,test);
 	printf("\nList step four");
 	getchar();
