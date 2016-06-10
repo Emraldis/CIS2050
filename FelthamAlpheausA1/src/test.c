@@ -39,7 +39,7 @@ int main(void){
 	list = removeFromFront(list);
 	printf("\nFirst value is:");
 	printData(getValueFront(list));
-	Printf("\nTesting remove from back:");
+	printf("\nTesting remove from back:");
 	list = removeFromBack(list);
 	printf("\nLast value is:");
 	printData(getValueBack(list));
