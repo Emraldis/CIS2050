@@ -17,7 +17,7 @@ int main(void){
 	printf("\nopening maze file");
 	getchar();
 	if(mazeData != NULL){
-		while ((string != NULL) && (i<100){
+		while ((string != NULL) && (i<100)){
 			fgets(string,128,mazeData);
 			printf("\n%s",string);
 			i++;
