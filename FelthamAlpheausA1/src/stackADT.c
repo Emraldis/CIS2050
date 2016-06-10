@@ -6,7 +6,7 @@ Stack * createStack(void * structPtr, int ptrSize){
 	Stack * stack;
 	stack = malloc(sizeof(Stack));
 	stack->structPtr = malloc(ptrSize);
-	memcpy(stack->structPtr,structPtr,prtSize);
+	memcpy(stack->structPtr,structPtr,ptrSize);
 	stack->ptrSize = ptrSize;
 	stack->under = NULL;
 	
@@ -16,7 +16,7 @@ Stack * addToStack(void * structPtr, Stack * stack, int ptrSize){
 	Stack * element;
 	
 	element = createStack(structPtr,ptrSize);
-	element->next = stack;
+	element->under = stack;
 	return(element);
 }
 Stack * removeFromStack(Stack * stack){
@@ -48,7 +48,7 @@ void * readFromTop(Stack * stack){
 	void * ptr;
 	if(stack != NULL){
 		ptr = malloc(stack->ptrSize);
-		memcpy(ptr,stack->structPtr,ptrSize);
+		memcpy(ptr,stack->structPtr,stack->ptrSize);
 		return(ptr);
 	}else{
 		return(NULL);

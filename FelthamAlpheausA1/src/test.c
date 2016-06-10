@@ -98,7 +98,7 @@ int main(void){
 	tempStack = stack;
 	while(tempStack != NULL){
 		printData(tempStack->structPtr);
-		tempStack = tempStack->under
+		tempStack = tempStack->under;
 	}
 	
 	return(0);
