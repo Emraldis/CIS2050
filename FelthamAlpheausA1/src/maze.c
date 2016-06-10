@@ -24,6 +24,7 @@ int main(void){
 	maze = malloc(sizeof(char *));
 	
 	printf("\nopening maze file");
+	getchar();
 	if(mazeData != NULL){
 		while ((fgets(string,128,mazeData) != NULL) && (i<101)){
 			if(strlen(string) > sizeX){
