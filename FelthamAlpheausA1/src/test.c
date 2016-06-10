@@ -21,7 +21,7 @@ int main(void){
 	for(i=1;i<101;i++){
 		sprintf(string,"%d",i);
 		data = create(string);
-		memcpy(dataPtr,data);
+		memcpy(dataPtr,data,sizeof(data));
 		list = addToFront(dataPtr,list,sizeof(dataPtr));
 	}
 	getchar();
