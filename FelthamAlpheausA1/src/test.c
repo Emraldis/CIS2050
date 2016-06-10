@@ -104,5 +104,17 @@ int main(void){
 	stack = removeFromStack(stack);
 	printf("\nTop value is:");
 	printData(readFromTop(stack));
+	printf("Deleting Stack");
+	stack = deleteStack(stack);
+	printf("\nPrinting Stack");
+	tempStack = stack;
+	while(tempStack != NULL){
+		printData(tempStack->structPtr);
+		tempStack = tempStack->under;
+	}
+	printf("\nTop value is:");
+	printData(readFromTop(stack));
+	printf("\nIf no segfaults occured, then thestack test was successful.\n");
+	
 	return(0);
 }
