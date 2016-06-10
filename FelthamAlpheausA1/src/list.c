@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "list.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 Element * createList(void * structPtr, int ptrSize){
 	Element * list;
-	int test;
 	
-	test = sizeof(structPtr);
 	list = malloc(sizeof(Element));
 	list->structPtr = malloc(ptrSize);
 	memcpy(list->structPtr,structPtr,ptrSize);
@@ -79,6 +79,7 @@ Element * deleteList(Element * list){
 		free(tempElement->structPtr);
 		free(tempElement);
 	}
+	list = NULL;
 	return(list);
 	
 }

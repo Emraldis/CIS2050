@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+/*Alpheaus Feltham, 0903594*/
+
 typedef struct PathStruct{
 	char choice;
 	char * available;

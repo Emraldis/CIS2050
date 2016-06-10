@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*Alpheaus Feltham, 0903594*/
+
 typedef struct ListElement{
 	void * structPtr;
 	struct ListElement * next;

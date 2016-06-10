@@ -4,6 +4,8 @@
 #include "testData.h"
 #include "stackADT.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 int main(void){
 	int i;
 	char * string;
@@ -11,12 +13,14 @@ int main(void){
 	Element * list;
 	void * dataPtr;
 	Element * currentPos;
+	Stack * stack;
+	Stack * tempStack;
 	
 	string = malloc(sizeof(char) * 128);
 	list = NULL;
 	dataPtr = NULL;
 	
-	printf("\nTesting List ADT:");
+	printf("\n********************************Testing List ADT********************************");
 	//getchar();
 	printf("\nCreating List");
 	for(i=1;i<101;i++){
@@ -83,6 +87,19 @@ int main(void){
 	printData(getValueBack(list));
 	printf("\nIf no segfaults occured, then the list test was successful, deleting list.\n");
 	list = deleteList(list);
+	printf("\n********************************Testing Stack ADT********************************");
+	printf("\nCreating stack:");
+	for(i=1;i<101;i++){
+		sprintf(string,"%d",i);
+		data = create(string);
+		stack = addToStack(data, stack, sizeof(data));
+	}
+	printf("\nPrinting Stack");
+	tempStack = stack;
+	while(tempStack != NULL){
+		printData(tempStack->structPtr);
+		tempStack = tempStack->under
+	}
 	
 	return(0);
 }
