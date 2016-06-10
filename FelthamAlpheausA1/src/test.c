@@ -69,6 +69,10 @@ int main(void){
 	}
 	printf("\nPrinting List:");
 	currentPos = list;
+	while(currentPos != NULL){
+		printData(currentPos->structPtr);
+		currentPos = currentPos->next;
+	}
 	printf("\nFirst value is:");
 	printData(getValueFront(list));
 	printf("\nLast value is:");
