@@ -1,4 +1,4 @@
-#include "listADT.h"
+#include "list.h"
 
 typedef struct StackElement{
 	void * structPtr;
