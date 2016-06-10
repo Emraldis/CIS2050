@@ -5,17 +5,30 @@
 Element * createList(void * structPtr, int ptrSize){
 	Element * list;
 	
+	printf("\nList step two");
+	getchar();
 	list = malloc(sizeof(Element));
+	printf("\nList step three");
+	getchar();
 	memcpy(list->structPtr,structPtr,ptrSize);
+	printf("\nList step four");
+	getchar();
 	list->ptrSize = ptrSize;
+	printf("\nList step five");
+	getchar();
 	list->next = NULL;
+	printf("\nList step six");
+	getchar();
 	
 	return(list);
 }
 Element * addToFront(void * structPtr,Element * list, int ptrSize){
 	Element * element;
-	
+	printf("\nList step one");
+	getchar();
 	element = createList(structPtr, ptrSize);
+	printf("\nList step seven");
+	getchar();
 	element->next = list;
 	
 	return(element);
