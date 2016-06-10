@@ -26,10 +26,10 @@ int main(void){
 		data = create(string);
 		printf("step two");
 		getchar();
-		memcpy(dataPtr,data,sizeof(data));
-		printf("step three");
-		getchar();
-		list = addToFront(dataPtr,list,sizeof(dataPtr));
+		//memcpy(dataPtr,data,sizeof(data));
+		//printf("step three");
+		//getchar();
+		list = addToFront(data,list,sizeof(data));
 		printf("step four");
 		getchar();
 	}
