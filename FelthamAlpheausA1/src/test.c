@@ -21,17 +21,8 @@ int main(void){
 	printf("\nCreating List");
 	for(i=1;i<101;i++){
 		sprintf(string,"%d",i);
-		printf("step one");
-		getchar();
 		data = create(string);
-		printf("step two");
-		getchar();
-		//memcpy(dataPtr,data,sizeof(data));
-		//printf("step three");
-		//getchar();
 		list = addToFront(data,list,sizeof(data));
-		printf("step four");
-		getchar();
 	}
 	getchar();
 	printf("\nPrinting List:");
