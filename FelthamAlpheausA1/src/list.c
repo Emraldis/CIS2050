@@ -4,13 +4,16 @@
 
 Element * createList(void * structPtr, int ptrSize){
 	Element * list;
+	int test;
+	
+	test = sizeof(structPtr);
 	
 	printf("\nList step two");
 	getchar();
 	list = malloc(sizeof(Element));
 	printf("\nList step three");
 	getchar();
-	memcpy(list->structPtr,structPtr,ptrSize);
+	memcpy(list->structPtr,structPtr,test);
 	printf("\nList step four");
 	getchar();
 	list->ptrSize = ptrSize;
