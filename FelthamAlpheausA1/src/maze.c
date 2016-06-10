@@ -10,7 +10,7 @@ int main(void){
 	FILE * mazeData;
 	char * string;
 	
-	mazeData = fopen(maze,'r');
+	mazeData = fopen("maze","r");
 	string = malloc(sizeof(char) * 128);
 	
 	while (string != NULL){
