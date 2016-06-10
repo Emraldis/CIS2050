@@ -100,6 +100,11 @@ int main(void){
 		printData(tempStack->structPtr);
 		tempStack = tempStack->under;
 	}
-	
+	prinf("\nTop value is:");
+	printData(readFromTop(stack));
+	printf("\nRemoving top Element:");
+	stack = removeFromStack(stack);
+	prinf("\nTop value is:");
+	printData(readFromTop(stack));
 	return(0);
 }
