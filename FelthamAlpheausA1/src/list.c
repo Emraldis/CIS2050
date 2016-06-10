@@ -15,7 +15,7 @@ Element * createList(void * structPtr, int ptrSize){
 Element * addToFront(void * structPtr,Element * list, int ptrSize){
 	Element * element;
 	
-	element = createList(structPtr);
+	element = createList(structPtr, ptrSize);
 	element->next = list;
 	
 	return(element);
@@ -24,7 +24,7 @@ Element * addToBack(void * structPtr,Element * list, int ptrSize){
 	Element * currentPos;
 	Element * element;
 	currentPos = list;
-	element = createList(structPtr);
+	element = createList(structPtr, ptrSize);
 	if(list != NULL){
 		while(currentPos->next != NULL){
 			currentPos = currentPos->next;
@@ -73,7 +73,7 @@ void deleteList(Element * list){
 }
 void * getValueFront(Element * list){
 	void * ptr;
-	memcpy(ptr,list->structPtr,ptrSize);
+	memcpy(ptr,list->structPtr,list->ptrSize);
 	return (ptr);
 }
 void * getValueBack(Element * list){
@@ -81,7 +81,7 @@ void * getValueBack(Element * list){
 	Element * tempElement;
 	tempElement = list;
 	while(tempElement != NULL){
-		memcpy(ptr,list->structPtr,ptrSize);
+		memcpy(ptr,list->structPtr,list->ptrSize);
 		tempElement = tempElement->next;
 	}
 	return (ptr);

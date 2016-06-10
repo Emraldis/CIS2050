@@ -2,6 +2,7 @@
 
 Stack * createStack(void * structPtr){
 	Stack * stack;
+	stack = malloc(sizeof(Stack));
 	
 	return(stack);
 }
@@ -16,5 +17,6 @@ void deleteStack(Stack * stack){
 }
 void * readFromTop(Stack * stack){
 	void * ptr;
+	ptr = NULL;
 	return(ptr);
 }

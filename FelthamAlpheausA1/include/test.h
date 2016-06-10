@@ -12,4 +12,4 @@ Test * create(char * value);
 precondition: Must have a struct to free and delete
 postcondition: Must properly free and delete the struct
 */
-void deleteStruct(Test * struct);
+void deleteStruct(Test * input);
