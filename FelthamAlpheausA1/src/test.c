@@ -16,17 +16,25 @@ int main(void){
 	list = NULL;
 	dataPtr = NULL;
 	
-	printf("/nTesting List ADT:");
+	printf("\nTesting List ADT:");
 	getchar();
-	printf("/nCreating List");
+	printf("\nCreating List");
 	for(i=1;i<101;i++){
 		sprintf(string,"%d",i);
+		printf("step one");
+		getchar();
 		data = create(string);
+		printf("step two");
+		getchar();
 		memcpy(dataPtr,data,sizeof(data));
+		printf("step three");
+		getchar();
 		list = addToFront(dataPtr,list,sizeof(dataPtr));
+		printf("step four");
+		getchar();
 	}
 	getchar();
-	printf("/nPrinting List:");
+	printf("\nPrinting List:");
 	currentPos = list;
 	while(currentPos != NULL){
 		printData(currentPos->structPtr);
