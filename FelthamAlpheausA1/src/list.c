@@ -69,7 +69,6 @@ Element * deleteList(Element * list){
 		tempElement = list;
 		list = list->next;
 		free(tempElement->structPtr);
-		free(tempElement->ptrSize);
 		free(tempElement);
 	}
 	printf("\nList correctly deleted");
