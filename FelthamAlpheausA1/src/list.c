@@ -73,11 +73,13 @@ void deleteList(Element * list){
 }
 void * getValueFront(Element * list){
 	void * ptr;
+	ptr = malloc(list->ptrSize);
 	memcpy(ptr,list->structPtr,list->ptrSize);
 	return (ptr);
 }
 void * getValueBack(Element * list){
 	void * ptr;
+	ptr = malloc(list->ptrSize);
 	Element * tempElement;
 	tempElement = list;
 	while(tempElement != NULL){
