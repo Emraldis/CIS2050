@@ -70,7 +70,9 @@ void deleteList(Element * list){
 		list = list->next;
 		free(tempElement->structPtr);
 		free(tempElement);
+		tempElement = NULL;
 	}
+	list = NULL;
 	
 }
 void * getValueFront(Element * list){
