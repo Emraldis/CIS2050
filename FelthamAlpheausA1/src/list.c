@@ -62,7 +62,7 @@ Element * removeFromBack(Element * list){
 	
 	return (list);
 }
-void deleteList(Element * list){
+Element * deleteList(Element * list){
 	Element * tempElement;
 	
 	while (list != NULL){
@@ -73,6 +73,7 @@ void deleteList(Element * list){
 		tempElement = NULL;
 	}
 	list = NULL;
+	return(list);
 	
 }
 void * getValueFront(Element * list){

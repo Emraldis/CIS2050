@@ -36,7 +36,7 @@ Element * removeFromBack(Element * list);
 precondition: Must have a list to delete
 postcondition: List must be deleted and memory freed
 */
-void deleteList(Element * list);
+Element * deleteList(Element * list);
 /*Returns the struct positioned in the first element in the list
 precondition: Must have a list with elements to read from
 postcondition: Must return a valid struct (if there is one to return)

@@ -50,7 +50,7 @@ int main(void){
 		currentPos = currentPos->next;
 	}
 	printf("\nDeleting list");
-	deleteList(list);
+	list = deleteList(list);
 	printf("\nFirst value is:");
 	printData(getValueFront(list));
 	printf("\nLast value is:");
