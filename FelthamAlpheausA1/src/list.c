@@ -69,30 +69,39 @@ Element * deleteList(Element * list){
 		tempElement = list;
 		list = list->next;
 		free(tempElement->structPtr);
+		free(tempElement->ptrSize);
 		free(tempElement);
 	}
-	printf("\nList correctly deleted");
+	/*printf("\nList correctly deleted");
 	getchar();
 	list = NULL;
 	printf("\nList set to NULL");
-	getchar();
+	getchar();*/
 	return(list);
 	
 }
 void * getValueFront(Element * list){
 	void * ptr;
-	ptr = malloc(list->ptrSize);
-	memcpy(ptr,list->structPtr,list->ptrSize);
-	return (ptr);
+	if(list != NULL){
+		ptr = malloc(list->ptrSize);
+		memcpy(ptr,list->structPtr,list->ptrSize);
+		return (ptr);
+	}else{
+		return(NULL);
+	}
 }
 void * getValueBack(Element * list){
 	void * ptr;
-	ptr = malloc(list->ptrSize);
-	Element * tempElement;
-	tempElement = list;
-	while(tempElement != NULL){
-		memcpy(ptr,tempElement->structPtr,tempElement->ptrSize);
-		tempElement = tempElement->next;
+	if(list != NULL){
+		ptr = malloc(list->ptrSize);
+		Element * tempElement;
+		tempElement = list;
+		while(tempElement != NULL){
+			memcpy(ptr,tempElement->structPtr,tempElement->ptrSize);
+			tempElement = tempElement->next;
+		}
+		return (ptr);
+	}else{
+		return(NULL);
 	}
-	return (ptr);
 }
