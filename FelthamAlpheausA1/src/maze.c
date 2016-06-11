@@ -16,13 +16,16 @@ int main(void){
 	int j = 0;
 	int startX;
 	int startY;
+	int loc[2];
 	char testChar = 'a';
 	Path * path;
 	Stack * stack;
+	Path * tempPath;
 	
 	mazeData = fopen("maze","r");
 	maze = malloc(sizeof(maze));
 	string = malloc(sizeof(char) * 128);
+	stack = NULL;
 	
 	printf("\nopening maze file\n");
 	if(mazeData != NULL){
@@ -51,6 +54,8 @@ int main(void){
 			strcpy(maze->mazeData[i],string);
 			i++;
 		}
+		loc[0] = startX;
+		loc[1] = startY;
 		fclose(mazeData);
 		printf("\nThe start position of the maze is located at %d,%d",startX,startY);
 		printf("\nThe maze is %d by %d units in size\n",maze->sizeX, maze->sizeY);
@@ -58,6 +63,21 @@ int main(void){
 			printf("%s",maze->mazeData[j]);
 		}
 		path = create(startX,startY,maze);
+		stack = addToStack(path,stack,sizeof(path));
+		tempPath = readFromTop(stack);
+		
+		printf("\nBeginning solution");
+		getchar();
+		
+		while((maze->mazeData[loc[0]][loc[1]] != 'F') && (tempPath->available[0] != 'X')){
+			stack = addToStack(setNewPos(tempPath,maze);
+			tempPath = readFromTop(stack);
+			
+		}
+		for(j=0;j<sizeY;j++){
+			printf("%s",maze->mazeData[j]);
+		}
+		
 	}else{
 		printf("\nERROR opening file");
 	}
