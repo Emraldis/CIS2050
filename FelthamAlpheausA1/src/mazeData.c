@@ -73,7 +73,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[3] = 'X';
 			newX = (path->locArr[0] + 1);
 			newY = path->locArr[1];
-			printf("\nThe next location will be at %d,%d\n"newX,newY);
+			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locArr[0],newPath->locArr[1]);
 			getchar();
@@ -87,7 +87,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[3] = 'X';
 			newX = (path->locArr[0] - 1);
 			newY = path->locArr[1];
-			printf("\nThe next location will be at %d,%d\n"newX,newY);
+			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locArr[0],newPath->locArr[1]);
 			getchar();
@@ -101,7 +101,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[3] = 'X';
 			newX = path->locArr[0];
 			newY = (path->locArr[1] - 1);
-			printf("\nThe next location will be at %d,%d\n"newX,newY);
+			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locArr[0],newPath->locArr[1]);
 			getchar();
@@ -115,7 +115,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[3] = 'X';
 			newX = path->locArr[0];
 			newY = (path->locArr[1] + 1);
-			printf("\nThe next location will be at %d,%d\n"newX,newY);
+			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locArr[0],newPath->locArr[1]);
 			getchar();
