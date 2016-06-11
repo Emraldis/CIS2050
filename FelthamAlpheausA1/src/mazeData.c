@@ -10,7 +10,6 @@ Path * create(int locX, int locY, Maze * maze){
 	path->locArr[0] = locX;
 	path->locArr[1] = locY;
 	strcpy(path->available,getOptions(maze,locX,locY));
-	printf("\n%s\n",path->available);
 	maze->mazeData[locX][locY] = '*';
 	return(path);
 }
@@ -59,6 +58,8 @@ char * getOptions(Maze * maze, int posX, int posY){
 
 Path * setNewPos(Path * path, Maze * maze){
 	Path * newPath;
+	
+	printf("\n%s\n",path->available);
 	
 	printf("The option to be used is: %c",path->available[0]);
 	getchar();
