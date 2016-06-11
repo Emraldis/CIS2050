@@ -35,13 +35,11 @@ int main(void){
 		mazeData =fopen("maze","r");
 		i = 0;
 		while(fgets(string,128,mazeData)){
-			printf("\n%d",i);
 			for(j=0;j<sizeX;j++){
 				testChar = string[j];
 				if(testChar == 'S'){
 					startX = j;
 					startY = i;
-					printf("\nThe start position of the maze is located at %d,%d",startX,startY);
 				}
 			}
 			maze[i] = malloc(sizeof(char) * sizeX);

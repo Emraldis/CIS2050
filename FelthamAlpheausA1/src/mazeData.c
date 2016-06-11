@@ -2,9 +2,14 @@
 
 /*Alpheaus Feltham, 0903594*/
 
-Path * create(char * value){
+Path * create(int locX, int locY, char * * maze){
 	Path * path;
 	path = malloc(sizeof(path));
+	path->available = malloc(sizeof(char) * 4);
+	path->used = malloc(sizeof(char) * 4);
+	path->locArr[0] = locX;
+	path->locArr[1] = locY;
+	path->available = getOptions(maze,locX,locY);
 	return(path);
 }
 
@@ -16,6 +21,6 @@ void deleteStruct(Path * path){
 
 char * getOptions(char * * maze, int posX, int posY){
 	char * options;
-	options = malloc(sizeof(char) * 128);
+	options = malloc(sizeof(char) * 4);
 	return(options);
 }
