@@ -27,6 +27,7 @@ int main(void){
 	maze = malloc(sizeof(maze));
 	string = malloc(sizeof(char) * 128);
 	stack = NULL;
+	tempPath = malloc(sizeof(Path));
 	
 	printf("\nopening maze file\n");
 	if(mazeData != NULL){
