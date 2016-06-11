@@ -52,7 +52,8 @@ int main(void){
 			i++;
 		}
 		fclose(mazeData);
-		printf("\nThe start position of the maze is located at %d,%d\n",startX,startY);
+		printf("\nThe start position of the maze is located at %d,%d",startX,startY);
+		printf("\nThe maze is %d by %d units in size\n",maze->sizeX, maze->sizeY);
 		for(j=0;j<sizeY;j++){
 			printf("%s",maze->mazeData[j]);
 		}
