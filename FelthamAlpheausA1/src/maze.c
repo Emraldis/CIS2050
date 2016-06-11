@@ -21,6 +21,7 @@ int main(void){
 	Path * path;
 	Stack * stack;
 	Path * tempPath;
+	Path * newPath;
 	
 	mazeData = fopen("maze","r");
 	maze = malloc(sizeof(maze));
@@ -70,7 +71,8 @@ int main(void){
 		getchar();
 		
 		while((maze->mazeData[loc[0]][loc[1]] != 'F') && (tempPath->available[0] != 'X')){
-			stack = addToStack(setNewPos(tempPath,maze);
+			newPath = steNewPos(tempPath,maze);
+			stack = addToStack(newPath,stack,sizeof(newPath));
 			tempPath = readFromTop(stack);
 			
 		}
