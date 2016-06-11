@@ -66,7 +66,7 @@ int main(void){
 		}
 		path = create(startX,startY,maze);
 		printf("\nTEST1:%s\n",path->available);
-		stack = addToStack(path,stack,sizeof(path));
+		stack = addToStack(path,stack,sizeof(Path));
 		tempPath = readFromTop(stack);
 		
 		if(tempPath == NULL){
