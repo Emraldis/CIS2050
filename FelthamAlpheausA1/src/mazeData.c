@@ -21,6 +21,33 @@ void deleteStruct(Path * path){
 
 char * getOptions(Maze * maze, int posX, int posY){
 	char * options;
+	int i;
+	
+	i = 0;
 	options = malloc(sizeof(char) * 4);
+	
+	if(posX < maze->sizeX){
+		if(maze->mazeData[posX + 1][posY]) == ' '){
+			options[i] = 'R';
+		}
+	}
+	if(posX > 0){
+		if(maze->mazeData[posX - 1][posY]) == ' '){
+			options[i] = 'L';
+		}
+	}
+	if(posY < maze->sizeY){
+		if(maze->mazeData[posX][posY + 1]) == ' '){
+			options[i] = 'U';
+		}
+	}
+	if(posY > 0){
+		if(maze->mazeData[posX][posY - 1]) == ' '){
+			options[i] = 'D';
+		}
+	}
+	
+	printf("\n%s\n",options);
+	
 	return(options);
 }
