@@ -102,6 +102,7 @@ Path * setNewPos(Path * path, Maze * maze){
 
 char * returnOptions(Path * input){
 	char * output;
+	output = malloc(sizeof(char) * 128);
 	if(input != NULL){
 		strcpy(output,input->available);
 	}else{
