@@ -18,8 +18,10 @@ int main(void){
 	int startY;
 	char testChar = 'a';
 	Path * path;
+	Stack * stack;
 	
 	mazeData = fopen("maze","r");
+	maze = malloc(sizeof(maze));
 	string = malloc(sizeof(char) * 128);
 	
 	printf("\nopening maze file\n");
