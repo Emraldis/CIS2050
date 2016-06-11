@@ -67,7 +67,7 @@ int main(void){
 		path = create(startX,startY,maze);
 		printf("\nTEST1:%s\n",path->available);
 		stack = addToStack(path,stack,sizeof(path));
-		tempPath = readFromTop(stack);
+		memcpy(tempPath,readFromTop(stack),sizeof(Path));
 		
 		if(tempPath == NULL){
 			printf("\nERROR\n");
