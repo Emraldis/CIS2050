@@ -9,7 +9,7 @@
 int main(void){
 	FILE * mazeData;
 	char * string;
-	char * * maze;
+	Maze * maze;
 	int sizeX = 0;
 	int sizeY = 0;
 	int i = 0;
@@ -17,6 +17,7 @@ int main(void){
 	int startX;
 	int startY;
 	char testChar = 'a';
+	Path * path;
 	
 	mazeData = fopen("maze","r");
 	string = malloc(sizeof(char) * 128);
@@ -31,7 +32,9 @@ int main(void){
 			i++;
 		}
 		fclose(mazeData);
-		maze = malloc(sizeof(char *) * sizeY);
+		maze->mazeData = malloc(sizeof(char *) * sizeY);
+		maze->sizeX = sizeX;
+		maze->sizeY = sizeY;
 		mazeData =fopen("maze","r");
 		i = 0;
 		while(fgets(string,128,mazeData)){
@@ -42,15 +45,16 @@ int main(void){
 					startY = i;
 				}
 			}
-			maze[i] = malloc(sizeof(char) * sizeX);
-			strcpy(maze[i],string);
+			maze->mazeData[i] = malloc(sizeof(char) * sizeX);
+			strcpy(maze->mazeData[i],string);
 			i++;
 		}
 		fclose(mazeData);
 		printf("\nThe start position of the maze is located at %d,%d\n",startX,startY);
 		for(j=0;j<sizeY;j++){
-			printf("%s",maze[j]);
+			printf("%s",maze->mazeData[j]);
 		}
+		path = create(startX,startY,maze);
 	}else{
 		printf("\nERROR opening file");
 	}
