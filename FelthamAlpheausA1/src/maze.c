@@ -71,7 +71,7 @@ int main(void){
 		getchar();
 		
 		while((maze->mazeData[loc[0]][loc[1]] != 'F') && (tempPath->available[0] != 'X')){
-			newPath = steNewPos(tempPath,maze);
+			newPath = setNewPos(tempPath,maze);
 			stack = addToStack(newPath,stack,sizeof(newPath));
 			tempPath = readFromTop(stack);
 			
