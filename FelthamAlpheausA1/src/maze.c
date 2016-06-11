@@ -21,14 +21,14 @@ int main(void){
 	mazeData = fopen("maze","r");
 	string = malloc(sizeof(char) * 128);
 	
-	printf("\nopening maze file");
+	printf("\nopening maze file\n");
 	if(mazeData != NULL){
 		while ((fgets(string,128,mazeData) != NULL) && (i<101)){
 			if(strlen(string) > sizeX){
 				sizeX = strlen(string);
 			}
 			sizeY++;
-			printf("%s",string);
+			//printf("%s",string);
 			i++;
 		}
 		fclose(mazeData);
@@ -36,9 +36,19 @@ int main(void){
 		mazeData =fopen("maze","r");
 		i = 0;
 		while(fgets(string,128,mazeData)){
+			for(j=0;j<sizeX;j++){
+				if(string[j] == 'S');{
+					startX = j;
+					startY = i;
+				}
+			}
 			maze[i] = malloc(sizeof(char) * sizeX);
 			strcpy(maze[i],string);
 			i++;
+		}
+		printf("\nThe start position of the maze is located at %d,%d",startX,startY);
+		for(j=0;j<sizeY;j++){
+			printf("\n%s",maze[j]);
 		}
 	}else{
 		printf("\nERROR opening file");
