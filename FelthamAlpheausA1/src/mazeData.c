@@ -26,7 +26,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 	i = 0;
 	options = malloc(sizeof(char) * 4);
 	
-	options = "XXXX";
+	strcpy(options,"XXXX");
 	
 	getchar();
 	
