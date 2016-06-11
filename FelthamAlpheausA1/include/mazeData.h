@@ -11,7 +11,7 @@ typedef struct PathStruct{
 	int locArr[2];
 }Path;
 
-Typedef struc MazeStruct{
+typedef struct MazeStruct{
 	char * * mazeData;
 	int sizeX;
 	int sizeY;
