@@ -43,12 +43,12 @@ char * getOptions(Maze * maze, int posX, int posY){
 	}
 	if(posY < maze->sizeY){
 		if(maze->mazeData[posX][posY + 1] == ' '){
-			options[i] = 'U';
+			options[i] = 'D';
 		}
 	}
 	if(posY > 0){
 		if(maze->mazeData[posX][posY - 1] == ' '){
-			options[i] = 'D';
+			options[i] = 'U';
 		}
 	}
 	
@@ -89,7 +89,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
 			path->available[3] = 'X';
-			newPath = create(path->locArr[0],(path->locArr[1] + 1),maze);
+			newPath = create(path->locArr[0],(path->locArr[1] - 1),maze);
 			break;
 		case 'D':
 			printf("The option to be used is: D");
@@ -98,7 +98,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
 			path->available[3] = 'X';
-			newPath = create(path->locArr[0],(path->locArr[1] - 1),maze);
+			newPath = create(path->locArr[0],(path->locArr[1] + 1),maze);
 			break;
 		default:
 			printf("\nError encountered while attempting to solve maze.\n");
