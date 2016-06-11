@@ -12,3 +12,5 @@ alternatively, both can be compiled at the same time, with the command: "make al
 Running:
 the test code can be run using the command: "./bin/test" from the "FelthamAlpheausA1" folder
 the test code can be run using the command: "./bin/maze" from the "FelthamAlpheausA1" folder
+
+I got help with void pointers from this website: http://pseudomuto.com/development/2013/05/02/implementing-a-generic-linked-list-in-c/
