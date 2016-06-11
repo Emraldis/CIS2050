@@ -37,7 +37,7 @@ int main(void){
 		while(fgets(string,128,mazeData)){
 			printf("\n%d",i);
 			for(j=0;j<sizeX;j++){
-				testChar = string[j]
+				testChar = string[j];
 				if(testChar == 'S'){
 					startX = j;
 					startY = i;
