@@ -33,7 +33,7 @@ int main(void){
 		}
 		fclose(mazeData);
 		maze = malloc(sizeof(char *) * sizeY);
-		mazeData =(fopen("maze","r");
+		mazeData =fopen("maze","r");
 		i = 0;
 		while(fgets(string,128,mazeData){
 			maze[i] = malloc(sizeof(char) * sizeX);
