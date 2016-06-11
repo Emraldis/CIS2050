@@ -68,6 +68,11 @@ int main(void){
 		stack = addToStack(path,stack,sizeof(path));
 		tempPath = readFromTop(stack);
 		
+		if(tempPath == NULL){
+			printf("\nERROR\n");
+			exit(0);
+		}
+		
 		printf("\nTEST2:%s\n",tempPath->available);
 		
 		printf("\nBeginning solution");
