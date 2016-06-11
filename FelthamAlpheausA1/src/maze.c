@@ -32,11 +32,11 @@ int main(void){
 			i++;
 		}
 		fclose(mazeData);
-		mazeLayer = malloc(sizeof(char) * sizeX);
 		maze = malloc(sizeof(char *) * sizeY);
 		mazeData =(fopen("maze","r");
 		i = 0;
 		while(fgets(string,128,mazeData){
+			maze[i] = malloc(sizeof(char) * sizeX);
 			strcpy(maze[i],string);
 			i++;
 		}
