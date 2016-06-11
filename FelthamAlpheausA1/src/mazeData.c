@@ -28,6 +28,8 @@ char * getOptions(Maze * maze, int posX, int posY){
 	
 	options = "XXXX";
 	
+	getchar();
+	
 	if(posX < maze->sizeX){
 		if(maze->mazeData[posX + 1][posY] == ' '){
 			options[i] = 'R';
