@@ -64,8 +64,11 @@ int main(void){
 			printf("%s",maze->mazeData[j]);
 		}
 		path = create(startX,startY,maze);
+		printf("\nTEST1:%s\n",path->available);
 		stack = addToStack(path,stack,sizeof(path));
 		tempPath = readFromTop(stack);
+		
+		printf("\nTEST2:%s\n",tempPath->available);
 		
 		printf("\nBeginning solution");
 		getchar();
