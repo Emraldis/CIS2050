@@ -10,7 +10,6 @@ int main(void){
 	FILE * mazeData;
 	char * string;
 	char * * maze;
-	char * mazeLayer;
 	int sizeX = 0;
 	int sizeY = 0;
 	int i = 0;
@@ -28,7 +27,6 @@ int main(void){
 				sizeX = strlen(string);
 			}
 			sizeY++;
-			//printf("%s",string);
 			i++;
 		}
 		fclose(mazeData);
@@ -46,7 +44,8 @@ int main(void){
 			strcpy(maze[i],string);
 			i++;
 		}
-		printf("\nThe start position of the maze is located at %d,%d",startX,startY);
+		fclose(mazeData);
+		printf("\nThe start position of the maze is located at %d,%d\n",startX,startY);
 		for(j=0;j<sizeY;j++){
 			printf("%s",maze[j]);
 		}
