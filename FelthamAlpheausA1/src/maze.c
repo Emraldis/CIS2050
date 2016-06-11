@@ -12,7 +12,7 @@ int main(void){
 	char * * maze;
 	char * mazeLayer;
 	int sizeX = 0;
-	int sizeY = 1;
+	int sizeY = 0;
 	int i = 0;
 	int j = 0;
 	int startX;
@@ -48,7 +48,7 @@ int main(void){
 		}
 		printf("\nThe start position of the maze is located at %d,%d",startX,startY);
 		for(j=0;j<sizeY;j++){
-			printf("\n%s",maze[j]);
+			printf("%s",maze[j]);
 		}
 	}else{
 		printf("\nERROR opening file");
