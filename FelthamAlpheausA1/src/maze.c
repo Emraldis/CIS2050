@@ -35,7 +35,7 @@ int main(void){
 		maze = malloc(sizeof(char *) * sizeY);
 		mazeData =fopen("maze","r");
 		i = 0;
-		while(fgets(string,128,mazeData){
+		while(fgets(string,128,mazeData)){
 			maze[i] = malloc(sizeof(char) * sizeX);
 			strcpy(maze[i],string);
 			i++;
