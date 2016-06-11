@@ -20,8 +20,6 @@ int main(void){
 	
 	mazeData = fopen("maze","r");
 	string = malloc(sizeof(char) * 128);
-	mazeLayer = malloc(sizeof(char));
-	maze = malloc(sizeof(char *));
 	
 	printf("\nopening maze file");
 	if(mazeData != NULL){
@@ -29,13 +27,17 @@ int main(void){
 			if(strlen(string) > sizeX){
 				sizeX = strlen(string);
 			}
-			realloc(mazeLayer,sizeof(char) * sizeX);
-			strcpy(mazeLayer,string);
-			getchar();
 			sizeY++;
-			realloc(maze,sizeof(char *) * sizeY);
-			strcpy(maze[i],mazeLayer);
-			printf("%s",maze[i]);
+			printf("%s",string);
+			i++;
+		}
+		fclose(mazeData);
+		mazeLayer = malloc(sizeof(char) * sizeX);
+		maze = malloc(sizeof(char *) * sizeY);
+		mazeData =(fopen("maze","r");
+		i = 0;
+		while(fgets(string,128,mazeData){
+			strcpy(maze[i],string);
 			i++;
 		}
 	}else{
