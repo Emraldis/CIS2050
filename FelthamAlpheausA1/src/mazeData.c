@@ -61,8 +61,6 @@ Path * setNewPos(Path * path, Maze * maze){
 	
 	printf("\n%s\n",path->available);
 	
-	getchar();
-	
 	switch(path->available[0]){
 		case 'R':
 			printf("The option to be used is: R");
@@ -72,6 +70,8 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[2] = path->available[3];
 			path->available[3] = 'X';
 			newPath = create((path->locArr[0] + 1),path->locArr[1],maze);
+			printf("\nNew path created, location %d,%d\n",newPath->locArr[0],newPath->locArr[1]);
+			getchar();
 			break;
 		case 'L':
 			printf("The option to be used is: L");
@@ -81,6 +81,8 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[2] = path->available[3];
 			path->available[3] = 'X';
 			newPath = create((path->locArr[0] - 1),path->locArr[1],maze);
+			printf("\nNew path created, location %d,%d\n",newPath->locArr[0],newPath->locArr[1]);
+			getchar();
 			break;
 		case 'U':
 			printf("The option to be used is: U");
@@ -90,6 +92,8 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[2] = path->available[3];
 			path->available[3] = 'X';
 			newPath = create(path->locArr[0],(path->locArr[1] - 1),maze);
+			printf("\nNew path created, location %d,%d\n",newPath->locArr[0],newPath->locArr[1]);
+			getchar();
 			break;
 		case 'D':
 			printf("The option to be used is: D");
@@ -99,6 +103,8 @@ Path * setNewPos(Path * path, Maze * maze){
 			path->available[2] = path->available[3];
 			path->available[3] = 'X';
 			newPath = create(path->locArr[0],(path->locArr[1] + 1),maze);
+			printf("\nNew path created, location %d,%d\n",newPath->locArr[0],newPath->locArr[1]);
+			getchar();
 			break;
 		default:
 			printf("\nError encountered while attempting to solve maze.\n");
