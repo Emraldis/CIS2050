@@ -60,6 +60,9 @@ char * getOptions(Maze * maze, int posX, int posY){
 Path * setNewPos(Path * path, Maze * maze){
 	Path * newPath;
 	
+	printf("The option to be used is: %c",path->available[0]);
+	getchar();
+	
 	switch(path->available[0]){
 		case 'R':
 			path->available[0] = path->available[1];
@@ -90,7 +93,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			newPath = create(path->locArr[0],(path->locArr[1] - 1),maze);
 			break;
 		default:
-			printf("\nError encountered while attempting to solve maze.");
+			printf("\nError encountered while attempting to solve maze.\n");
 			exit(0);
 	}
 	return(newPath);
