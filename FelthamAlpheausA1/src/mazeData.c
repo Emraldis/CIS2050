@@ -59,7 +59,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 Path * setNewPos(Path * path, Maze * maze){
 	Path * newPath;
 	
-	printf("\n%s\n",path->available);
+	printf("\n%s @ %d,%d\n",path->available, path->locArr[0],path->locArr[1]);
 	
 	switch(path->available[0]){
 		case 'R':
