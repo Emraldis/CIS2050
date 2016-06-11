@@ -108,4 +108,5 @@ char * returnOptions(Path * input){
 	}else{
 		return(NULL);
 	}
+	return(output);
 }
