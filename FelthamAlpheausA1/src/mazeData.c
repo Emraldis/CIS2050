@@ -99,3 +99,12 @@ Path * setNewPos(Path * path, Maze * maze){
 	}
 	return(newPath);
 }
+
+char * returnOptions(Path * input){
+	char * output;
+	if(input != NULL){
+		strcpy(output,input->available);
+	}else{
+		return(NULL);
+	}
+}

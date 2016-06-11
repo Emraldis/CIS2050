@@ -67,14 +67,14 @@ int main(void){
 		path = create(startX,startY,maze);
 		printf("\nTEST1:%s\n",path->available);
 		stack = addToStack(path,stack,sizeof(path));
-		&tempPath = readFromTop(stack);
+		tempPath = readFromTop(stack);
 		
 		if(tempPath == NULL){
 			printf("\nERROR\n");
 			exit(0);
 		}
 		
-		printf("\nTEST2:%s\n",tempPath->available);
+		printf("\nTEST2:%s\n",returnOptions(readFromTop(stack)));
 		
 		printf("\nBeginning solution");
 		getchar();
