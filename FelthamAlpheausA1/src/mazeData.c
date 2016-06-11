@@ -10,6 +10,7 @@ Path * create(int locX, int locY, Maze * maze){
 	path->locArr[0] = locX;
 	path->locArr[1] = locY;
 	path->available = getOptions(maze,locX,locY);
+	maze[locX][locY] = '*';
 	return(path);
 }
 
@@ -54,4 +55,43 @@ char * getOptions(Maze * maze, int posX, int posY){
 	printf("\n%s\n",options);
 	
 	return(options);
+}
+
+Path * setNewPos(Path * path, Maze * maze){
+	Path * newPath;
+	
+	switch(path->available[0]){
+		case 'R':
+			path->available[0] = path->available[1];
+			path->available[1] = path->available[2];
+			path->available[2] = path->available[3];
+			path->available[3] = 'X';
+			newPath = create((path->locArr[0] + 1),path->locArr[1],maze);
+			break;
+		case 'L':
+			path->available[0] = path->available[1];
+			path->available[1] = path->available[2];
+			path->available[2] = path->available[3];
+			path->available[3] = 'X';
+			newPath = create((path->locArr[0] - 1),path->locArr[1],maze);
+			break;
+		case 'U':
+			path->available[0] = path->available[1];
+			path->available[1] = path->available[2];
+			path->available[2] = path->available[3];
+			path->available[3] = 'X';
+			newPath = create(path->locArr[0],(path->locArr[1] + 1),maze);
+			break;
+		case 'D':
+			path->available[0] = path->available[1];
+			path->available[1] = path->available[2];
+			path->available[2] = path->available[3];
+			path->available[3] = 'X';
+			newPath = create(path->locArr[0],(path->locArr[1] - 1),maze);
+			break;
+		default:
+			printf("\nError encountered while attempting to solve maze.");
+			exit(0);
+	}
+	return(newPath);
 }

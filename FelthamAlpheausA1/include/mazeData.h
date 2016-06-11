@@ -32,3 +32,8 @@ precondition: must have a maze, and a position therein.
 postcondition: Must return a list of available positions.
 */
 char * getOptions(Maze * maze, int posX, int posY);
+/*Chooses one of the direciton options available, and follows it.
+precondition: must have a maze, and a position therein.
+postcondition: Must return a new path struct with a new position.
+*/
+Path * setNewPos(Path * path, Maze * maze);
