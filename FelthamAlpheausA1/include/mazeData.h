@@ -37,5 +37,3 @@ precondition: must have a maze, and a position therein.
 postcondition: Must return a new path struct with a new position.
 */
 Path * setNewPos(Path * path, Maze * maze);
-
-char * returnOptions(Path * input);

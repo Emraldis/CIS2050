@@ -65,7 +65,6 @@ int main(void){
 			printf("%s",maze->mazeData[j]);
 		}
 		path = create(startX,startY,maze);
-		printf("\nTEST1:%s\n",path->available);
 		stack = addToStack(path,stack,sizeof(Path));
 		tempPath = readFromTop(stack);
 		
@@ -74,7 +73,6 @@ int main(void){
 			exit(0);
 		}
 		
-		printf("\nTEST2:%s\n",returnOptions(readFromTop(stack)));
 		
 		printf("\nBeginning solution");
 		getchar();
