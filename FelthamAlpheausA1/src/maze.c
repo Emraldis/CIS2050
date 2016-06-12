@@ -79,6 +79,7 @@ int main(void){
 		
 		while((maze->mazeData[loc[0]][loc[1]] != 'F') && (tempPath->available[0] != 'X')){
 			newPath = setNewPos(tempPath,maze);
+			printf("\nTEST: %s\n",newPath->available);
 			stack = addToStack(newPath,stack,sizeof(Path));
 			tempPath = readFromTop(stack);
 			
