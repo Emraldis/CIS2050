@@ -8,7 +8,8 @@ typedef struct PathStruct{
 	char choice;
 	char * available;
 	char * used;
-	int locArr[2];
+	int locX;
+	int locY;
 }Path;
 
 typedef struct MazeStruct{
