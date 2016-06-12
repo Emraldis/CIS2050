@@ -77,7 +77,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			newY = path->locY;
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
-			printf("\nNew path created, location %d,%d\n",newpath->locX,newpath->locY);
+			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
 			getchar();
 			break;
 		case 'L':
@@ -91,7 +91,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			newY = path->locY;
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
-			printf("\nNew path created, location %d,%d\n",newpath->locX,newpath->locY);
+			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
 			getchar();
 			break;
 		case 'U':
@@ -105,7 +105,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			newY = (path->locY - 1);
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
-			printf("\nNew path created, location %d,%d\n",newpath->locX,newpath->locY);
+			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
 			getchar();
 			break;
 		case 'D':
@@ -119,7 +119,7 @@ Path * setNewPos(Path * path, Maze * maze){
 			newY = (path->locY + 1);
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
-			printf("\nNew path created, location %d,%d\n",newpath->locX,newpath->locY);
+			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
 			getchar();
 			break;
 		default:
