@@ -12,7 +12,7 @@ Path * create(int locX, int locY, Maze * maze){
 	printf("\nTEST A: %s\n",path->available);
 	path->locArr[0] = locX;
 	path->locArr[1] = locY;
-	printf("\nTEST B: %s\n"path->available);
+	printf("\nTEST B: %s\n",path->available);
 	return(path);
 }
 
