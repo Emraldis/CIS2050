@@ -11,6 +11,7 @@ Path * create(int locX, int locY, Maze * maze){
 	maze->mazeData[locX][locY] = '*';
 	path->locArr[0] = locX;
 	path->locArr[1] = locY;
+	printf("\nTEST: %s\n",path->available);
 	return(path);
 }
 
@@ -52,7 +53,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 		}
 	}
 	
-	printf("\nTEST:%s\n",options);
+	//printf("\nTEST:%s\n",options);
 	return(options);
 }
 
