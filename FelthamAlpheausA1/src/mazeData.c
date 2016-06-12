@@ -124,5 +124,6 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nError encountered while attempting to solve maze.\n");
 			exit(0);
 	}
+	printf("TEST: %s\n",newPath->available);
 	return(newPath);
 }
