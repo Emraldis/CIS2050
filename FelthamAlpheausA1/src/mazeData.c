@@ -27,26 +27,28 @@ char * getOptions(Maze * maze, int posX, int posY){
 	
 	strcpy(options,"XXXX");
 	
-	getchar();
-	
 	if(posX < maze->sizeX){
 		if(maze->mazeData[posX + 1][posY] == ' '){
 			options[i] = 'R';
+			printf("\nTo the right, the character is: '%c'",maze->mazeData[posX + 1][posY]);
 		}
 	}
 	if(posX > 0){
 		if(maze->mazeData[posX - 1][posY] == ' '){
 			options[i] = 'L';
+			printf("\nTo the left, the character is: '%c'",maze->mazeData[posX - 1][posY]);
 		}
 	}
 	if(posY < maze->sizeY){
 		if(maze->mazeData[posX][posY + 1] == ' '){
 			options[i] = 'D';
+			printf("\nTo the top, the character is: '%c'",maze->mazeData[posX][posY + 1])'
 		}
 	}
 	if(posY > 0){
 		if(maze->mazeData[posX][posY - 1] == ' '){
 			options[i] = 'U';
+			printf("\nTo the bottom, the character is: '%c'",maze->mazeData[posX][posY - 1]);
 		}
 	}
 	
