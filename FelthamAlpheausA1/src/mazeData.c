@@ -8,14 +8,9 @@ Path * create(int locX, int locY, Maze * maze){
 	path->available = malloc(sizeof(char) * 4);
 	strcpy(path->available,getOptions(maze,locX,locY));
 	maze->mazeData[locX][locY] = '*';
-	printf("\nTEST A: %s\n",path->available);
-	getchar();
-	printf("\nTEST B: %s\n",path->available);
-	getchar();
+	printf("\n%s\n",path->available);
 	path->locX = locX;
 	path->locY = locY;
-	printf("\nTEST C: %s\n",path->available);
-	getchar();
 	return(path);
 }
 
