@@ -42,13 +42,13 @@ char * getOptions(Maze * maze, int posX, int posY){
 	if(posY < maze->sizeY){
 		if(maze->mazeData[posX][posY + 1] == ' '){
 			options[i] = 'D';
-			printf("\nTo the top, the character is: '%c'",maze->mazeData[posX][posY + 1]);
+			printf("\nTo the bottom, the character is: '%c'",maze->mazeData[posX][posY + 1]);
 		}
 	}
 	if(posY > 0){
 		if(maze->mazeData[posX][posY - 1] == ' '){
 			options[i] = 'U';
-			printf("\nTo the bottom, the character is: '%c'",maze->mazeData[posX][posY - 1]);
+			printf("\nTo the top, the character is: '%c'",maze->mazeData[posX][posY - 1]);
 		}
 	}
 	
