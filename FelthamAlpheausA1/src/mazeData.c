@@ -64,7 +64,6 @@ Path * setNewPos(Path * path, Maze * maze){
 	switch(path->available[0]){
 		case 'R':
 			printf("The option to be used is: R");
-			getchar();
 			path->available[0] = path->available[1];
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
@@ -77,7 +76,6 @@ Path * setNewPos(Path * path, Maze * maze){
 			break;
 		case 'L':
 			printf("The option to be used is: L");
-			getchar();
 			path->available[0] = path->available[1];
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
@@ -90,7 +88,6 @@ Path * setNewPos(Path * path, Maze * maze){
 			break;
 		case 'U':
 			printf("The option to be used is: U");
-			getchar();
 			path->available[0] = path->available[1];
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
@@ -103,7 +100,6 @@ Path * setNewPos(Path * path, Maze * maze){
 			break;
 		case 'D':
 			printf("The option to be used is: D");
-			getchar();
 			path->available[0] = path->available[1];
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
