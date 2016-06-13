@@ -8,7 +8,6 @@ Path * create(int locX, int locY, Maze * maze){
 	path->available = malloc(sizeof(char) * 4);
 	strcpy(path->available,getOptions(maze,locX,locY));
 	maze->mazeData[locX][locY] = '*';
-	printf("\n%s\n",path->available);
 	path->locX = locX;
 	path->locY = locY;
 	return(path);
@@ -75,7 +74,6 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
-			getchar();
 			break;
 		case 'L':
 			printf("The option to be used is: L");
@@ -89,7 +87,6 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
-			getchar();
 			break;
 		case 'U':
 			printf("The option to be used is: U");
@@ -103,7 +100,6 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
-			getchar();
 			break;
 		case 'D':
 			printf("The option to be used is: D");
@@ -117,12 +113,10 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
-			getchar();
 			break;
 		default:
 			printf("\nError encountered while attempting to solve maze.\n");
 			exit(0);
 	}
-	printf("TEST: %s\n",newPath->available);
 	return(newPath);
 }
