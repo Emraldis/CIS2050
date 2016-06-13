@@ -82,7 +82,9 @@ int main(void){
 			//printf("\nTEST: %s\n",newPath->available);
 			stack = addToStack(newPath,stack,sizeof(Path));
 			tempPath = readFromTop(stack);
-			
+			for(j=0;j<sizeY;j++){
+				printf("%s",maze->mazeData[j]);
+			}
 		}
 		for(j=0;j<sizeY;j++){
 			printf("%s",maze->mazeData[j]);
