@@ -21,7 +21,6 @@ Path * create(int locX, int locY, Maze * maze){
 
 void deleteStruct(Path * path){
 	free(path->available);
-	free(path->used);
 	free(path);
 }
 
