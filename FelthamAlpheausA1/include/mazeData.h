@@ -7,7 +7,6 @@
 typedef struct PathStruct{
 	char choice;
 	char * available;
-	char * used;
 	int locX;
 	int locY;
 }Path;
