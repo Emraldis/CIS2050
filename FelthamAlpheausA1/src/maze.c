@@ -85,6 +85,7 @@ int main(void){
 			for(j=0;j<sizeY;j++){
 				printf("%s",maze->mazeData[j]);
 			}
+			getchar();
 		}
 		for(j=0;j<sizeY;j++){
 			printf("%s",maze->mazeData[j]);
