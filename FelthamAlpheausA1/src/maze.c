@@ -76,8 +76,13 @@ int main(void){
 		
 		printf("\nBeginning solution");
 		getchar();
-		
-		while((maze->mazeData[loc[0]][loc[1]] != 'F') && (tempPath->available[0] != 'X')){
+		// && (tempPath->available[0] != 'X'))
+		while(maze->mazeData[loc[0]][loc[1]] != 'F'){
+			while(tempPath->available[0] == 'X'){
+				maze->mazeData[tempPath->locX][tempPath->locY] = ' ';
+				stack = removeFromStack(stack);
+				tempPath = readFromTop(stack);
+			}
 			newPath = setNewPos(tempPath,maze);
 			//printf("\nTEST: %s\n",newPath->available);
 			stack = addToStack(newPath,stack,sizeof(Path));
