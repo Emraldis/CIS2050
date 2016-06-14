@@ -26,8 +26,6 @@ int main(int argc, char * argv[]){
 	
 	fileName = malloc(sizeof(char) * 256);
 	
-	printf("TEST: path %d PathData %d",sizeof(path),sizeof(PathData));
-	
 	if(argv[1] != NULL){
 		strcpy(fileName,argv[1]);
 	}
