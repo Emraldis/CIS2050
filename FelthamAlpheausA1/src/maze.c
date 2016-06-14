@@ -94,7 +94,6 @@ int main(void){
 			}
 			loc[0] = tempPath->locX;
 			loc[1] = tempPath->locY;
-			getchar();
 		}
 		printf("\n***********Solution Complete**********\n");
 		/*for(j=0;j<sizeY;j++){
