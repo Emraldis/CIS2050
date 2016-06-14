@@ -29,7 +29,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 	strcpy(options,"XXXX");
 	
 	if(posX < maze->sizeX){
-		if(maze->mazeData[posX + 1][posY] == ' '){
+		if((maze->mazeData[posX + 1][posY] == ' ') || (maze->mazeData[posX + 1][posY] == 'F')){
 			i = 0;
 			while(options[i] != 'X'){
 				i++;
@@ -39,7 +39,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 		}
 	}
 	if(posX > 0){
-		if(maze->mazeData[posX - 1][posY] == ' '){
+		if((maze->mazeData[posX - 1][posY] == ' ') || (maze->mazeData[posX - 1][posY] == 'F')){
 			i = 0;
 			while(options[i] != 'X'){
 				i++;
@@ -49,7 +49,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 		}
 	}
 	if(posY < maze->sizeY){
-		if(maze->mazeData[posX][posY + 1] == ' '){
+		if((maze->mazeData[posX][posY + 1] == ' ') || (maze->mazeData[posX][posY + 1] == 'F')){
 			i = 0;
 			while(options[i] != 'X'){
 				i++;
@@ -59,7 +59,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 		}
 	}
 	if(posY > 0){
-		if(maze->mazeData[posX][posY - 1] == ' '){
+		if((maze->mazeData[posX][posY - 1] == ' ') || (maze->mazeData[posX][posY - 1] == 'F')){
 			i = 0;
 			while(options[i] != 'X'){
 				i++;
