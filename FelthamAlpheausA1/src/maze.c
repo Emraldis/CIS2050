@@ -24,6 +24,8 @@ int main(int argc, char * argv[]){
 	Path * tempPath;
 	Path * newPath;
 	
+	fileName = malloc(sizeof(char) * 128);
+	
 	if(argv[1] != NULL){
 		strcpy(fileName,argv[1]);
 	}
