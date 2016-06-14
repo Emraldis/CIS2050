@@ -29,13 +29,16 @@ int main(int argc, char * argv[]){
 	if(argv[1] != NULL){
 		strcpy(fileName,argv[1]);
 	}
-	mazeData = fopen(fileName,"r");
-	maze = malloc(sizeof(maze));
-	string = malloc(sizeof(char) * 128);
-	stack = NULL;
-	tempPath = malloc(sizeof(Path));
 	printf("\nopening maze file\n");
+	getchar();
+	mazeData = fopen(fileName,"r");
 	if(mazeData != NULL){
+		printf("\nFile Opened Successfully!");
+		getchar();
+		maze = malloc(sizeof(maze));
+		string = malloc(sizeof(char) * 128);
+		stack = NULL;
+		tempPath = malloc(sizeof(Path));
 		while ((fgets(string,128,mazeData) != NULL) && (i<101)){
 			if(strlen(string) > sizeX){
 				sizeX = strlen(string);
