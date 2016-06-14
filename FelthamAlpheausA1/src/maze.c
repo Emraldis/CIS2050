@@ -92,6 +92,8 @@ int main(void){
 			for(j=0;j<sizeY;j++){
 				printf("%s",maze->mazeData[j]);
 			}
+			loc[0] = tempPath->locX;
+			loc[1] = tempPath->locY;
 			getchar();
 		}
 		/*for(j=0;j<sizeY;j++){
