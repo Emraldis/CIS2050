@@ -96,6 +96,7 @@ int main(void){
 			loc[1] = tempPath->locY;
 			getchar();
 		}
+		printf("\n***********Solution Complete**********\n");
 		/*for(j=0;j<sizeY;j++){
 			printf("%s",maze->mazeData[j]);
 		}*/
