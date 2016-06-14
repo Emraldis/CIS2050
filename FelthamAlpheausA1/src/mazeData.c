@@ -7,11 +7,19 @@ Path * create(int locX, int locY, Maze * maze){
 	path = malloc(sizeof(path));
 	path->available = malloc(sizeof(char) * 4);
 	strcpy(path->available,getOptions(maze,locX,locY));
+<<<<<<< HEAD
 	if(maze->mazeData[locX][locY] == ' '){
 		maze->mazeData[locX][locY] = '*';
 	}
 	path->locX = locX;
 	path->locY = locY;
+=======
+	maze->mazeData[locX][locY] = '*';
+	printf("\nTEST A: %s\n",path->available);
+	path->locX = locX;
+	path->locY = locY;
+	printf("\nTEST B: %s\n",path->available);
+>>>>>>> parent of f2eaeb0... more debug
 	return(path);
 }
 
