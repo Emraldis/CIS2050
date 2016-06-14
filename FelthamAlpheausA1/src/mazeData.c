@@ -10,9 +10,9 @@ Path * create(int locX, int locY, Maze * maze){
 	strcpy(path->available,getOptions(maze,locX,locY));
 	if(maze->mazeData[locX][locY] == ' '){
 		maze->mazeData[locX][locY] = '*';
-	}
+	}/*
 	path->locX = locX;
-	path->locY = locY;
+	path->locY = locY;*/
 	maze->mazeData[locX][locY] = '*';
 	printf("\nTEST A: %s\n",path->available);
 	path->locX = locX;
