@@ -87,9 +87,9 @@ int main(void){
 			}
 			getchar();
 		}
-		for(j=0;j<sizeY;j++){
+		/*for(j=0;j<sizeY;j++){
 			printf("%s",maze->mazeData[j]);
-		}
+		}*/
 		
 	}else{
 		printf("\nERROR opening file");

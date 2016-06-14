@@ -7,7 +7,9 @@ Path * create(int locX, int locY, Maze * maze){
 	path = malloc(sizeof(path));
 	path->available = malloc(sizeof(char) * 4);
 	strcpy(path->available,getOptions(maze,locX,locY));
-	maze->mazeData[locX][locY] = '*';
+	if(maze->mazeData[locX][locY] == ' '){
+		maze->mazeData[locX][locY] = '*';
+	}
 	path->locX = locX;
 	path->locY = locY;
 	return(path);
