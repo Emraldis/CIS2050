@@ -36,11 +36,7 @@ int main(int argc, char * argv[]){
 		printf("\nFile Opened Successfully!");
 		getchar();
 		maze = malloc(sizeof(maze));
-		printf("\nMemory Allocated for maze");
-		getchar();
 		string = malloc(sizeof(char) * 128);
-		printf("\nMemory Allocated for string");
-		getchar();
 		stack = NULL;
 		tempPath = malloc(sizeof(Path));
 		while ((fgets(string,128,mazeData) != NULL) && (i<101)){
