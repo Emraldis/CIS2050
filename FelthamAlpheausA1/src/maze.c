@@ -78,7 +78,7 @@ int main(void){
 		getchar();
 		// && (tempPath->available[0] != 'X'))
 		while(maze->mazeData[loc[0]][loc[1]] != 'F'){
-			while(tempPath->available[0] == 'X'){
+			while((tempPath->available[0] == 'X') && (maze->mazeData[tempPath->locX][tempPath->locY] != 'F')){
 				if(maze->mazeData[tempPath->locX][tempPath->locY] == '*'){
 					maze->mazeData[tempPath->locX][tempPath->locY] = ' ';
 				}
