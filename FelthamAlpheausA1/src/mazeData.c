@@ -24,31 +24,46 @@ char * getOptions(Maze * maze, int posX, int posY){
 	char * options;
 	int i;
 	
-	i = 0;
 	options = malloc(sizeof(char) * 4);
 	
 	strcpy(options,"XXXX");
 	
 	if(posX < maze->sizeX){
 		if(maze->mazeData[posX + 1][posY] == ' '){
+			i = 0;
+			while(options[i] != X){
+				i++;
+			}
 			options[i] = 'R';
 			printf("\nTo the right, the character is: '%c'",maze->mazeData[posX + 1][posY]);
 		}
 	}
 	if(posX > 0){
 		if(maze->mazeData[posX - 1][posY] == ' '){
+			i = 0;
+			while(options[i] != X){
+				i++;
+			}
 			options[i] = 'L';
 			printf("\nTo the left, the character is: '%c'",maze->mazeData[posX - 1][posY]);
 		}
 	}
 	if(posY < maze->sizeY){
 		if(maze->mazeData[posX][posY + 1] == ' '){
+			i = 0;
+			while(options[i] != X){
+				i++;
+			}
 			options[i] = 'D';
 			printf("\nTo the bottom, the character is: '%c'",maze->mazeData[posX][posY + 1]);
 		}
 	}
 	if(posY > 0){
 		if(maze->mazeData[posX][posY - 1] == ' '){
+			i = 0;
+			while(options[i] != X){
+				i++;
+			}
 			options[i] = 'U';
 			printf("\nTo the top, the character is: '%c'",maze->mazeData[posX][posY - 1]);
 		}
