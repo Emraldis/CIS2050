@@ -31,7 +31,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 	if(posX < maze->sizeX){
 		if(maze->mazeData[posX + 1][posY] == ' '){
 			i = 0;
-			while(options[i] != X){
+			while(options[i] != 'X'){
 				i++;
 			}
 			options[i] = 'R';
@@ -41,7 +41,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 	if(posX > 0){
 		if(maze->mazeData[posX - 1][posY] == ' '){
 			i = 0;
-			while(options[i] != X){
+			while(options[i] != 'X'){
 				i++;
 			}
 			options[i] = 'L';
@@ -51,7 +51,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 	if(posY < maze->sizeY){
 		if(maze->mazeData[posX][posY + 1] == ' '){
 			i = 0;
-			while(options[i] != X){
+			while(options[i] != 'X'){
 				i++;
 			}
 			options[i] = 'D';
@@ -61,7 +61,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 	if(posY > 0){
 		if(maze->mazeData[posX][posY - 1] == ' '){
 			i = 0;
-			while(options[i] != X){
+			while(options[i] != 'X'){
 				i++;
 			}
 			options[i] = 'U';
