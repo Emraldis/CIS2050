@@ -79,7 +79,9 @@ int main(void){
 		// && (tempPath->available[0] != 'X'))
 		while(maze->mazeData[loc[0]][loc[1]] != 'F'){
 			while(tempPath->available[0] == 'X'){
-				maze->mazeData[tempPath->locX][tempPath->locY] = ' ';
+				if(maze->mazeData[tempPath->locX][tempPath->locY] == '*'){
+					maze->mazeData[tempPath->locX][tempPath->locY] = ' ';
+				}
 				stack = removeFromStack(stack);
 				tempPath = readFromTop(stack);
 			}
