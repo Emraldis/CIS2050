@@ -54,7 +54,7 @@ char * getOptions(Maze * maze, int posX, int posY){
 		}
 	}
 	
-	//printf("\nTEST:%s\n",options);
+	printf("\nTEST:%s\n",options);
 	return(options);
 }
 
