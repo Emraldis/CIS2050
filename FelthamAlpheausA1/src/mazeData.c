@@ -4,7 +4,7 @@
 
 Path * create(int locX, int locY, Maze * maze){
 	Path * path;
-	path = malloc(sizeof(path));
+	path = malloc(sizeof(Path));
 	path->available = malloc(sizeof(char) * 4);
 	path->used = malloc(sizeof(char) * 4);
 	strcpy(path->available,getOptions(maze,locX,locY));
