@@ -6,21 +6,21 @@ Path * create(int locX, int locY, Maze * maze){
 	Path * path;
 	path = malloc(sizeof(path));
 	path->available = malloc(sizeof(char) * 4);
+	path->used = malloc(sizeof(char) * 4);
 	strcpy(path->available,getOptions(maze,locX,locY));
-	if(maze->mazeData[locX][locY] == ' '){
-		maze->mazeData[locX][locY] = '*';
-	}/*
-	path->locX = locX;
-	path->locY = locY;*/
+	maze->mazeData[locX][locY] = '*';
 	printf("\nTEST A: %s\n",path->available);
+	getchar();
 	path->locX = locX;
 	path->locY = locY;
 	printf("\nTEST B: %s\n",path->available);
+	getchar();
 	return(path);
 }
 
 void deleteStruct(Path * path){
 	free(path->available);
+	free(path->used);
 	free(path);
 }
 
@@ -28,52 +28,35 @@ char * getOptions(Maze * maze, int posX, int posY){
 	char * options;
 	int i;
 	
+	i = 0;
 	options = malloc(sizeof(char) * 4);
 	
 	strcpy(options,"XXXX");
 	
+	getchar();
+	
 	if(posX < maze->sizeX){
-		if((maze->mazeData[posX + 1][posY] == ' ') || (maze->mazeData[posX + 1][posY] == 'F')){
-			i = 0;
-			while(options[i] != 'X'){
-				i++;
-			}
+		if(maze->mazeData[posX + 1][posY] == ' '){
 			options[i] = 'R';
-			printf("\nTo the right, the character is: '%c'",maze->mazeData[posX + 1][posY]);
 		}
 	}
 	if(posX > 0){
-		if((maze->mazeData[posX - 1][posY] == ' ') || (maze->mazeData[posX - 1][posY] == 'F')){
-			i = 0;
-			while(options[i] != 'X'){
-				i++;
-			}
+		if(maze->mazeData[posX - 1][posY] == ' '){
 			options[i] = 'L';
-			printf("\nTo the left, the character is: '%c'",maze->mazeData[posX - 1][posY]);
 		}
 	}
 	if(posY < maze->sizeY){
-		if((maze->mazeData[posX][posY + 1] == ' ') || (maze->mazeData[posX][posY + 1] == 'F')){
-			i = 0;
-			while(options[i] != 'X'){
-				i++;
-			}
+		if(maze->mazeData[posX][posY + 1] == ' '){
 			options[i] = 'D';
-			printf("\nTo the bottom, the character is: '%c'",maze->mazeData[posX][posY + 1]);
 		}
 	}
 	if(posY > 0){
-		if((maze->mazeData[posX][posY - 1] == ' ') || (maze->mazeData[posX][posY - 1] == 'F')){
-			i = 0;
-			while(options[i] != 'X'){
-				i++;
-			}
+		if(maze->mazeData[posX][posY - 1] == ' '){
 			options[i] = 'U';
-			printf("\nTo the top, the character is: '%c'",maze->mazeData[posX][posY - 1]);
 		}
 	}
 	
-	printf("\nTEST:%s\n",options);
+	//printf("\nTEST:%s\n",options);
 	return(options);
 }
 
@@ -87,6 +70,7 @@ Path * setNewPos(Path * path, Maze * maze){
 	switch(path->available[0]){
 		case 'R':
 			printf("The option to be used is: R");
+			getchar();
 			path->available[0] = path->available[1];
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
@@ -96,9 +80,11 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
+			getchar();
 			break;
 		case 'L':
 			printf("The option to be used is: L");
+			getchar();
 			path->available[0] = path->available[1];
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
@@ -108,9 +94,11 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
+			getchar();
 			break;
 		case 'U':
 			printf("The option to be used is: U");
+			getchar();
 			path->available[0] = path->available[1];
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
@@ -120,9 +108,11 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
+			getchar();
 			break;
 		case 'D':
 			printf("The option to be used is: D");
+			getchar();
 			path->available[0] = path->available[1];
 			path->available[1] = path->available[2];
 			path->available[2] = path->available[3];
@@ -132,10 +122,12 @@ Path * setNewPos(Path * path, Maze * maze){
 			printf("\nThe next location will be at %d,%d\n",newX,newY);
 			newPath = create(newX,newY,maze);
 			printf("\nNew path created, location %d,%d\n",newPath->locX,newPath->locY);
+			getchar();
 			break;
 		default:
 			printf("\nError encountered while attempting to solve maze.\n");
 			exit(0);
 	}
+	printf("TEST: %s\n",newPath->available);
 	return(newPath);
 }

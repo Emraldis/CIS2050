@@ -6,10 +6,9 @@
 
 /*Alpheaus Feltham, 0903594*/
 
-int main(int argc, char * argv[]){
+int main(void){
 	FILE * mazeData;
 	char * string;
-	char * fileName;
 	Maze * maze;
 	int sizeX = 0;
 	int sizeY = 0;
@@ -24,21 +23,14 @@ int main(int argc, char * argv[]){
 	Path * tempPath;
 	Path * newPath;
 	
-	fileName = malloc(sizeof(char) * 256);
+	mazeData = fopen("maze","r");
+	maze = malloc(sizeof(maze));
+	string = malloc(sizeof(char) * 128);
+	stack = NULL;
+	tempPath = malloc(sizeof(Path));
 	
-	if(argv[1] != NULL){
-		strcpy(fileName,argv[1]);
-	}
 	printf("\nopening maze file\n");
-	getchar();
-	mazeData = fopen(fileName,"r");
 	if(mazeData != NULL){
-		printf("\nFile Opened Successfully!");
-		getchar();
-		maze = malloc(sizeof(maze));
-		string = malloc(sizeof(char) * 128);
-		stack = NULL;
-		tempPath = malloc(sizeof(Path));
 		while ((fgets(string,128,mazeData) != NULL) && (i<101)){
 			if(strlen(string) > sizeX){
 				sizeX = strlen(string);
@@ -84,29 +76,17 @@ int main(int argc, char * argv[]){
 		
 		printf("\nBeginning solution");
 		getchar();
-		// && (tempPath->available[0] != 'X'))
-		while(maze->mazeData[loc[0]][loc[1]] != 'F'){
-			while((tempPath->available[0] == 'X') && (maze->mazeData[tempPath->locX][tempPath->locY] != 'F')){
-				if(maze->mazeData[tempPath->locX][tempPath->locY] == '*'){
-					maze->mazeData[tempPath->locX][tempPath->locY] = ' ';
-				}
-				stack = removeFromStack(stack);
-				tempPath = readFromTop(stack);
-			}
+		
+		while((maze->mazeData[loc[0]][loc[1]] != 'F') && (tempPath->available[0] != 'X')){
 			newPath = setNewPos(tempPath,maze);
-			//printf("\nTEST: %s\n",newPath->available);
+			printf("\nTEST: %s\n",newPath->available);
 			stack = addToStack(newPath,stack,sizeof(Path));
 			tempPath = readFromTop(stack);
-			for(j=0;j<sizeY;j++){
-				printf("%s",maze->mazeData[j]);
-			}
-			loc[0] = tempPath->locX;
-			loc[1] = tempPath->locY;
+			
 		}
-		printf("\n***********Solution Complete**********\n");
-		/*for(j=0;j<sizeY;j++){
+		for(j=0;j<sizeY;j++){
 			printf("%s",maze->mazeData[j]);
-		}*/
+		}
 		
 	}else{
 		printf("\nERROR opening file");
