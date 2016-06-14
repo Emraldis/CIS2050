@@ -6,9 +6,10 @@
 
 /*Alpheaus Feltham, 0903594*/
 
-int main(void){
+int main(int argc, char * argv[]){
 	FILE * mazeData;
 	char * string;
+	char * fileName;
 	Maze * maze;
 	int sizeX = 0;
 	int sizeY = 0;
@@ -23,12 +24,14 @@ int main(void){
 	Path * tempPath;
 	Path * newPath;
 	
-	mazeData = fopen("maze","r");
+	if(argv[1] != NULL){
+		strcpy(fileName,argv[1]);
+	}
+	mazeData = fopen(fileName,"r");
 	maze = malloc(sizeof(maze));
 	string = malloc(sizeof(char) * 128);
 	stack = NULL;
 	tempPath = malloc(sizeof(Path));
-	
 	printf("\nopening maze file\n");
 	if(mazeData != NULL){
 		while ((fgets(string,128,mazeData) != NULL) && (i<101)){
