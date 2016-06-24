@@ -38,6 +38,7 @@ int main (int argc, char * argv[]){
 		i++;
 		truncString[0] = tempString[0];
 		truncString[1] = tempString[1];
+		truncString[2] = tempString[2];
 		mapEntry[0] = (atoi(truncString) % size);
 		mapEntry [1] = atoi(tempString);
 		if(hashMap[mapEntry[0]] == NULL){
