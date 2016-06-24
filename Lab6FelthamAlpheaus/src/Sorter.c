@@ -36,6 +36,8 @@ int main (int argc, char * argv[]){
 		size = atoi(tempString);
 	}else{
 		size = 100;
+		sprintf(fileName,"size%d",size);
+		outputFile = fopen(fileName,"w");
 	}
 	hashMap = malloc(sizeof(int *) * size);
 	
