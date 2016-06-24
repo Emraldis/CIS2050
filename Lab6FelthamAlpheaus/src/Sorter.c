@@ -18,7 +18,7 @@ int main (int argc, char * argv[]){
 		getchar();
 	}else{
 		printf("\nError opening file.\n");
-		exit(
+		exit(0);
 	}
 	tempString = malloc(sizeof(char) * 256);
 	truncString = malloc(sizeof(char) * 4);
