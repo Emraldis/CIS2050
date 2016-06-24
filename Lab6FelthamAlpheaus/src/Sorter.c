@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main (int argc, char argv[]){
+int main (int argc, char * argv[]){
 	int * * hashMap;
 	int * mapEntry;
 	char * tempString;
@@ -29,10 +29,11 @@ int main (int argc, char argv[]){
 		if(hashMap[mapEntry[0]] == NULL){
 			hashMap[mapEntry[0]] = mapEntry;
 		}else{
-			printf("collision at %d", mapEntry[0]);
+			printf("collision at %d\n", mapEntry[0]);
 			collisions++;
 		}
 	}
+	printf("\nTotal number of collisions: %d", collisions);
 	fclose(inputFile);
 	
 }
