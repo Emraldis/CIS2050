@@ -16,11 +16,11 @@ int main (int argc, char argv[]){
 	tempString = malloc(sizeof(char) * 256);
 	truncString = malloc(sizeof(char) * 4);
 	mapEntry = malloc(sizeof(int) * 2);
-	strcpy(tempString, argv[1]);
+	tempString = argv[1];
 	size = atoi(tempString);
 	hashMap = malloc(sizeof(int *) * size);
 	
-	while((i <size) && (fgets(tempString,256,inputFile) != NULL){
+	while((i <size) && (fgets(tempString,256,inputFile) != NULL)){
 		i++;
 		truncString[0] = tempString[0];
 		truncString[1] = tempString[1];
