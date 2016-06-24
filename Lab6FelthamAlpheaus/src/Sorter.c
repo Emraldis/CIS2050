@@ -34,11 +34,11 @@ int main (int argc, char * argv[]){
 	printf("\nBeginning sorting\n");
 	getchar();
 	
-	while((i <size) && (fgets(tempString,256,inputFile) != NULL)){
+	while((i <300) && (fgets(tempString,256,inputFile) != NULL)){
 		i++;
 		truncString[0] = tempString[0];
 		truncString[1] = tempString[1];
-		mapEntry[0] = atoi(truncString);
+		mapEntry[0] = (atoi(truncString) % size);
 		mapEntry [1] = atoi(tempString);
 		if(hashMap[mapEntry[0]] == NULL){
 			hashMap[mapEntry[0]] = mapEntry;
