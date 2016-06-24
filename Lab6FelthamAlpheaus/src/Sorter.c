@@ -15,6 +15,7 @@ int main (int argc, char * argv[]){
 	char * truncStringTwo;
 	int collisions = 0;
 	char * outputString;
+	char * tempOutputString;
 	
 	inputFile = fopen("numList","r");
 	if(inputFile != NULL){
@@ -29,14 +30,15 @@ int main (int argc, char * argv[]){
 	mapEntry = malloc(sizeof(int) * 2);
 	fileName = malloc(sizeof(char) * 256);
 	outputString = malloc(sizeof(char) * 256);
+	tempOutputString = malloc(sizeof(char) * 256);
 	if(argv[1] != NULL){
 		tempString = argv[1];
-		sprintf(fileName,"size%s",tempString);
+		sprintf(fileName,"size%s.txt",tempString);
 		outputFile = fopen(fileName,"w");
 		size = atoi(tempString);
 	}else{
 		size = 100;
-		sprintf(fileName,"size%d",size);
+		sprintf(fileName,"size%d.txt",size);
 		outputFile = fopen(fileName,"w");
 	}
 	hashMap = malloc(sizeof(int *) * size);
@@ -63,11 +65,11 @@ int main (int argc, char * argv[]){
 		}else{
 			truncStringTwo[0] = "0";
 		}
-		
+		sprintf(tempOutputString," From:(%s * %s) % %d",truncString,truncStringTwo,size);
 		
 		mapEntry[0] = ((atoi(truncString) * (atoi(truncStringTwo))) % size);
 		mapEntry [1] = atoi(tempString);
-		sprintf(outputString,"Generated key of: %d for data value: %d ",mapEntry[0], mapEntry[1]);
+		sprintf(outputString,"Generated key of: %d for data value: %d %s",mapEntry[0], mapEntry[1],tempOutputString);
 		fputs(outputString,outputFile);
 		if(hashMap[mapEntry[0]] == NULL){
 			fputs("\n",outputFile);
