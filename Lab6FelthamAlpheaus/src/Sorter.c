@@ -13,11 +13,22 @@ int main (int argc, char * argv[]){
 	int collisions = 0;
 	
 	inputFile = fopen("numList","r");
+	if(inputFile != NULL){
+		printf("\nFile Opened\n");
+		getchar();
+	}else{
+		printf("\nError opening file.\n");
+		exit(
+	}
 	tempString = malloc(sizeof(char) * 256);
 	truncString = malloc(sizeof(char) * 4);
 	mapEntry = malloc(sizeof(int) * 2);
-	tempString = argv[1];
-	size = atoi(tempString);
+	if(argv[1] != NULL){
+		tempString = argv[1];
+		size = atoi(tempString);
+	}else{
+		size = 100;
+	}
 	hashMap = malloc(sizeof(int *) * size);
 	
 	printf("\nBeginning sorting\n");
