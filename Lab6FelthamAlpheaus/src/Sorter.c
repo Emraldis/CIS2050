@@ -15,7 +15,6 @@ int main (int argc, char * argv[]){
 	inputFile = fopen("numList","r");
 	if(inputFile != NULL){
 		printf("\nFile Opened\n");
-		getchar();
 	}else{
 		printf("\nError opening file.\n");
 		exit(0);
@@ -32,7 +31,6 @@ int main (int argc, char * argv[]){
 	hashMap = malloc(sizeof(int *) * size);
 	
 	printf("\nBeginning sorting\n");
-	getchar();
 	
 	while((i <300) && (fgets(tempString,256,inputFile) != NULL)){
 		i++;
