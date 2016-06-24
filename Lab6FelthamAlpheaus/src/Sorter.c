@@ -48,7 +48,7 @@ int main (int argc, char * argv[]){
 			collisions++;
 		}
 	}
-	printf("\nTotal number of collisions: %d", collisions);
+	printf("\nTotal number of collisions: %d\n", collisions);
 	fclose(inputFile);
 	
 }
