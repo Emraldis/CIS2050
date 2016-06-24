@@ -20,6 +20,9 @@ int main (int argc, char * argv[]){
 	size = atoi(tempString);
 	hashMap = malloc(sizeof(int *) * size);
 	
+	printf("\nBeginning sorting\n");
+	getchar();
+	
 	while((i <size) && (fgets(tempString,256,inputFile) != NULL)){
 		i++;
 		truncString[0] = tempString[0];
