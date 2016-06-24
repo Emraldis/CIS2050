@@ -4,7 +4,8 @@
 
 int main(void){
 	FILE * outputFile;
-	srand(time_t);
+	time_t t;
+	srand((unsigned)time(&t));
 	char * tempString;
 	int i;
 	int tempInt;
