@@ -65,7 +65,7 @@ int main (int argc, char * argv[]){
 		}else{
 			truncStringTwo[0] = "0";
 		}
-		sprintf(tempOutputString," From:(%s * %s) % %d",truncString,truncStringTwo,size);
+		sprintf(tempOutputString," From:(%s * %s) \% %d",truncString,truncStringTwo,size);
 		
 		mapEntry[0] = ((atoi(truncString) * (atoi(truncStringTwo))) % size);
 		mapEntry [1] = atoi(tempString);
