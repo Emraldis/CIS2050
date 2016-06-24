@@ -8,10 +8,13 @@ int main (int argc, char * argv[]){
 	char * tempString;
 	int size;
 	FILE * inputFile;
+	FILE * outputFile;
+	char * fileName;
 	int i = 0;
 	char * truncString;
 	char * truncStringTwo;
 	int collisions = 0;
+	char * outputString;
 	
 	inputFile = fopen("numList","r");
 	if(inputFile != NULL){
@@ -24,8 +27,12 @@ int main (int argc, char * argv[]){
 	truncString = malloc(sizeof(char) * 4);
 	truncStringTwo = malloc(sizeof(char) * 4);
 	mapEntry = malloc(sizeof(int) * 2);
+	fileName = malloc(sizeof(char) * 256);
+	outputString = malloc(sizeof(char) * 256);
 	if(argv[1] != NULL){
 		tempString = argv[1];
+		sprintf(fileName,"size%s",tempString);
+		outputFile = fopen(fileName,"w");
 		size = atoi(tempString);
 	}else{
 		size = 100;
@@ -58,14 +65,22 @@ int main (int argc, char * argv[]){
 		
 		mapEntry[0] = ((atoi(truncString) * (atoi(truncStringTwo))) % size);
 		mapEntry [1] = atoi(tempString);
+		sprintf(outputString,"Generated key of: %d for data value: %d ",mapEntry[0], mapEntry[1]);
+		fputs(outputString,outputFile);
 		if(hashMap[mapEntry[0]] == NULL){
+			fputs("\n",outputFile);
 			hashMap[mapEntry[0]] = mapEntry;
 		}else{
+			sprintf(outputString,"But There was a collision, as key: %d was already taken\n",mapEntry[0]);
+			fputs(outputString,outputFile);
 			printf("collision at %d\n", mapEntry[0]);
 			collisions++;
 		}
 	}
+	sprintf(outputString,"\nTotal number of collisions: %d\n", collisions);
 	printf("\nTotal number of collisions: %d\n", collisions);
+	fputs(outputString,outputFile);
 	fclose(inputFile);
-	
+	fclose(outputFile);
+	return(0);
 }
