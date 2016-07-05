@@ -67,28 +67,34 @@ char * nameGen(FILE * nameFile){
 	time_t t;
 	srand((unsigned)time(&t));
 	char * outputName;
-	char * nameList;
+	char * firstNameList;
+	char * lastNameList;
 	char * firstName;
 	char * lastName;
+	char * tempList;
 	int randInt;
 	int i;
 	
 	outputName = malloc(sizeof(char) * 256);
-	nameList = malloc(sizeof(char) * 4096);
+	firstNameList = malloc(sizeof(char) * 4096);
+	lastNameList = malloc(sizeof(char) * 4096);
+	tempList = malloc(sizeof(char) * 4096);
 	firstName = malloc(sizeof(char) * 64);
 	lastName = malloc(sizeof(char) * 64);
 	
-	fgets(nameList,4096,nameFile);
+	fgets(firstNameList,4096,nameFile);
+	fgets(lastNameList,4096,nameFile);
 	randInt = (rand() % 92);
-	firstName = strtok(nameList," ");
+	strcpy(templist,firstNameList);
+	firstName = strtok(tempList," ");
 	for(i=0;i<randInt;i++){
 		firstName = strtok(NULL," ");
 	}
 	strcpy(outputName,firstName);
 	strcat(outputName, " ");
-	fgets(nameList,4096,nameFile);
 	randInt = (rand() % 83);
-	lastName = strtok(nameList," ");
+	strcpy(templist,lastNameList);
+	lastName = strtok(tempList," ");
 	for(i=0;i<randInt;i++){
 		lastName = strtok(NULL," ");
 	}
