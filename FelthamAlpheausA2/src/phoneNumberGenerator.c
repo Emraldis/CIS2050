@@ -47,7 +47,7 @@ int main (void){
 	return(0);
 }
 
-char * nameGen(nameFile){
+char * nameGen(FILE * nameFile){
 	time_t t;
 	srand((unsigned)time(&t));
 	char * outputName;
