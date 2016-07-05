@@ -2,6 +2,7 @@
 #include <string.h>
 #include <time.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 char * nameGen ();
 
@@ -49,7 +50,7 @@ int main (void){
 		strcat(tempString,"|");
 		name = nameGen();
 		printf("\nName generated: %s \nPrinting data to file",name);
-		getchar();
+		sleep(2);
 		strcat(tempString,name);
 		strcat(tempString,"\n");
 		fputs(tempString,outputFile);
