@@ -12,8 +12,7 @@ Generated key of: 20 for data value: 1093802  From:(109 * 380) remainder 100.
 Generated key of: 88 for data value: 1431169  From:(143 * 116) remainder 100. But There was a collision, as key: 88 was already taken
 Generated key of: 6 for data value: 2378384  From:(237 * 838) remainder 100. 
 Generated key of: 72 for data value: 1824463  From:(182 * 446) remainder 100. 
-Generated key of: 50 for data value: 19510  From:(195 * 10
-) remainder 100. But There was a collision, as key: 50 was already taken
+Generated key of: 50 for data value: 19510  From:(195 * 10) remainder 100. But There was a collision, as key: 50 was already taken
 Generated key of: 23 for data value: 531733  From:(531 * 733) remainder 100. 
 Generated key of: 80 for data value: 2589100  From:(258 * 910) remainder 100. 
 Generated key of: 88 for data value: 564017  From:(564 * 017) remainder 100. But There was a collision, as key: 88 was already taken
@@ -51,8 +50,7 @@ Generated key of: 62 for data value: 599738  From:(599 * 738) remainder 100.
 Generated key of: 13 for data value: 2797471  From:(279 * 747) remainder 100. 
 Generated key of: 87 for data value: 1971714  From:(197 * 171) remainder 100. 
 Generated key of: 75 for data value: 2252834  From:(225 * 283) remainder 100. But There was a collision, as key: 75 was already taken
-Generated key of: 65 for data value: 29547  From:(295 * 47
-) remainder 100. But There was a collision, as key: 65 was already taken
+Generated key of: 65 for data value: 29547  From:(295 * 47) remainder 100. But There was a collision, as key: 65 was already taken
 Generated key of: 8 for data value: 671348  From:(671 * 348) remainder 100. 
 Generated key of: 70 for data value: 870201  From:(870 * 201) remainder 100. But There was a collision, as key: 70 was already taken
 Generated key of: 44 for data value: 1626121  From:(162 * 612) remainder 100. But There was a collision, as key: 44 was already taken
@@ -68,8 +66,7 @@ Generated key of: 86 for data value: 138797  From:(138 * 797) remainder 100.
 Generated key of: 20 for data value: 2406233  From:(240 * 623) remainder 100. But There was a collision, as key: 20 was already taken
 Generated key of: 28 for data value: 2421842  From:(242 * 184) remainder 100. But There was a collision, as key: 28 was already taken
 Generated key of: 8 for data value: 2847379  From:(284 * 737) remainder 100. But There was a collision, as key: 8 was already taken
-Generated key of: 41 for data value: 43793  From:(437 * 93
-) remainder 100. 
+Generated key of: 41 for data value: 43793  From:(437 * 93) remainder 100. 
 Generated key of: 50 for data value: 1257704  From:(125 * 770) remainder 100. But There was a collision, as key: 50 was already taken
 Generated key of: 84 for data value: 399716  From:(399 * 716) remainder 100. 
 Generated key of: 48 for data value: 1883963  From:(188 * 396) remainder 100. But There was a collision, as key: 48 was already taken
@@ -114,8 +111,7 @@ Generated key of: 38 for data value: 1542975  From:(154 * 297) remainder 100. Bu
 Generated key of: 70 for data value: 1740055  From:(174 * 005) remainder 100. But There was a collision, as key: 70 was already taken
 Generated key of: 28 for data value: 2645028  From:(264 * 502) remainder 100. But There was a collision, as key: 28 was already taken
 Generated key of: 56 for data value: 348472  From:(348 * 472) remainder 100. But There was a collision, as key: 56 was already taken
-Generated key of: 51 for data value: 76979  From:(769 * 79
-) remainder 100. 
+Generated key of: 51 for data value: 76979  From:(769 * 79) remainder 100. 
 Generated key of: 0 for data value: 390260  From:(390 * 260) remainder 100. But There was a collision, as key: 0 was already taken
 Generated key of: 42 for data value: 2825317  From:(282 * 531) remainder 100. But There was a collision, as key: 42 was already taken
 Generated key of: 80 for data value: 2284104  From:(228 * 410) remainder 100. But There was a collision, as key: 80 was already taken
@@ -158,22 +154,19 @@ Generated key of: 48 for data value: 728541  From:(728 * 541) remainder 100. But
 Generated key of: 47 for data value: 1872810  From:(187 * 281) remainder 100. But There was a collision, as key: 47 was already taken
 Generated key of: 53 for data value: 2433716  From:(243 * 371) remainder 100. 
 Generated key of: 35 for data value: 1096159  From:(109 * 615) remainder 100. But There was a collision, as key: 35 was already taken
-Generated key of: 28 for data value: 9418  From:(941 * 8
-) remainder 100. But There was a collision, as key: 28 was already taken
+Generated key of: 28 for data value: 9418  From:(941 * 8) remainder 100. But There was a collision, as key: 28 was already taken
 Generated key of: 44 for data value: 592682  From:(592 * 682) remainder 100. But There was a collision, as key: 44 was already taken
 Generated key of: 96 for data value: 444634  From:(444 * 634) remainder 100. But There was a collision, as key: 96 was already taken
 Generated key of: 69 for data value: 1919590  From:(191 * 959) remainder 100. 
 Generated key of: 12 for data value: 656677  From:(656 * 677) remainder 100. But There was a collision, as key: 12 was already taken
 Generated key of: 63 for data value: 2334112  From:(233 * 411) remainder 100. 
 Generated key of: 14 for data value: 377382  From:(377 * 382) remainder 100. 
-Generated key of: 18 for data value: 25417  From:(254 * 17
-) remainder 100. But There was a collision, as key: 18 was already taken
+Generated key of: 18 for data value: 25417  From:(254 * 17) remainder 100. But There was a collision, as key: 18 was already taken
 Generated key of: 48 for data value: 164907  From:(164 * 907) remainder 100. But There was a collision, as key: 48 was already taken
 Generated key of: 38 for data value: 602869  From:(602 * 869) remainder 100. But There was a collision, as key: 38 was already taken
 Generated key of: 34 for data value: 2631181  From:(263 * 118) remainder 100. But There was a collision, as key: 34 was already taken
 Generated key of: 36 for data value: 2523186  From:(252 * 318) remainder 100. But There was a collision, as key: 36 was already taken
-Generated key of: 62 for data value: 53899  From:(538 * 99
-) remainder 100. But There was a collision, as key: 62 was already taken
+Generated key of: 62 for data value: 53899  From:(538 * 99) remainder 100. But There was a collision, as key: 62 was already taken
 Generated key of: 40 for data value: 2409263  From:(240 * 926) remainder 100. But There was a collision, as key: 40 was already taken
 Generated key of: 84 for data value: 1843514  From:(184 * 351) remainder 100. But There was a collision, as key: 84 was already taken
 Generated key of: 0 for data value: 1564257  From:(156 * 425) remainder 100. But There was a collision, as key: 0 was already taken
@@ -209,15 +202,13 @@ Generated key of: 72 for data value: 912106  From:(912 * 106) remainder 100. But
 Generated key of: 25 for data value: 1759596  From:(175 * 959) remainder 100. But There was a collision, as key: 25 was already taken
 Generated key of: 0 for data value: 2053407  From:(205 * 340) remainder 100. But There was a collision, as key: 0 was already taken
 Generated key of: 27 for data value: 2872211  From:(287 * 221) remainder 100. 
-Generated key of: 64 for data value: 84818  From:(848 * 18
-) remainder 100. But There was a collision, as key: 64 was already taken
+Generated key of: 64 for data value: 84818  From:(848 * 18) remainder 100. But There was a collision, as key: 64 was already taken
 Generated key of: 16 for data value: 2992846  From:(299 * 284) remainder 100. But There was a collision, as key: 16 was already taken
 Generated key of: 98 for data value: 1460136  From:(146 * 013) remainder 100. But There was a collision, as key: 98 was already taken
 Generated key of: 40 for data value: 765656  From:(765 * 656) remainder 100. But There was a collision, as key: 40 was already taken
 Generated key of: 23 for data value: 2616431  From:(261 * 643) remainder 100. But There was a collision, as key: 23 was already taken
 Generated key of: 72 for data value: 1443633  From:(144 * 363) remainder 100. But There was a collision, as key: 72 was already taken
-Generated key of: 83 for data value: 47371  From:(473 * 71
-) remainder 100. 
+Generated key of: 83 for data value: 47371  From:(473 * 71) remainder 100. 
 Generated key of: 79 for data value: 2691916  From:(269 * 191) remainder 100. 
 Generated key of: 50 for data value: 1547759  From:(154 * 775) remainder 100. But There was a collision, as key: 50 was already taken
 Generated key of: 72 for data value: 177836  From:(177 * 836) remainder 100. But There was a collision, as key: 72 was already taken
@@ -262,8 +253,7 @@ Generated key of: 9 for data value: 2292214  From:(229 * 221) remainder 100. But
 Generated key of: 44 for data value: 2840915  From:(284 * 091) remainder 100. But There was a collision, as key: 44 was already taken
 Generated key of: 48 for data value: 1113682  From:(111 * 368) remainder 100. But There was a collision, as key: 48 was already taken
 Generated key of: 60 for data value: 326560  From:(326 * 560) remainder 100. But There was a collision, as key: 60 was already taken
-Generated key of: 78 for data value: 90289  From:(902 * 89
-) remainder 100. But There was a collision, as key: 78 was already taken
+Generated key of: 78 for data value: 90289  From:(902 * 89) remainder 100. But There was a collision, as key: 78 was already taken
 Generated key of: 31 for data value: 1214118  From:(121 * 411) remainder 100. 
 Generated key of: 35 for data value: 1237450  From:(123 * 745) remainder 100. But There was a collision, as key: 35 was already taken
 Generated key of: 38 for data value: 258561  From:(258 * 561) remainder 100. But There was a collision, as key: 38 was already taken
