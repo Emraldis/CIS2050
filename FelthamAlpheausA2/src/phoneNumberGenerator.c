@@ -19,7 +19,7 @@ int main (void){
 	tempStringTwo = malloc(sizeof(char) * 256);
 	name = malloc(sizeof(char) * 256);
 	outputFile = fopen("PhoneNumbers.txt","w");
-	if((outputFile == NULL) || (nameFile == NULL)){
+	if(outputFile == NULL){
 		printf("\nERROR OPENING FILES");
 		exit(0);
 	}else{
@@ -92,7 +92,7 @@ char * nameGen(){
 	strcpy(outputName,firstName);
 	strcat(outputName, " ");
 	randInt = (rand() % 83);
-	strcpy(templist,lastNameList);
+	strcpy(tempList,lastNameList);
 	lastName = strtok(tempList," ");
 	for(i=0;i<randInt;i++){
 		lastName = strtok(NULL," ");
