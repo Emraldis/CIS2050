@@ -28,7 +28,7 @@ int main (void){
 		sprintf(tempStringTwo,"%d",tempInt);
 		strcat(tempString,tempStringTwo);
 		tempInt = (rand() % 10000);
-		if(tempInt < 999({
+		if(tempInt < 999){
 			if(tempInt < 99){
 				if(tempInt < 9){
 					strcat(tempString,"0");
