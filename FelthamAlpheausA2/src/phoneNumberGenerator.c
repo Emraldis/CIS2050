@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-char * nameGen (FILE * nameFile);
+char * nameGen ();
 
 int main (void){
 	FILE * outputFile;
@@ -84,7 +84,7 @@ char * nameGen(){
 	fgets(firstNameList,4096,nameFile);
 	fgets(lastNameList,4096,nameFile);
 	randInt = (rand() % 92);
-	strcpy(templist,firstNameList);
+	strcpy(tempList,firstNameList);
 	firstName = strtok(tempList," ");
 	for(i=0;i<randInt;i++){
 		firstName = strtok(NULL," ");
