@@ -49,6 +49,7 @@ int main (void){
 		strcat(tempString,"|");
 		name = nameGen();
 		printf("\nName generated: %s \nPrinting data to file",name);
+		getchar();
 		strcat(tempString,name);
 		strcat(tempString,"\n");
 		fputs(tempString,outputFile);
