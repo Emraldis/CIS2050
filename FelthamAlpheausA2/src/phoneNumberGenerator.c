@@ -82,7 +82,7 @@ char * nameGen(FILE * nameFile){
 	randInt = (rand() % 92);
 	firstName = strtok(nameList," ");
 	for(i=0;i<randInt;i++){
-		firstName = strtok(nameList," ");
+		firstName = strtok(NULL," ");
 	}
 	strcpy(outputName,firstName);
 	strcat(outputName, " ");
@@ -90,8 +90,8 @@ char * nameGen(FILE * nameFile){
 	randInt = (rand() % 83);
 	lastName = strtok(nameList," ");
 	for(i=0;i<randInt;i++){
-		lastName = strtok(nameList," ");
+		lastName = strtok(NULL," ");
 	}
-	strcpy(outputName,lastName);
+	strcat(outputName,lastName);
 	return(outputName);
 }
