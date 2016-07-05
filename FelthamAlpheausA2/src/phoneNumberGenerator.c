@@ -52,7 +52,7 @@ int main (void){
 		getchar();
 		strcat(tempString,"|");
 		name = nameGen(nameFile);
-		printf("\nName generated: %s \nPrinting data to file");
+		printf("\nName generated: %s \nPrinting data to file",name);
 		getchar();
 		strcat(tempString,name);
 		strcat(tempString,"\n");
