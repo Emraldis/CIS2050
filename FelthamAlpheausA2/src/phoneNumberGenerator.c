@@ -7,7 +7,6 @@ char * nameGen (FILE * nameFile);
 
 int main (void){
 	FILE * outputFile;
-	FILE * nameFile;
 	char * tempString;
 	char * tempStringTwo;
 	char * name;
@@ -20,7 +19,6 @@ int main (void){
 	tempStringTwo = malloc(sizeof(char) * 256);
 	name = malloc(sizeof(char) * 256);
 	outputFile = fopen("PhoneNumbers.txt","w");
-	nameFile = fopen("NameList.txt","r");
 	if((outputFile == NULL) || (nameFile == NULL)){
 		printf("\nERROR OPENING FILES");
 		exit(0);
@@ -51,19 +49,19 @@ int main (void){
 		printf("\nPhone number generated: %s \ngenerating name",tempString);
 		getchar();
 		strcat(tempString,"|");
-		name = nameGen(nameFile);
+		name = nameGen();
 		printf("\nName generated: %s \nPrinting data to file",name);
 		getchar();
 		strcat(tempString,name);
 		strcat(tempString,"\n");
 		fputs(tempString,outputFile);
 	}
-	fclose(nameFile);
 	fclose(outputFile);
 	return(0);
 }
 
-char * nameGen(FILE * nameFile){
+char * nameGen(){
+	FILE * nameFile;
 	time_t t;
 	srand((unsigned)time(&t));
 	char * outputName;
@@ -81,6 +79,7 @@ char * nameGen(FILE * nameFile){
 	tempList = malloc(sizeof(char) * 4096);
 	firstName = malloc(sizeof(char) * 64);
 	lastName = malloc(sizeof(char) * 64);
+	nameFile = fopen("NameList.txt","r");
 	
 	fgets(firstNameList,4096,nameFile);
 	fgets(lastNameList,4096,nameFile);
@@ -99,5 +98,6 @@ char * nameGen(FILE * nameFile){
 		lastName = strtok(NULL," ");
 	}
 	strcat(outputName,lastName);
+	fclose(nameFile);
 	return(outputName);
 }
