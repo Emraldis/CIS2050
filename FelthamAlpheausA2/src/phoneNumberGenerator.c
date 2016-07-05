@@ -78,7 +78,7 @@ char * nameGen(){
 	lastName = malloc(sizeof(char) * 64);
 	nameFile = fopen("NameList.txt","r");
 	
-	if(outputFile == NULL){
+	if(nameFile == NULL){
 		printf("\nERROR OPENING FILE");
 		exit(0);
 	}
