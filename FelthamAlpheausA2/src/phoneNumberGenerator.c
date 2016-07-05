@@ -20,11 +20,10 @@ int main (void){
 	name = malloc(sizeof(char) * 256);
 	outputFile = fopen("PhoneNumbers.txt","w");
 	if(outputFile == NULL){
-		printf("\nERROR OPENING FILES");
+		printf("\nERROR OPENING FILE");
 		exit(0);
 	}else{
 		printf("\nBeginning name generation");
-		getchar();
 	}
 	for(i=0;i<100;i++){
 		sprintf(tempString,"%d",6045);
@@ -47,11 +46,9 @@ int main (void){
 		sprintf(tempStringTwo,"%d",tempInt);
 		strcat(tempString,tempStringTwo);
 		printf("\nPhone number generated: %s \ngenerating name",tempString);
-		getchar();
 		strcat(tempString,"|");
 		name = nameGen();
 		printf("\nName generated: %s \nPrinting data to file",name);
-		getchar();
 		strcat(tempString,name);
 		strcat(tempString,"\n");
 		fputs(tempString,outputFile);
@@ -81,6 +78,10 @@ char * nameGen(){
 	lastName = malloc(sizeof(char) * 64);
 	nameFile = fopen("NameList.txt","r");
 	
+	if(outputFile == NULL){
+		printf("\nERROR OPENING FILE");
+		exit(0);
+	}
 	fgets(firstNameList,4096,nameFile);
 	fgets(lastNameList,4096,nameFile);
 	randInt = (rand() % 92);
