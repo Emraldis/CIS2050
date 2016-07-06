@@ -30,7 +30,7 @@ int main (void){
 		name = nameGen();
 		printf("\nName generated: %s",name);
 		sleep(2);
-		strcat(tempString,name);
+		strcpy(tempString,name);
 		strcat(tempString,",");
 		sprintf(tempStringTwo,"%d",6045);
 		strcat(tempString,tempStringTwo);
