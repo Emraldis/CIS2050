@@ -27,7 +27,13 @@ int main (void){
 		printf("\nBeginning name generation");
 	}
 	for(i=0;i<100;i++){
-		sprintf(tempString,"%d",6045);
+		name = nameGen();
+		printf("\nName generated: %s",name);
+		sleep(2);
+		strcat(tempString,name);
+		strcat(tempString,",");
+		sprintf(tempStringTwo,"%d",6045);
+		strcat(tempString,tempStringTwo);
 		tempInt = (rand() % 100);
 		if(tempInt < 10){
 			strcat(tempString,"0");
@@ -46,12 +52,7 @@ int main (void){
 		}
 		sprintf(tempStringTwo,"%d",tempInt);
 		strcat(tempString,tempStringTwo);
-		printf("\nPhone number generated: %s \ngenerating name",tempString);
-		strcat(tempString,"|");
-		name = nameGen();
-		printf("\nName generated: %s \nPrinting data to file",name);
-		sleep(2);
-		strcat(tempString,name);
+		printf("\nPhone number generated: %s",tempString);
 		strcat(tempString,"\n");
 		fputs(tempString,outputFile);
 	}
@@ -93,7 +94,7 @@ char * nameGen(){
 		firstName = strtok(NULL," ");
 	}
 	strcpy(outputName,firstName);
-	strcat(outputName, " ");
+	strcat(outputName, ",");
 	randInt = (rand() % 83);
 	strcpy(tempList,lastNameList);
 	lastName = strtok(tempList," ");
