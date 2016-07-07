@@ -70,6 +70,9 @@ char * nameGen(){
 	char * firstName;
 	char * lastName;
 	char * tempList;
+	char * tempString;
+	int firstNameLimit;
+	int lastNameLimit;
 	int randInt;
 	int i;
 	
@@ -79,6 +82,41 @@ char * nameGen(){
 	tempList = malloc(sizeof(char) * 4096);
 	firstName = malloc(sizeof(char) * 64);
 	lastName = malloc(sizeof(char) * 64);
+	tempString = malloc(sizeof(char) * 64);
+	nameFile = fopen("NameList.txt","r");
+	
+	
+	if(nameFile == NULL){
+		printf("\nERROR OPENING FILE");
+		exit(0);
+	}
+	
+	fgets(firstNameList,4096,nameFile);
+	strcpy(tempList,firstNameList);
+	if(tempList != NULL){
+		if(strlen(tempList) >=1){
+			firstNameLimit = 0;
+			tempString = strtok(tempList," ");
+			while(strtok(NULL," ") != NULL){
+				firstNameLimit++;
+			}
+		}
+	}
+	printf("\n%d First names detected",firstNameLimit);
+	fgets(lastNameList,4096,nameFile);
+	strcpy(tempList,lastNameList);
+	if(tempList != NULL){
+		if(strlen(tempList) >=1){
+			lastNameLimit = 0;
+			tempString = strtok(tempList," ");
+			while(strtok(NULL," ") != NULL){
+				lastNameLimit++;
+			}
+		}
+	}
+	printf("\n%d Last names detected,lastNameLimit);
+	fclose(nameFile);
+	
 	nameFile = fopen("NameList.txt","r");
 	
 	if(nameFile == NULL){
