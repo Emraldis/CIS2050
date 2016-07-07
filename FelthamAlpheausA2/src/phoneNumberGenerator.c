@@ -125,7 +125,7 @@ char * nameGen(){
 	}
 	fgets(firstNameList,4096,nameFile);
 	fgets(lastNameList,4096,nameFile);
-	randInt = (rand() % 92);
+	randInt = (rand() % firstNameLimit);
 	strcpy(tempList,firstNameList);
 	firstName = strtok(tempList," ");
 	for(i=0;i<randInt;i++){
@@ -133,7 +133,7 @@ char * nameGen(){
 	}
 	strcpy(outputName,firstName);
 	strcat(outputName, ",");
-	randInt = (rand() % 83);
+	randInt = (rand() % lastNameLimit);
 	strcpy(tempList,lastNameList);
 	lastName = strtok(tempList," ");
 	for(i=0;i<randInt;i++){
