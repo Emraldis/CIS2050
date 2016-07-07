@@ -102,7 +102,7 @@ char * nameGen(){
 			}
 		}
 	}
-	printf("\n%d First names detected",firstNameLimit);
+	//printf("\n%d First names detected",firstNameLimit);
 	fgets(lastNameList,4096,nameFile);
 	strcpy(tempList,lastNameList);
 	if(tempList != NULL){
@@ -114,7 +114,7 @@ char * nameGen(){
 			}
 		}
 	}
-	printf("\n%d Last names detected",lastNameLimit);
+	//printf("\n%d Last names detected",lastNameLimit);
 	fclose(nameFile);
 	
 	nameFile = fopen("NameList.txt","r");
