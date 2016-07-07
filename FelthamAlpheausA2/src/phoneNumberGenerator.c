@@ -114,7 +114,7 @@ char * nameGen(){
 			}
 		}
 	}
-	printf("\n%d Last names detected,lastNameLimit);
+	printf("\n%d Last names detected",lastNameLimit);
 	fclose(nameFile);
 	
 	nameFile = fopen("NameList.txt","r");
