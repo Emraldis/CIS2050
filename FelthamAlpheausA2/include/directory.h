@@ -8,7 +8,7 @@
 typedef struct DirectoryEntry{
 	char * firstName;
 	char * lastName;
-	long phoneNum;
+	double phoneNum;
 }DirEntry;
 
 DirEntry * newEntry(char * input);
