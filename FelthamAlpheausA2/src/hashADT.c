@@ -66,7 +66,7 @@ int newHashKey(int keyBase, int dataSize){
 		if(tempInt == 0){
 			tempInt = a;
 		}else{
-			tempInt = (tempInt + (tempInt * a));
+			tempInt = ((tempInt + (tempInt * a))/tempInt);
 		}
 		printf("\n%d",tempInt);
 		getchar();
