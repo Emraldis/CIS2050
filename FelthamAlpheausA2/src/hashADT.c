@@ -21,7 +21,7 @@ int newHashKey(double keyBase, int dataSize){
 	int key;
 	int tempInt;
 	char * tempString;
-	char * intStorage;
+	int a = 0;
 	int i;
 	
 	printf("\nCreating Hash key");
@@ -32,9 +32,39 @@ int newHashKey(double keyBase, int dataSize){
 	sprintf(tempString,"%f",keyBase);
 	printf("\n%f,%s",keyBase,tempString);
 	for(i=0;i<(strlen(tempString));i++){
-		intStorage[0] = tempString[i];
-		printf("\nINTS %s",intStorage);
-		tempInt = (tempInt * (1 + (atoi(intStorage))));
+		switch(tempString[i]){
+			case'0':
+				a = 0;
+				break;
+			case'1':
+				a = 1;
+				break;
+			case'2':
+				a = 2;
+				break;
+			case'3':
+				a = 3;
+				break;
+			case'4':
+				a = 4;
+				break;
+			case'5':
+				a = 5;
+				break;
+			case'6':
+				a = 6;
+				break;
+			case'7':
+				a = 7;
+				break;
+			case'8':
+				a = 8;
+				break;
+			case'9':
+				a = 9;
+				break;
+		}
+		tempInt = (tempInt * (1 + a);
 		printf("\n%d",tempInt);
 		getchar();
 	}
