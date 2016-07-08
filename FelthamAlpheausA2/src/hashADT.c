@@ -17,7 +17,7 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 	return(newHash);
 }
 
-int newHashKey(int keyBase, int dataSize){
+int newHashKey(double keyBase, int dataSize){
 	int key;
 	int tempInt;
 	char * tempString;
@@ -29,8 +29,8 @@ int newHashKey(int keyBase, int dataSize){
 	tempString = malloc(sizeof(char) * 16);
 	intStorage = malloc(sizeof(char));
 	tempInt = 0;
-	sprintf(tempString,"\n%d",keyBase);
-	printf("%d,%s",keyBase,tempString);
+	sprintf(tempString,"%f",keyBase);
+	printf("\n%f,%s",keyBase,tempString);
 	for(i=0;i<(strlen(tempString));i++){
 		intStorage[0] = tempString[i];
 		printf("\nINTS %s",intStorage);
