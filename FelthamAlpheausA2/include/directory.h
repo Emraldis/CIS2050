@@ -1,5 +1,5 @@
-#ifndef _AFELTHAM_HEADERH
-#define _AFELTHAM_HEADERH
+#ifndef _AFELTHAM_HEADERH_DIR
+#define _AFELTHAM_HEADERH_DIR
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

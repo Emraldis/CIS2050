@@ -1,5 +1,5 @@
-#ifndef _AFELTHAM_HEADERH
-#define _AFELTHAM_HEADERH
+#ifndef _AFELTHAM_HEADERH_HASH
+#define _AFELTHAM_HEADERH_HASH
 #include "list.h"
 
 typedef struct HashTableEntry{
