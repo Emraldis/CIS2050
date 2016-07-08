@@ -14,9 +14,7 @@ DirEntry * newEntry(char * input){
 	strcpy(newDir->firstName,strtok(input,","));
 	strcpy(newDir->lastName,strtok(NULL,","));
 	tempString = strtok(NULL,"\n");
-	printf("\n%s,%f",tempString,decode(tempString));
 	newDir->phoneNum = decode(tempString);
-	getchar();
 	printf("\nNew Directory entry created:\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %f\n",newDir->firstName,newDir->lastName,newDir->phoneNum);
 	
 	return(newDir);
@@ -57,7 +55,6 @@ double decode(char * phoneNum){
 	int j = 0;
 	
 	for(i=(strlen(phoneNum));i>0;i--){
-		printf("\nSo far: %f, from %c",output,phoneNum[j]);
 		switch(phoneNum[j]){
 			case '0':
 				output = (output + 0);
@@ -93,10 +90,8 @@ double decode(char * phoneNum){
 			printf("\nERROR DECODING");
 				exit(1);
 		}
-		getchar();
 		j++;
 	}
-	printf("\nDECODED: %f",output);
 	
 	return(output);
 }
@@ -107,13 +102,10 @@ double pwr(int base, int exponent){
 	
 	output = base;
 	
-	printf("\nPRE: %f",output);
 	for(i=1;i<exponent;i++){
 		output = (output * base);
-		printf("\nDUR: %f",output);
 	}
-	
-	printf("\nEXP: %f",output);
+
 	
 	return(output);
 }
