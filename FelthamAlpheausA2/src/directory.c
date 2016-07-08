@@ -13,7 +13,7 @@ DirEntry * newEntry(char * input){
 	
 	strcpy(newDir->firstName,strtok(input,","));
 	strcpy(newDir->lastName,strtok(NULL,","));
-	tempString = strtok(NULL,",");
+	tempString = strtok(NULL,"\n");
 	printf("\n%s,%d",tempString,atoi(tempString));
 	newDir->phoneNum = atoi(tempString);
 	
