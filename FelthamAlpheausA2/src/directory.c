@@ -104,10 +104,11 @@ int decode(char * phoneNum){
 
 int pwr(int base, int exponent){
 	int i;
-	int output;
+	int output = 0;
 	
 	output = base;
 	
+	printf("\nPRE: %d",output);
 	for(i=1;i<exponent;i++){
 		output = (output * base);
 	}
