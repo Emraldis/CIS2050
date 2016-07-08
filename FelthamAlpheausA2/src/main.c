@@ -46,14 +46,14 @@ int main(int argc, char * argv[]){
 	
 	printf("\n\nList is %d entries large\n",dirSize);
 	tempDir = getValueBack(nameList);
-	printf("\nTEST: %s,%s,%d",tempDir->firstName,tempDir->lastName,tempDir->phoneNum);
+	printf("\nTEST: %s,%s,%f",tempDir->firstName,tempDir->lastName,tempDir->phoneNum);
 	tempElement = nameList;
 	hashTable = NULL;
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,tempElement->ptrSize);
 		tempDouble = (tempDir->phoneNum - 6045000000);
 		tempInt = (tempDouble * 1);
-		printf("\nGenerating a key from %f",tempInt);
+		printf("\nGenerating a key from %d",tempInt);
 		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize);
 		if(tempHash != NULL){
 			hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
