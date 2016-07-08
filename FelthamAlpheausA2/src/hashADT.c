@@ -42,6 +42,7 @@ int newHashKey(int keyBase, int dataSize){
 	key = ((tempIntA * tempIntB) % (dataSize * (2/3)));
 	
 	printf("\nKey generatred: %d",key);
+	getchar();
 	
 	return(key);
 }
