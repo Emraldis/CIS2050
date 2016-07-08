@@ -45,7 +45,7 @@ int main(int argc, char * argv[]){
 	dirSize = getSize(nameList);
 	
 	printf("\n\nList is %d entries large\n",dirSize);
-	tempDir = getValueBack(nameList);
+	memcpy(tempDir,getValueBack(nameList),sizeof(DirEntry));
 	printf("\nTEST: %s,%s,%f",tempDir->firstName,tempDir->lastName,tempDir->phoneNum);
 	tempElement = nameList;
 	hashTable = NULL;
