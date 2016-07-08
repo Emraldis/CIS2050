@@ -9,10 +9,9 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 	key = newHashKey(keyBase,dataSize);
 	if(table == NULL){
 		printf("\nTest 0");
-		getchar();
 		newHash->hashKey = key;
 		printf("\nTest A");
-		getchar();
+		return(newHash);
 	}
 	if(keyExists(key,table) != NULL){
 		printf("\nTest 1");
