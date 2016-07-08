@@ -1,4 +1,3 @@
-
 #include "directory.h"
 
 DirEntry * newEntry(char * input){
@@ -15,10 +14,10 @@ DirEntry * newEntry(char * input){
 	strcpy(newDir->firstName,strtok(input,","));
 	strcpy(newDir->lastName,strtok(NULL,","));
 	tempString = strtok(NULL,"\n");
-	printf("\n%s,%d",tempString,decode(tempString));
+	printf("\n%s,%ld",tempString,decode(tempString));
 	newDir->phoneNum = decode(tempString);
 	getchar();
-	printf("\nNew Directory entry created:\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %d\n",newDir->firstName,newDir->lastName,newDir->phoneNum);
+	printf("\nNew Directory entry created:\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %ld\n",newDir->firstName,newDir->lastName,newDir->phoneNum);
 	
 	return(newDir);
 }
@@ -48,7 +47,7 @@ void printDir(DirEntry * directory){
 	if(directory == NULL){
 		printf("\nEMPTY DIRECTORY");
 	}else{
-		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %d",directory->firstName,directory->lastName,directory->phoneNum);
+		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %l",directory->firstName,directory->lastName,directory->phoneNum);
 	}
 }
 
@@ -58,7 +57,7 @@ long decode(char * phoneNum){
 	int j = 0;
 	
 	for(i=(strlen(phoneNum));i>0;i--){
-		printf("\nSo far: %d, from %c",output,phoneNum[j]);
+		printf("\nSo far: %ld, from %c",output,phoneNum[j]);
 		switch(phoneNum[j]){
 			case '0':
 				output = (output + 0);
@@ -97,7 +96,7 @@ long decode(char * phoneNum){
 		getchar();
 		j++;
 	}
-	printf("\nDECODED: %d",output);
+	printf("\nDECODED: %ld",output);
 	
 	return(output);
 }
@@ -108,13 +107,13 @@ long pwr(int base, int exponent){
 	
 	output = base;
 	
-	printf("\nPRE: %d",output);
+	printf("\nPRE: %ld",output);
 	for(i=1;i<exponent;i++){
 		output = (output * base);
-		printf("\nDUR: %d",output);
+		printf("\nDUR: %ld",output);
 	}
 	
-	printf("\nEXP: %d",output);
+	printf("\nEXP: %ld",output);
 	
 	return(output);
 }
