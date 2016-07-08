@@ -14,10 +14,10 @@ DirEntry * newEntry(char * input){
 	strcpy(newDir->firstName,strtok(input,","));
 	strcpy(newDir->lastName,strtok(NULL,","));
 	tempString = strtok(NULL,",");
-	printf("\n%s",tempString);
+	printf("\n%s,%d",tempString,atoi(tempString));
 	newDir->phoneNum = atoi(tempString);
 	
-	printf("\nNew Directory entry created:\nFirstName: %s\nLastName: %s\nPhone Number: %d",newDir->firstName,newDir->lastName,newDir->phoneNum);
+	printf("\nNew Directory entry created:\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %d\n",newDir->firstName,newDir->lastName,newDir->phoneNum);
 	
 	return(newDir);
 }
