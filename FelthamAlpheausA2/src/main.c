@@ -63,10 +63,10 @@ int main(int argc, char * argv[]){
 	while(tempElement != NULL){
 		printf("\nTEST A");
 		getchar();
-		/*
 		tempHash = tempElement->structPtr;
 		printf("\nTEST B");
 		getchar();
+		/*
 		printf("\nFor key: %d, there are %d entries",tempHash->hashKey,subListSize(tempHash));
 		printf("\nTEST C");
 		getchar();
