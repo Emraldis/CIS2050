@@ -26,8 +26,8 @@ int newHashKey(int keyBase, int dataSize){
 	
 	tempString = malloc(sizeof(char) * 16);
 	tempStringTwo = malloc(sizeof(char) * 4);
-	
-	sprintf(tempString,"%d",(keyBase - 6045000000));
+	tempIntA = (keyBase - 6045000000);
+	sprintf(tempString,"%d",tempIntA);
 	tempStringTwo[0] = tempString[0];
 	tempStringTwo[1] = tempString[1];
 	tempStringTwo[2] = tempString[2];
