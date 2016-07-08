@@ -102,7 +102,7 @@ double pwr(int base, int exponent){
 	
 	output = base;
 	
-	for(i=1;i<exponent;i++){
+	for(i=0;i<exponent;i++){
 		output = (output * base);
 	}
 
