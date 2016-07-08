@@ -53,9 +53,7 @@ int main(int argc, char * argv[]){
 		tempInt = (tempDouble * 1);
 		printf("\nGenerating a key from %d",tempInt);
 		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize);
-		if(tempHash != NULL){
-			hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
-		}
+		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
 		tempElement = tempElement->next;
 	}
 	printf("\nHash Table completed, verifying");
