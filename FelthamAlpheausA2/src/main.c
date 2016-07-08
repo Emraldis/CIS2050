@@ -45,7 +45,8 @@ int main(int argc, char * argv[]){
 	dirSize = getSize(nameList);
 	
 	printf("\n\nList is %d entries large\n",dirSize);
-	
+	tempDir = getValueBack(nameList);
+	printf("\nTEST: %s,%s,%d"tempDir->firstName,tempDir->lastName,tempDir->phoneNum);
 	tempElement = nameList;
 	hashTable = NULL;
 	while(tempElement != NULL){
