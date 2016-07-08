@@ -27,7 +27,6 @@ int newHashKey(double keyBase, int dataSize){
 	printf("\nCreating Hash key");
 	getchar();
 	tempString = malloc(sizeof(char) * 16);
-	intStorage = malloc(sizeof(char));
 	tempInt = 0;
 	sprintf(tempString,"%f",keyBase);
 	printf("\n%f,%s",keyBase,tempString);
@@ -64,7 +63,7 @@ int newHashKey(double keyBase, int dataSize){
 				a = 9;
 				break;
 		}
-		tempInt = (tempInt * (1 + a);
+		tempInt = (tempInt * (1 + a));
 		printf("\n%d",tempInt);
 		getchar();
 	}
