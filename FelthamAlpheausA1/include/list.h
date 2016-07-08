@@ -49,3 +49,8 @@ precondition: Must have a list with elements to read from
 postcondition: Must return a valid struct (if there is one to return)
 */
 void * getValueBack(Element * list);
+/*Returns the number of elements in the list (0 if empty)
+precondition: None
+postcondition: Must return a valid value
+*/
+int getSize(Element * list);

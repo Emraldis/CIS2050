@@ -1,19 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "list.h"
+#include "hashADT.h"
 
 typedef struct directoryEntry{
-	char * name;
+	char * Fistname;
+	char * lastName;
 	int phoneNum;
-	int hashNum;
 }dirEntry;
 
 dirEntry * newEntry(char * input);
 
-int * hashEntry(int number);
-
-dirEntry * findEntry(Element * list, int hashEntry);
-
-
-
+void printTableEntry(HashEntry * entry);
