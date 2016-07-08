@@ -2,6 +2,8 @@
 
 DirEntry * newEntry(char * input){
 	DirEntry * newDir;
+	
+	newDir = malloc(sizeof(DirEntry));
 	newDir->firstName = malloc(sizeof(char) * 32);
 	newDir->lastName = malloc(sizeof(char) * 32);
 	
