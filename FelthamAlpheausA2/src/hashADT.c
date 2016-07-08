@@ -7,7 +7,6 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 	newHash = malloc(sizeof(HashEntry));
 	
 	key = newHashKey(keyBase,dataSize);
-	newHash->subList = NULL;
 	if(table == NULL){
 		printf("\nTest 0");
 		newHash->hashKey = key;
@@ -20,7 +19,7 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 		newHash = keyExists(key,table);
 		printf("\nTest B");
 		getchar();
-		newHash = addToSubList(newHash,element);
+		newHash->subList = addToFront(element,newHash->subList,sizeof(element));
 	}else{
 		printf("\nTest 2");
 		getchar();
