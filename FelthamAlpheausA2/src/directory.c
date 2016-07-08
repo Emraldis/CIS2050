@@ -11,7 +11,7 @@ DirEntry * newEntry(char * input){
 	
 	strcpy(newDir->firstName,strtok(input,","));
 	strcpy(newDir->lastName,strtok(NULL,","));
-	newDir->phoneNum = atoi(strtok(NULL,"\0"));
+	newDir->phoneNum = atoi(strtok(NULL,"\n"));
 	
 	printf("\nNew Directory entry created:\nFirstName: %s\nLastName: %s\nPhone Number: %d",newDir->firstName,newDir->lastName,newDir->phoneNum);
 	
