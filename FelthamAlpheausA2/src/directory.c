@@ -1,7 +1,7 @@
 #include "directory.h"
 
-dirEntry * newEntry(char * input){
-	dierEntry * newDir;
+DirEntry * newEntry(char * input){
+	DirEntry * newDir;
 	char * tempString = malloc(sizeof(char) * 128);
 	newDir->firstName = malloc(sizeof(char) * 32);
 	newDir->lastName = malloc(sizeof(char) * 32);
@@ -17,10 +17,10 @@ dirEntry * newEntry(char * input){
 
 void printTableEntry(HashEntry * entry){
 	Element * tempElement;
-	dirEntry * tempDir;
+	DirEntry * tempDir;
 	
 	tempElement = malloc(sizeof(Element));
-	tempDir = malloc(sizeof(dirEntry));
+	tempDir = malloc(sizeof(DirEntry));
 	tempDir->firstName = malloc(sizeof(char) * 32);
 	tempDir->lastName = malloc(sizeof(char) * 32);
 	
@@ -36,11 +36,10 @@ void printTableEntry(HashEntry * entry){
 	
 }
 
-void printDir (dirEntry * directory){
+void printDir (DirEntry * directory){
 	if(directory == NULL){
 		printf("\nEMPTY DIRECTORY");
 	}else{
 		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %d",directory->firstName,directory->lastName,directory->phoneNum);
 	}
-	return();
 }

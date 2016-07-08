@@ -5,13 +5,13 @@
 #include <stdlib.h>
 #include "hashADT.h"
 
-typedef struct directoryEntry{
+typedef struct DirectoryEntry{
 	char * Fistname;
 	char * lastName;
 	int phoneNum;
-}dirEntry;
+}DirEntry;
 
-dirEntry * newEntry(char * input);
+DirEntry * newEntry(char * input);
 
 void printTableEntry(HashEntry * entry);
 

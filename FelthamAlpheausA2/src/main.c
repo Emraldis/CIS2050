@@ -8,7 +8,7 @@ int main(int argc, char * argv[]){
 	char * fileName;
 	Element * nameList;
 	char * data;
-	dirEntry * tempDir;
+	DirEntry * tempDir;
 	Element * hashTable;
 	HashEntry * tempHash;
 	Element * tempElement;
@@ -16,7 +16,7 @@ int main(int argc, char * argv[]){
 	
 	fileName = malloc(sizeof(char) * 256);
 	data = malloc(sizeof(char) * 256);
-	tempDir = malloc(sizeof(dirEntry));
+	tempDir = malloc(sizeof(DirEntry));
 	tempElement = malloc(sizeof(Element));
 	
 	if(argc != 1){
@@ -41,7 +41,7 @@ int main(int argc, char * argv[]){
 	tempElement = nameList;
 	while(tempElement != NULL){
 		tempDir = tempElement->structPtr;
-		tempHash = createHashEntry(tempDir,hashTable,dirSize);
+		tempHash = createHashEntry(tempDir->phoneNum,tempDir,hashTable,dirSize);
 		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
 	}
 	
