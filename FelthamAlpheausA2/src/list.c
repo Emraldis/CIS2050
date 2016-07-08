@@ -120,7 +120,7 @@ int getSize(Element * list){
 	if(tempElement != NULL){
 		while(tempElement != NULL){
 			count++;
-			if(tempElement->next != NULL){
+			if(tempElement != NULL){
 				tempElement = tempElement->next;
 			}else{
 				break;
