@@ -9,6 +9,7 @@ DirEntry * newEntry(char * input){
 	newDir = malloc(sizeof(DirEntry));
 	newDir->firstName = malloc(sizeof(char) * 32);
 	newDir->lastName = malloc(sizeof(char) * 32);
+	newDir->phoneNum = malloc(sizeof(int));
 	tempString = malloc(sizeof(char) * 16);
 	
 	strcpy(newDir->firstName,strtok(input,","));
