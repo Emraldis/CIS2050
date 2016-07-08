@@ -7,7 +7,6 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 	newHash = malloc(sizeof(HashEntry));
 	
 	key = newHashKey(keyBase,dataSize);
-	newHash->subList = malloc(sizeof(Element));
 	newHash->subList = NULL;
 	if(table == NULL){
 		printf("\nTest 0");
