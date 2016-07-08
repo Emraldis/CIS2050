@@ -53,6 +53,7 @@ int main(int argc, char * argv[]){
 		tempInt = (tempDouble * 1);
 		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize);
 		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
+		tempElement = tempElement->next;
 	}
 	
 	return(0);

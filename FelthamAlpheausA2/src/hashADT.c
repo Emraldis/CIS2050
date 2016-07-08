@@ -8,27 +8,15 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 	
 	key = newHashKey(keyBase,dataSize);
 	if(table == NULL){
-		printf("\nTest 0");
 		newHash->hashKey = key;
-		printf("\nTest A");
 		return(newHash);
 	}
 	if(keyExists(key,table) != NULL){
-		printf("\nTest 1");
-		getchar();
 		newHash = keyExists(key,table);
-		printf("\nTest B");
-		getchar();
 		newHash->subList = addToFront(element,newHash->subList,sizeof(element));
 	}else{
-		printf("\nTest 2");
-		getchar();
 		newHash->hashKey = key;
-		printf("\nTest C");
-		getchar();
 		newHash->subList = createList(element,sizeof(element));
-		printf("\nTest D");
-		getchar();
 	}
 	return(newHash);
 }

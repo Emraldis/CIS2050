@@ -27,22 +27,14 @@ Element * addToBack(void * structPtr,Element * list, int ptrSize){
 	Element * element;
 	currentPos = list;
 	element = createList(structPtr, ptrSize);
-	printf("\nTEST");
-	getchar();
 	if(list != NULL){
-		printf("\nTESTA");
-		getchar();
 		while(currentPos->next != NULL){
 			currentPos = currentPos->next;
 		}
 		currentPos->next = element;
 	}else{
-		printf("\nTESTB");
-		getchar();
 		list = element;
 	}
-		printf("\nTESTC");
-		getchar();
 	return (list);
 }
 Element * removeFromFront(Element * list){
