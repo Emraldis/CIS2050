@@ -23,12 +23,12 @@ Element * addToFront(void * structPtr,Element * list, int ptrSize){
 	return(element);
 }
 Element * addToBack(void * structPtr,Element * list, int ptrSize){
-	printf("\nTEST");
-	getchar();
 	Element * currentPos;
 	Element * element;
 	currentPos = list;
 	element = createList(structPtr, ptrSize);
+	printf("\nTEST");
+	getchar();
 	if(list != NULL){
 		while(currentPos->next != NULL){
 			currentPos = currentPos->next;
