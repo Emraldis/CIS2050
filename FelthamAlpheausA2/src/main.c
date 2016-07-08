@@ -70,10 +70,10 @@ int main(int argc, char * argv[]){
 		printf("\nFor key: %d, there are %d entries",tempHash->hashKey,subListSize(tempHash));
 		printf("\nTEST C");
 		getchar();
+		*/
 		tempElement = tempElement->next;
 		printf("\nTEST D");
 		getchar();
-		*/
 	}
 	return(0);
 }
