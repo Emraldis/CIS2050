@@ -38,6 +38,7 @@ int main(int argc, char * argv[]){
 	while(fgets(data,256,dirFile) != NULL){
 		tempDir = newEntry(data);
 		nameList = addToFront(tempDir,nameList,sizeof(tempDir));
+		printDir(tempDir);
 		printf("\nDirectory Added to list");
 	}
 	fclose(dirFile);
