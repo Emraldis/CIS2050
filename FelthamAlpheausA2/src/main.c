@@ -59,11 +59,19 @@ int main(int argc, char * argv[]){
 	printf("\nHash Table completed, verifying");
 	getchar();
 	tempElement = hashTable;
-	/*
+	
 	while(tempElement != NULL){
+		printf("\nTEST A");
+		getchar();
 		tempHash = tempElement->structPtr;
+		printf("\nTEST B");
+		getchar();
 		printf("\nFor key: %d, there are %d entries",tempHash->hashKey,subListSize(tempHash));
+		printf("\nTEST C");
+		getchar();
 		tempElement = tempElement->next;
-	}*/
+		printf("\nTEST D");
+		getchar();
+	}
 	return(0);
 }
