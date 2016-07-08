@@ -93,6 +93,8 @@ int decode(char * phoneNum){
 			printf("\nERROR DECODING");
 				exit(1);
 		}
+		printf("\nSo far: %d",output);
+		getchar();
 		j++;
 	}
 	printf("\nDECODED: %d",output);
