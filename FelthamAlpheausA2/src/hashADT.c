@@ -30,7 +30,7 @@ int newHashKey(int keyBase, int dataSize){
 	intStorage = malloc(sizeof(char));
 	tempInt = 0;
 	sprintf(tempString,"\n%d",keyBase);
-	printf("%d,%s"keyBase,tempString);
+	printf("%d,%s",keyBase,tempString);
 	for(i=0;i<(strlen(tempString));i++){
 		intStorage[0] = tempString[i];
 		printf("\nINTS %s",intStorage);
