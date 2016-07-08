@@ -115,8 +115,10 @@ HashEntry * keyExists(int key, Element * table){
 
 HashEntry * addToSubList(HashEntry * entry, void * element){
 	printf("test");
+	getchar();
 	entry->subList = addToBack(element,entry->subList,sizeof(element));
 	printf("test");
+	getchar();
 	
 	return(entry);
 }
