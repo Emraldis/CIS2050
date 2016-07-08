@@ -17,4 +17,6 @@ void printTableEntry(HashEntry * entry);
 
 void printDir(DirEntry * directory);
 
+int decode(char * phoneNum);
+
 #endif

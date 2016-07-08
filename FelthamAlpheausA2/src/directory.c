@@ -1,3 +1,4 @@
+#include <math.h>
 #include "directory.h"
 
 DirEntry * newEntry(char * input){
@@ -14,7 +15,7 @@ DirEntry * newEntry(char * input){
 	strcpy(newDir->firstName,strtok(input,","));
 	strcpy(newDir->lastName,strtok(NULL,","));
 	tempString = strtok(NULL,"\n");
-	printf("\n%s,%d",tempString,atoi(tempString));
+	printf("\n%s,%d",tempString,decode(tempString));
 	newDir->phoneNum = atol(tempString);
 	
 	printf("\nNew Directory entry created:\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %d\n",newDir->firstName,newDir->lastName,newDir->phoneNum);
@@ -49,4 +50,52 @@ void printDir(DirEntry * directory){
 	}else{
 		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %d",directory->firstName,directory->lastName,directory->phoneNum);
 	}
+}
+
+int decode(char * phoneNum){
+	int output = 0;
+	int i;
+	int j = 0;
+	
+	for(i=(strlen(phoneNum));i>0;i--){
+		switch(phoneNum[j]){
+			case '0':
+				output = (output + 0);
+				break;
+			case '1':
+				output = (output + (1 * pow(10,i));
+				break;
+			case '2':
+				output = (output + (2 * pow(10,i));
+				break;
+			case '3':
+				output = (output + (3 * pow(10,i));
+				break;
+			case '4':
+				output = (output + (4 * pow(10,i));
+				break;
+			case '5':
+				output = (output + (5 * pow(10,i));
+				break;
+			case '6':
+				output = (output + (6 * pow(10,i));
+				break;
+			case '7':
+				output = (output + (7 * pow(10,i));
+				break;
+			case '8':
+				output = (output + (8 * pow(10,i));
+				break;
+			case '9':
+				output = (output + (9 * pow(10,i));
+				break;
+			default:
+			printf("\nERROR DECODING");
+				exit(1);
+		}
+		j++;
+	}
+	printf("\nDECODED: %d",output);
+	
+	return(output);
 }
