@@ -61,6 +61,7 @@ int main(int argc, char * argv[]){
 	tempElement = hashTable;
 	
 	while(tempElement != NULL){
+		/*
 		printf("\nTEST A");
 		getchar();
 		tempHash = tempElement->structPtr;
@@ -72,6 +73,7 @@ int main(int argc, char * argv[]){
 		tempElement = tempElement->next;
 		printf("\nTEST D");
 		getchar();
+		*/
 	}
 	return(0);
 }
