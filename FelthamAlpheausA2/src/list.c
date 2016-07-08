@@ -121,6 +121,8 @@ int getSize(Element * list){
 		while(tempElement!= NULL){
 			count++;
 			tempElement = tempElement->next;
+			printf("\nCOUNT: %d",count);
+			getchar();
 		}
 	}
 	return(count);
