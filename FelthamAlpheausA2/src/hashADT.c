@@ -24,6 +24,8 @@ int newHashKey(int keyBase, int dataSize){
 	char * tempString;
 	char * tempStringTwo;
 	
+	printf("\nCreating Hash key");
+	getchar();
 	tempString = malloc(sizeof(char) * 16);
 	tempStringTwo = malloc(sizeof(char) * 4);
 	tempIntA = (keyBase - 6045000000);

@@ -41,7 +41,7 @@ int main(int argc, char * argv[]){
 	
 	dirSize = getSize(nameList);
 	
-	printf("\n\nList is %d entries	large\n",dirSize);
+	printf("\n\nList is %d entries large\n",dirSize);
 	
 	tempElement = nameList;
 	while(tempElement != NULL){
