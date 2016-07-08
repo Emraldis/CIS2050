@@ -9,14 +9,13 @@ DirEntry * newEntry(char * input){
 	newDir = malloc(sizeof(DirEntry));
 	newDir->firstName = malloc(sizeof(char) * 32);
 	newDir->lastName = malloc(sizeof(char) * 32);
-	newDir->phoneNum = malloc(sizeof(int));
 	tempString = malloc(sizeof(char) * 16);
 	
 	strcpy(newDir->firstName,strtok(input,","));
 	strcpy(newDir->lastName,strtok(NULL,","));
 	tempString = strtok(NULL,"\n");
 	printf("\n%s,%d",tempString,atoi(tempString));
-	newDir->phoneNum = atoi(tempString);
+	newDir->phoneNum = atol(tempString);
 	
 	printf("\nNew Directory entry created:\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %d\n",newDir->firstName,newDir->lastName,newDir->phoneNum);
 	
