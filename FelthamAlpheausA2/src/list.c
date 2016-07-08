@@ -118,9 +118,11 @@ int getSize(Element * list){
 	printf("\nChecking List Size");
 	getchar();
 	if(tempElement != NULL){
-		while(tempElement!= NULL){
+		while(tempElement != NULL){
 			count++;
-			tempElement = tempElement->next;
+			if(tempElement != NULL){
+				tempElement = tempElement->next;
+			}
 			printf("\nCOUNT: %d",count);
 			getchar();
 		}
