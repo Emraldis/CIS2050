@@ -23,6 +23,8 @@ Element * addToFront(void * structPtr,Element * list, int ptrSize){
 	return(element);
 }
 Element * addToBack(void * structPtr,Element * list, int ptrSize){
+	printf("\nTEST");
+	getchar();
 	Element * currentPos;
 	Element * element;
 	currentPos = list;
