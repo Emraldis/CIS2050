@@ -69,11 +69,9 @@ int main(int argc, char * argv[]){
 		tempHash = tempElement->structPtr;
 		printf("\nTEST B");
 		getchar();
-		/*
 		printf("\nFor key: %d, there are %d entries",tempHash->hashKey,subListSize(tempHash));
 		printf("\nTEST C");
 		getchar();
-		*/
 		tempElement = tempElement->next;
 		printf("\nTEST D");
 		getchar();
