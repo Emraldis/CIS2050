@@ -63,31 +63,31 @@ int decode(char * phoneNum){
 				output = (output + 0);
 				break;
 			case '1':
-				output = (output + (1 * pow(10,i));
+				output = (output + (1 * pow(10,i)));
 				break;
 			case '2':
-				output = (output + (2 * pow(10,i));
+				output = (output + (2 * pow(10,i)));
 				break;
 			case '3':
-				output = (output + (3 * pow(10,i));
+				output = (output + (3 * pow(10,i)));
 				break;
 			case '4':
-				output = (output + (4 * pow(10,i));
+				output = (output + (4 * pow(10,i)));
 				break;
 			case '5':
-				output = (output + (5 * pow(10,i));
+				output = (output + (5 * pow(10,i)));
 				break;
 			case '6':
-				output = (output + (6 * pow(10,i));
+				output = (output + (6 * pow(10,i)));
 				break;
 			case '7':
-				output = (output + (7 * pow(10,i));
+				output = (output + (7 * pow(10,i)));
 				break;
 			case '8':
-				output = (output + (8 * pow(10,i));
+				output = (output + (8 * pow(10,i)));
 				break;
 			case '9':
-				output = (output + (9 * pow(10,i));
+				output = (output + (9 * pow(10,i)));
 				break;
 			default:
 			printf("\nERROR DECODING");
