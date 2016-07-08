@@ -101,8 +101,12 @@ double pwr(int base, int exponent){
 	double output = 0;
 	
 	output = base;
-	
-	for(i=0;i<exponent;i++){
+	if(exponent == 0){
+		return(1);
+	}else if(exponent == 1){
+		return(base);
+	}
+	for(i=0;i<(exponent - 2);i++){
 		output = (output * base);
 	}
 
