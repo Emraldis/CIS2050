@@ -14,6 +14,7 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 	if(keyExists(key,table) != NULL){
 		newHash = keyExists(key,table);
 		newHash->subList = addToFront(element,newHash->subList,sizeof(element));
+		return(NULL);
 	}else{
 		newHash->hashKey = key;
 		newHash->subList = createList(element,sizeof(element));
