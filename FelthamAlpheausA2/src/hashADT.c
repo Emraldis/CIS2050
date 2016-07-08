@@ -9,13 +9,21 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 	key = newHashKey(keyBase,dataSize);
 	if(table == NULL){
 		newHash->hashKey = key;
+		printf("\nTest A");
+		getchar();
 	}
 	if(keyExists(key,table) != NULL){
 		newHash = keyExists(key,table);
+		printf("\nTest B");
+		getchar();
 		newHash = addToSubList(newHash,element);
 	}else{
 		newHash->hashKey = key;
+		printf("\nTest C");
+		getchar();
 		newHash->subList = createList(element,sizeof(element));
+		printf("\nTest D");
+		getchar();
 	}
 	return(newHash);
 }
@@ -32,7 +40,6 @@ int newHashKey(int keyBase, int dataSize){
 	tempString = malloc(sizeof(char) * 16);
 	tempInt = 0;
 	sprintf(tempString,"%d",keyBase);
-	printf("\n%d,%s",keyBase,tempString);
 	for(i=0;i<(strlen(tempString));i++){
 		switch(tempString[i]){
 			case'0':
@@ -71,12 +78,9 @@ int newHashKey(int keyBase, int dataSize){
 		}else{
 			tempInt = (tempInt * (1 + a));
 		}
-		printf("\n%d",tempInt);
 		getchar();
 	}
-	printf("\nTEST%d",(tempInt));
 	getchar();
-	printf("\nDATASIZE %d",dataSize);
 	key = ((tempInt) % (dataSize / 2));
 	
 	printf("\nKey generatred: %d",key);
