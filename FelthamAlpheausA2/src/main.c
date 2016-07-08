@@ -56,11 +56,6 @@ int main(int argc, char * argv[]){
 		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
 		tempElement = tempElement->next;
 	}
-	tempElement = nameList;
-	while(tempElement != NULL){
-		tempHash = tempElement->structPtr;
-		printf("\nSublist size for key %d is :%d",tempHash->hashKey,subListSize(tempHash));
-		tempElement = tempElement->next;
-	}
+	
 	return(0);
 }
