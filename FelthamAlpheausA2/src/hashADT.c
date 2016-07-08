@@ -13,6 +13,9 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 		newHash->hashKey = key;
 		printf("\nTest A");
 		getchar();
+	}else{
+		printf("error");
+		exit(0);
 	}
 	if(keyExists(key,table) != NULL){
 		printf("\nTest 1");
