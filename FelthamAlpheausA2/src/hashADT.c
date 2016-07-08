@@ -1,6 +1,6 @@
 #include "hashADT.h"
 
-HashEntry * createHashEntry(double keyBase, void * element, Element * table, int dataSize){
+HashEntry * createHashEntry(int keyBase, void * element, Element * table, int dataSize){
 	HashEntry * newHash;
 	int key;
 	
@@ -17,7 +17,7 @@ HashEntry * createHashEntry(double keyBase, void * element, Element * table, int
 	return(newHash);
 }
 
-int newHashKey(double keyBase, int dataSize){
+int newHashKey(int keyBase, int dataSize){
 	int key;
 	int tempInt;
 	char * tempString;
@@ -28,8 +28,8 @@ int newHashKey(double keyBase, int dataSize){
 	getchar();
 	tempString = malloc(sizeof(char) * 16);
 	tempInt = 0;
-	sprintf(tempString,"%f",keyBase);
-	printf("\n%f,%s",keyBase,tempString);
+	sprintf(tempString,"%d",keyBase);
+	printf("\n%d,%s",keyBase,tempString);
 	for(i=0;i<(strlen(tempString));i++){
 		switch(tempString[i]){
 			case'0':
@@ -62,6 +62,9 @@ int newHashKey(double keyBase, int dataSize){
 			case'9':
 				a = 9;
 				break;
+		}
+		if(tempInt == 0){
+			tempInt = a;
 		}
 		tempInt = (tempInt * (1 + a));
 		printf("\n%d",tempInt);

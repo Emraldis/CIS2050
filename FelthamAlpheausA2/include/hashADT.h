@@ -7,9 +7,9 @@ typedef struct HashTableEntry{
 	struct ListElement * subList;
 }HashEntry;
 
-HashEntry * createHashEntry(double keyBase, void * element, Element * table, int dataSize);
+HashEntry * createHashEntry(int keyBase, void * element, Element * table, int dataSize);
 
-int newHashKey(double keyBase, int dataSize);
+int newHashKey(int keyBase, int dataSize);
 
 HashEntry * keyExists(int key, Element * table);
 
