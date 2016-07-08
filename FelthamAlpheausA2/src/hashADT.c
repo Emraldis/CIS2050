@@ -27,7 +27,7 @@ int newHashKey(int keyBase, int dataSize){
 	printf("\nCreating Hash key");
 	getchar();
 	tempString = malloc(sizeof(char) * 16);
-	intStorage = malloc(sizeof(char));
+	intStorage = malloc(sizeof(char) * 2);
 	tempInt = 0;
 	sprintf(tempString,"%d",keyBase);
 	for(i=0;i<(strlen(tempString));i++){
