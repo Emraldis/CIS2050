@@ -17,8 +17,8 @@ void printTableEntry(HashEntry * entry);
 
 void printDir(DirEntry * directory);
 
-long decode(char * phoneNum);
+double decode(char * phoneNum);
 
-long pwr(int base, int exponent);
+double pwr(int base, int exponent);
 
 #endif

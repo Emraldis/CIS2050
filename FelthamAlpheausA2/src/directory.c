@@ -17,7 +17,7 @@ DirEntry * newEntry(char * input){
 	printf("\n%s,%ld",tempString,decode(tempString));
 	newDir->phoneNum = decode(tempString);
 	getchar();
-	printf("\nNew Directory entry created:\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %ld\n",newDir->firstName,newDir->lastName,newDir->phoneNum);
+	printf("\nNew Directory entry created:\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %f\n",newDir->firstName,newDir->lastName,newDir->phoneNum);
 	
 	return(newDir);
 }
@@ -47,17 +47,17 @@ void printDir(DirEntry * directory){
 	if(directory == NULL){
 		printf("\nEMPTY DIRECTORY");
 	}else{
-		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %ld",directory->firstName,directory->lastName,directory->phoneNum);
+		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %f",directory->firstName,directory->lastName,directory->phoneNum);
 	}
 }
 
-long decode(char * phoneNum){
-	long output = 0;
+double decode(char * phoneNum){
+	double output = 0;
 	int i;
 	int j = 0;
 	
 	for(i=(strlen(phoneNum));i>0;i--){
-		printf("\nSo far: %ld, from %c",output,phoneNum[j]);
+		printf("\nSo far: %f, from %c",output,phoneNum[j]);
 		switch(phoneNum[j]){
 			case '0':
 				output = (output + 0);
@@ -96,24 +96,24 @@ long decode(char * phoneNum){
 		getchar();
 		j++;
 	}
-	printf("\nDECODED: %ld",output);
+	printf("\nDECODED: %f",output);
 	
 	return(output);
 }
 
-long pwr(int base, int exponent){
+double pwr(int base, int exponent){
 	int i;
-	long output = 0;
+	double output = 0;
 	
 	output = base;
 	
-	printf("\nPRE: %ld",output);
+	printf("\nPRE: %f",output);
 	for(i=1;i<exponent;i++){
 		output = (output * base);
-		printf("\nDUR: %ld",output);
+		printf("\nDUR: %f",output);
 	}
 	
-	printf("\nEXP: %ld",output);
+	printf("\nEXP: %f",output);
 	
 	return(output);
 }
