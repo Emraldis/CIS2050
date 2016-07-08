@@ -3,6 +3,8 @@
 DirEntry * newEntry(char * input){
 	DirEntry * newDir;
 	
+	printf("\nCreating new Entry with: %s",input);
+	
 	newDir = malloc(sizeof(DirEntry));
 	newDir->firstName = malloc(sizeof(char) * 32);
 	newDir->lastName = malloc(sizeof(char) * 32);
