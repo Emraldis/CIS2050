@@ -41,12 +41,16 @@ int main(int argc, char * argv[]){
 	}
 	fclose(dirFile);
 	
+	printf("\nChecking Directory Size");
+	getchar();
 	dirSize = getSize(nameList);
 	
 	printf("\n\nList is %d entries large\n",dirSize);
 	
 	tempElement = nameList;
 	hashTable = NULL;
+	printf("\nBeginning Directory creation");
+	getchar();
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,tempElement->ptrSize);
 		tempDouble = (tempDir->phoneNum - 6045000000);
