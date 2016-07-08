@@ -37,7 +37,7 @@ int main(int argc, char * argv[]){
 	
 	while(fgets(data,256,dirFile) != NULL){
 		tempDir = newEntry(data);
-		nameList = addToFront(tempDir,nameList,sizeof(tempDir));
+		nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
 		printDir(tempDir);
 		printf("\nDirectory Added to list");
 	}
@@ -49,7 +49,7 @@ int main(int argc, char * argv[]){
 	tempElement = nameList;
 	hashTable = NULL;
 	while(tempElement != NULL){
-		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry) + (sizeof(char) * 32) + (sizeof(char) * 32)));
+		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
 		printDir(tempDir);
 		tempDouble = (tempDir->phoneNum - 6045000000);
 		tempInt = (tempDouble * 1);
