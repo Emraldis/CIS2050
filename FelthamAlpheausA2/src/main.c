@@ -48,6 +48,7 @@ int main(int argc, char * argv[]){
 	tempElement = nameList;
 	while(tempElement != NULL){
 		tempDir = tempElement->structPtr;
+		printf("\nNUM: %f",tempDir->phoneNum);
 		tempDouble = (tempDir->phoneNum - 6045000000);
 		tempInt = (tempDouble * 1);
 		printf("\ndouble: %f, int %d",tempDouble,tempInt);
