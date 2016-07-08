@@ -28,13 +28,13 @@ int newHashKey(int keyBase, int dataSize){
 	tempStringTwo = malloc(sizeof(char) * 4);
 	
 	sprintf(tempString,"%d",(keyBase - 6045000000));
-	strcpy(tempStringTwo,tempString[0]);
-	strcat(tempStringTwo,tempString[1]);
-	strcat(tempStringTwo,tempString[2]);
+	tempStringTwo[0] = tempString[0];
+	tempStringTwo[1] = tempString[1];
+	tempStringTwo[2] = tempString[2];
 	tempIntA = atoi(tempStringTwo);
-	strcpy(tempStringTwo,tempString[3]);
-	strcat(tempStringTwo,tempString[4]);
-	strcat(tempStringTwo,tempString[5]);
+	tempStringTwo[0] = tempString[3];
+	tempStringTwo[1] = tempString[4];
+	tempStringTwo[2] = tempString[5];
 	tempIntB = atoi(tempStringTwo);
 	
 	key = ((tempIntA * tempIntB) % (dataSize * (2/3)));

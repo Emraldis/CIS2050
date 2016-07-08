@@ -108,3 +108,18 @@ void * getValueBack(Element * list){
 		return(NULL);
 	}
 }
+int getSize(Element * list){
+	int count = 0;
+	Element * tempElement;
+	
+	tempElement = malloc(sizeof(Element));
+	
+	tempElement = list;
+	if(tempElement != NULL){
+		while(tempElement!= NULL){
+			count++;
+			tempElement = tempElement->next;
+		}
+	}
+	return(count);
+}

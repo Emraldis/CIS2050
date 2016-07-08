@@ -2,6 +2,7 @@
 #include <string.h>
 #include "hashADT.h"
 #include "directory.h"
+#include "list.h"
 
 int main(int argc, char * argv[]){
 	FILE * dirFile;
