@@ -6,9 +6,9 @@ dirEntry * newEntry(char * input){
 	newDir->firstName = malloc(sizeof(char) * 32);
 	newDir->lastName = malloc(sizeof(char) * 32);
 	
-	strcpy(newDir->firstName,strtok(input,",");
-	strcpy(newDir->lastName,strtok(NULL,",");
-	newDir->phoneNum = atoi(strtok(NULL,",");
+	strcpy(newDir->firstName,strtok(input,","));
+	strcpy(newDir->lastName,strtok(NULL,","));
+	newDir->phoneNum = atoi(strtok(NULL,","));
 	
 	printf("\nNew Directory entry created:\nFirstName: %s\nLastName: %s\nPhone Number: %d",newDir->firstName,newDir->lastName,newDir->phoneNum);
 	

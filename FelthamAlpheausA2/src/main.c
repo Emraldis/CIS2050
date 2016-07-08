@@ -10,7 +10,7 @@ int main(int argc, char * argv[]){
 	char * data;
 	dirEntry * tempDir;
 	Element * hashTable;
-	hashEntry * tempHash;
+	HashEntry * tempHash;
 	Element * tempElement;
 	int dirSize;
 	
@@ -27,7 +27,7 @@ int main(int argc, char * argv[]){
 	dirFile = fopen(fileName,"r");
 	
 	if(dirFile == NULL){
-		printf("\nError opening file);
+		printf("\nError opening file");
 		exit(0);
 	}
 	

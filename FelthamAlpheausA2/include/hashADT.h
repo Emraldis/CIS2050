@@ -1,3 +1,5 @@
+#ifndef _AFELTHAM_HEADERH
+#define _AFELTHAM_HEADERH
 #include "list.h"
 
 typedef struct HashTableEntry{
@@ -16,3 +18,5 @@ HashEntry * addToSubList(HashEntry * entry, void * element);
 int subListSize(HashEntry * entry);
 
 void printTableEntry(HashEntry * entry);
+
+#endif

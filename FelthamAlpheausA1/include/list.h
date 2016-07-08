@@ -1,3 +1,5 @@
+#ifndef _AFELTHAM_HEADERH
+#define _AFELTHAM_HEADERH
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -54,3 +56,5 @@ precondition: None
 postcondition: Must return a valid value
 */
 int getSize(Element * list);
+
+#endif

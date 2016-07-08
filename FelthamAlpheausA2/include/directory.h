@@ -1,3 +1,5 @@
+#ifndef _AFELTHAM_HEADERH
+#define _AFELTHAM_HEADERH
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -12,3 +14,5 @@ typedef struct directoryEntry{
 dirEntry * newEntry(char * input);
 
 void printTableEntry(HashEntry * entry);
+
+#endif
