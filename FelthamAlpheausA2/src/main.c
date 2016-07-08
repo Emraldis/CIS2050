@@ -50,7 +50,7 @@ int main(int argc, char * argv[]){
 		tempDir = tempElement->structPtr;
 		tempDouble = (tempDir->phoneNum - 6045000000);
 		tempInt = (tempDouble * 1);
-		printf("\ndouble: %f, int %f",tempDouble,tempInt);
+		printf("\ndouble: %f, int %d",tempDouble,tempInt);
 		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize);
 		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
 	}

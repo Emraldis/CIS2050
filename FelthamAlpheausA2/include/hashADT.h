@@ -11,7 +11,7 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 
 int newHashKey(int keyBase, int dataSize);
 
-HashEntry * keyExists(int key, Element * table);
+HashEntry * keyExists(double key, Element * table);
 
 HashEntry * addToSubList(HashEntry * entry, void * element);
 
