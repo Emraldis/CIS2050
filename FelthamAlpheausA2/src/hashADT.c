@@ -7,6 +7,9 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 	newHash = malloc(sizeof(HashEntry));
 	
 	key = newHashKey(keyBase,dataSize);
+	if(table == NULL){
+		newHash->hashKey = key;
+	}
 	if(keyExists(key,table) != NULL){
 		newHash = keyExists(key,table);
 		newHash = addToSubList(newHash,element);
