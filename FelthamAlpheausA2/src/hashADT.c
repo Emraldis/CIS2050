@@ -21,16 +21,18 @@ int newHashKey(int keyBase, int dataSize){
 	int key;
 	int tempInt;
 	char * tempString;
+	char * intStorage;
 	int i;
 	
 	printf("\nCreating Hash key");
 	getchar();
 	tempString = malloc(sizeof(char) * 16);
-	tempStringTwo = malloc(sizeof(char) * 4);
+	intStorage = malloc(sizeof(char));
 	tempInt = 0;
 	sprintf(tempString,"%d",keyBase);
 	for(i=0;i<(strlen(tempString));i++){
-		tempInt = (tempInt * (1 + (atoi(tempString[i]))));
+		intStorage[0] = tempInt[i];
+		tempInt = (tempInt * (1 + (atoi(intStorage))));
 	}
 	printf("\n%d",(tempInt));
 	getchar();
