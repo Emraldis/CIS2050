@@ -13,6 +13,7 @@ int main(int argc, char * argv[]){
 	Element * hashTable;
 	HashEntry * tempHash;
 	Element * tempElement;
+	int hashSize;
 	int dirSize;
 	double tempDouble;
 	int tempInt;
@@ -58,7 +59,8 @@ int main(int argc, char * argv[]){
 	}
 	printf("\nHash Table completed, verifying");
 	getchar();
-	printf("\nHash Table is %d entries large", getSize(hashTable));
+	hashSize = getSize(hashTable);
+	printf("\nHash Table is %d entries large", hashSize);
 	tempElement = hashTable;
 	
 	while(tempElement != NULL){
