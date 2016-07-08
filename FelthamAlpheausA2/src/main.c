@@ -56,6 +56,13 @@ int main(int argc, char * argv[]){
 		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
 		tempElement = tempElement->next;
 	}
-	
+	printf("\nHash Table completed, verifying");
+	getchar();
+	tempElement = hashTable;
+	while(tempElement != NULL){
+		tempHash = tempElement->structPtr;
+		printf("\nFor key: %d, there are %d entries",tempHash->hashKey,subListSize(tempHash));
+		tempElement = tempElement->next;
+	}
 	return(0);
 }
