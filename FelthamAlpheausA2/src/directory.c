@@ -58,6 +58,7 @@ int decode(char * phoneNum){
 	int j = 0;
 	
 	for(i=(strlen(phoneNum));i>0;i--){
+		printf("\nSo far: %d",output);
 		switch(phoneNum[j]){
 			case '0':
 				output = (output + 0);
@@ -93,7 +94,6 @@ int decode(char * phoneNum){
 			printf("\nERROR DECODING");
 				exit(1);
 		}
-		printf("\nSo far: %d",output);
 		getchar();
 		j++;
 	}
