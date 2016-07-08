@@ -58,7 +58,7 @@ int decode(char * phoneNum){
 	int j = 0;
 	
 	for(i=(strlen(phoneNum));i>0;i--){
-		printf("\nSo far: %d",output);
+		printf("\nSo far: %d, from %c",output,phoneNum[j]);
 		switch(phoneNum[j]){
 			case '0':
 				output = (output + 0);
@@ -111,6 +111,8 @@ int pwr(int base, int exponent){
 	for(i=1;i<exponent;i++){
 		output = (output * base);
 	}
+	
+	printf("\nEXP: %d"output);
 	
 	return(output);
 }
