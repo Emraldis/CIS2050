@@ -26,7 +26,7 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 		newHash->hashKey = key;
 		printf("\nTest C");
 		getchar();
-		newHash->subList = createList(element,sizeof(element));
+		newHash->subList = createList(element,sizeof(Element));
 		printf("\nTest D");
 		getchar();
 	}
@@ -116,7 +116,7 @@ HashEntry * keyExists(int key, Element * table){
 HashEntry * addToSubList(HashEntry * entry, void * element){
 	printf("test");
 	getchar();
-	entry->subList = addToBack(element,entry->subList,sizeof(element));
+	entry->subList = addToBack(element,entry->subList,sizeof(Element));
 	printf("test");
 	getchar();
 	
