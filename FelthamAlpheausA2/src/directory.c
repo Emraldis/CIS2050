@@ -1,4 +1,4 @@
-#include <math.h>
+
 #include "directory.h"
 
 DirEntry * newEntry(char * input){

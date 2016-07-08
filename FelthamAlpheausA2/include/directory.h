@@ -1,6 +1,7 @@
 #ifndef _AFELTHAM_HEADERH_DIR
 #define _AFELTHAM_HEADERH_DIR
 #include <stdio.h>
+#include <math.h>
 #include <string.h>
 #include <stdlib.h>
 #include "hashADT.h"
