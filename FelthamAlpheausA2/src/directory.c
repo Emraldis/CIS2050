@@ -111,6 +111,7 @@ int pwr(int base, int exponent){
 	printf("\nPRE: %d",output);
 	for(i=1;i<exponent;i++){
 		output = (output * base);
+		printf("\nDUR: %d",output);
 	}
 	
 	printf("\nEXP: %d",output);
