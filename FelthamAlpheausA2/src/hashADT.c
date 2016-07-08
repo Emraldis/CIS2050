@@ -19,29 +19,22 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 
 int newHashKey(int keyBase, int dataSize){
 	int key;
-	int tempIntA;
-	int tempIntB;
+	int tempInt;
 	char * tempString;
-	char * tempStringTwo;
+	int i;
 	
 	printf("\nCreating Hash key");
 	getchar();
 	tempString = malloc(sizeof(char) * 16);
 	tempStringTwo = malloc(sizeof(char) * 4);
-	tempIntA = (keyBase - 6045000000);
-	sprintf(tempString,"%d",tempIntA);
-	tempStringTwo[0] = tempString[0];
-	tempStringTwo[1] = tempString[1];
-	tempStringTwo[2] = tempString[2];
-	tempIntA = atoi(tempStringTwo);
-	tempStringTwo[0] = tempString[3];
-	tempStringTwo[1] = tempString[4];
-	tempStringTwo[2] = tempString[5];
-	tempIntB = atoi(tempStringTwo);
-	
-	printf("\n%d",(tempIntA * tempIntB));
+	tempInt = 0;
+	sprintf(tempString,"%d",keyBase);
+	for(i=0;i<(strlen(tempString));i++){
+		tempInt = (tempInt * (1 + (atoi(tempString[i]))));
+	}
+	printf("\n%d",(tempInt));
 	getchar();
-	key = ((tempIntA * tempIntB) % (dataSize * (2/3)));
+	key = ((tempInt) % (dataSize * (2/3)));
 	
 	printf("\nKey generatred: %d",key);
 	getchar();
