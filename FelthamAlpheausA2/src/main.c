@@ -49,11 +49,14 @@ int main(int argc, char * argv[]){
 	hashTable = NULL;
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,tempElement->ptrSize);
+		printDir(tempDir);
 		tempDouble = (tempDir->phoneNum - 6045000000);
 		tempInt = (tempDouble * 1);
 		printf("\nGenerating a key from %d",tempInt);
 		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize);
-		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
+		if(tempHash != NULL){
+			hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
+		}
 		tempElement = tempElement->next;
 	}
 	printf("\nHash Table completed, verifying");
