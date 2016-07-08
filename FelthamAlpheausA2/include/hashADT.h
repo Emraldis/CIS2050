@@ -9,7 +9,7 @@ typedef struct HashTableEntry{
 
 HashEntry * createHashEntry(double keyBase, void * element, Element * table, int dataSize);
 
-int newHashKey(int keyBase, int dataSize);
+int newHashKey(double keyBase, int dataSize);
 
 HashEntry * keyExists(int key, Element * table);
 

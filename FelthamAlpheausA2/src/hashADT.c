@@ -1,6 +1,6 @@
 #include "hashADT.h"
 
-HashEntry * createHashEntry(int keyBase, void * element, Element * table, int dataSize){
+HashEntry * createHashEntry(double keyBase, void * element, Element * table, int dataSize){
 	HashEntry * newHash;
 	int key;
 	
