@@ -57,8 +57,6 @@ int main(int argc, char * argv[]){
 		tempElement = tempElement->next;
 	}
 	tempElement = nameList;
-	printf("\nDone Creating Hash Table");
-	getchar();
 	while(tempElement != NULL){
 		tempHash = tempElement->structPtr;
 		printf("\nSublist size for key %d is :%d",tempHash->hashKey,subListSize(tempHash));
