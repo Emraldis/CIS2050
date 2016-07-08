@@ -19,7 +19,7 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int da
 
 int newHashKey(int keyBase, int dataSize){
 	int key;
-	int tempInt;
+	double tempInt;
 	char * tempString;
 	int a = 0;
 	int i;
@@ -66,7 +66,7 @@ int newHashKey(int keyBase, int dataSize){
 		if(tempInt == 0){
 			tempInt = a;
 		}else{
-			tempInt = ((tempInt + (tempInt * a))/tempInt);
+			tempInt = (tempInt + (tempInt * a));
 		}
 		printf("\n%d",tempInt);
 		getchar();
