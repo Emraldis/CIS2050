@@ -6,7 +6,7 @@
 #include "hashADT.h"
 
 typedef struct DirectoryEntry{
-	char * Fistname;
+	char * fistname;
 	char * lastName;
 	int phoneNum;
 }DirEntry;

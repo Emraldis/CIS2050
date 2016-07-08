@@ -1,4 +1,4 @@
-#include "hastADT.h"
+#include "hashADT.h"
 
 HashEntry * createHashEntry(int keyBase, void * element, Element * table, int dataSize){
 	HashEntry * newHash;
