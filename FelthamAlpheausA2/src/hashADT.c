@@ -32,6 +32,7 @@ int newHashKey(int keyBase, int dataSize){
 	sprintf(tempString,"%d",keyBase);
 	for(i=0;i<(strlen(tempString));i++){
 		intStorage[0] = tempString[i];
+		printf("\nINTS %s",intStorage);
 		tempInt = (tempInt * (1 + (atoi(intStorage))));
 		printf("\n%d",tempInt);
 		getchar();
