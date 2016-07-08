@@ -118,6 +118,11 @@ HashEntry * keyExists(int key, Element * table){
 HashEntry * addToSubList(HashEntry * entry, void * element){
 	printf("test");
 	getchar();
+	if(entry->subList == NULL){
+		printf("\nit should be null");
+	}else{
+		printf("\nBut it's not");
+	}
 	entry->subList = addToBack(element,entry->subList,sizeof(element));
 	printf("test");
 	getchar();
