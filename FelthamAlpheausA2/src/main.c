@@ -41,6 +41,8 @@ int main(int argc, char * argv[]){
 	}
 	fclose(dirFile);
 	
+	printf("\nChecking Directory Size");
+	getchar();
 	dirSize = getSize(nameList);
 	
 	printf("\n\nList is %d entries large\n",dirSize);

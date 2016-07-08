@@ -115,8 +115,6 @@ int getSize(Element * list){
 	tempElement = malloc(sizeof(Element));
 	
 	tempElement = list;
-	printf("\nChecking List Size");
-	getchar();
 	if(tempElement != NULL){
 		while(tempElement!= NULL){
 			count++;
