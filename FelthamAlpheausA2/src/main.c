@@ -42,8 +42,6 @@ int main(int argc, char * argv[]){
 	}
 	fclose(dirFile);
 	
-	memcpy(tempDir,getValueBack(nameList),sizeof(DirEntry));
-	printf("\nTEST: %s,%s,%f",tempDir->firstName,tempDir->lastName,tempDir->phoneNum);
 	dirSize = getSize(nameList);
 	
 	printf("\n\nList is %d entries large\n",dirSize);
