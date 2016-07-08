@@ -55,9 +55,10 @@ int main(int argc, char * argv[]){
 		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize);
 		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
 		tempElement = tempElement->next;
-	}/*
+	}
 	printf("\nHash Table completed, verifying");
 	getchar();
+	/*
 	tempElement = hashTable;
 	while(tempElement != NULL){
 		tempHash = tempElement->structPtr;
