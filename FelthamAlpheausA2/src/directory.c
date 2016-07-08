@@ -2,7 +2,6 @@
 
 DirEntry * newEntry(char * input){
 	DirEntry * newDir;
-	char * tempString = malloc(sizeof(char) * 128);
 	newDir->firstName = malloc(sizeof(char) * 32);
 	newDir->lastName = malloc(sizeof(char) * 32);
 	
@@ -36,7 +35,7 @@ void printTableEntry(HashEntry * entry){
 	
 }
 
-void printDir (DirEntry * directory){
+void printDir(DirEntry * directory){
 	if(directory == NULL){
 		printf("\nEMPTY DIRECTORY");
 	}else{

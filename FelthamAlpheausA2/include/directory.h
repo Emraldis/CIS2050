@@ -15,4 +15,6 @@ DirEntry * newEntry(char * input);
 
 void printTableEntry(HashEntry * entry);
 
+void printDir(DirEntry * directory);
+
 #endif
