@@ -112,7 +112,7 @@ int pwr(int base, int exponent){
 		output = (output * base);
 	}
 	
-	printf("\nEXP: %d"output);
+	printf("\nEXP: %d",output);
 	
 	return(output);
 }
