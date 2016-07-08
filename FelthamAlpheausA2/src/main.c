@@ -49,7 +49,7 @@ int main(int argc, char * argv[]){
 	tempElement = nameList;
 	hashTable = NULL;
 	while(tempElement != NULL){
-		tempDir = tempElement->structPtr;
+		memcpy(tempDIr,tempElement->structPtr,sizeof(DirEntry));
 		printDir(tempDir);
 		tempDouble = (tempDir->phoneNum - 6045000000);
 		tempInt = (tempDouble * 1);
