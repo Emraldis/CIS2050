@@ -52,8 +52,8 @@ void printDir(DirEntry * directory){
 	}
 }
 
-int decode(char * phoneNum){
-	int output = 0;
+long decode(char * phoneNum){
+	long output = 0;
 	int i;
 	int j = 0;
 	
@@ -102,9 +102,9 @@ int decode(char * phoneNum){
 	return(output);
 }
 
-int pwr(int base, int exponent){
+long pwr(int base, int exponent){
 	int i;
-	int output = 0;
+	long output = 0;
 	
 	output = base;
 	

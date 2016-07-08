@@ -8,7 +8,7 @@
 typedef struct DirectoryEntry{
 	char * firstName;
 	char * lastName;
-	int phoneNum;
+	long phoneNum;
 }DirEntry;
 
 DirEntry * newEntry(char * input);
@@ -17,8 +17,8 @@ void printTableEntry(HashEntry * entry);
 
 void printDir(DirEntry * directory);
 
-int decode(char * phoneNum);
+long decode(char * phoneNum);
 
-int pwr(int base, int exponent);
+long pwr(int base, int exponent);
 
 #endif

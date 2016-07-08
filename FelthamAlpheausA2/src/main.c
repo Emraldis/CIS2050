@@ -14,6 +14,8 @@ int main(int argc, char * argv[]){
 	HashEntry * tempHash;
 	Element * tempElement;
 	int dirSize;
+	long tempLong;
+	int tempInt;
 	
 	fileName = malloc(sizeof(char) * 256);
 	data = malloc(sizeof(char) * 256);
@@ -46,7 +48,9 @@ int main(int argc, char * argv[]){
 	tempElement = nameList;
 	while(tempElement != NULL){
 		tempDir = tempElement->structPtr;
-		tempHash = createHashEntry(tempDir->phoneNum,tempDir,hashTable,dirSize);
+		tempLong = (tempDir->phoneNum - 6045000000);
+		tempInt = (tempLong * 1);
+		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize);
 		hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
 	}
 	
