@@ -39,6 +39,8 @@ int newHashKey(int keyBase, int dataSize){
 	tempStringTwo[2] = tempString[5];
 	tempIntB = atoi(tempStringTwo);
 	
+	printf("\n%d"(tempIntA * tempIntB));
+	getchar();
 	key = ((tempIntA * tempIntB) % (dataSize * (2/3)));
 	
 	printf("\nKey generatred: %d",key);
