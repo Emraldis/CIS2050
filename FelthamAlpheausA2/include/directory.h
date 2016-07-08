@@ -1,7 +1,6 @@
 #ifndef _AFELTHAM_HEADERH_DIR
 #define _AFELTHAM_HEADERH_DIR
 #include <stdio.h>
-#include <math.h>
 #include <string.h>
 #include <stdlib.h>
 #include "hashADT.h"
@@ -19,5 +18,7 @@ void printTableEntry(HashEntry * entry);
 void printDir(DirEntry * directory);
 
 int decode(char * phoneNum);
+
+int pwr(int base, int exponent);
 
 #endif
