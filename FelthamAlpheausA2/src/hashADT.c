@@ -71,9 +71,11 @@ int newHashKey(int keyBase, int dataSize){
 			tempInt = (tempInt * (1 + a));
 		}
 	}
+	getchar();
 	key = ((tempInt) % (dataSize / 2));
 	
 	printf("\nKey generatred: %d",key);
+	getchar();
 	
 	return(key);
 }
