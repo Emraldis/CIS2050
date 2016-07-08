@@ -47,7 +47,7 @@ void printDir(DirEntry * directory){
 	if(directory == NULL){
 		printf("\nEMPTY DIRECTORY");
 	}else{
-		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %l",directory->firstName,directory->lastName,directory->phoneNum);
+		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %ld",directory->firstName,directory->lastName,directory->phoneNum);
 	}
 }
 
