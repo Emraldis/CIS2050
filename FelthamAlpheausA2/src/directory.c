@@ -45,7 +45,7 @@ void printTableEntry(HashEntry * entry){
 }
 
 void printDir(DirEntry * directory){
-	if((directory == NULL)||(directory->firstName == NULL)||(directory->lastName == NULL)||(directory->phoneNum == NULL)){
+	if((directory == NULL)||(directory->firstName == NULL)||(directory->lastName == NULL)){
 		printf("\nDATA MISSING");
 	}else{
 		printf("\n\tFirstName: %s\n\tLastName: %s\n\tPhone Number: %.0f",directory->firstName,directory->lastName,directory->phoneNum);
