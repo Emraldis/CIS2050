@@ -104,8 +104,14 @@ int main(int argc, char * argv[]){
 		}
 		printf("\n%s",searchKey);
 		tempDouble = atof(searchKey);
+		printf("\TEST A");
+		getchar();
 		tempKey = newHashKey(tempDouble,dirSize);
+		printf("\TEST B");
+		getchar();
 		tempHash = keyExists(tempKey,hashTable);
+		printf("\TEST C");
+		getchar();
 		if(tempHash == NULL){
 			printf("\nThat Phone Number does not exist");
 		}else{
@@ -129,6 +135,7 @@ int main(int argc, char * argv[]){
 				}
 			}
 		}
+		getchar();
 		printf("\f");
 	}
 	printf("\n");
