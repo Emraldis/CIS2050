@@ -120,14 +120,16 @@ int main(int argc, char * argv[]){
 			if(tempDir->phoneNum == tempDouble){
 				printf("\nFound something:");
 				printDir(tempDir);
-			}	
+			}
+			printf("\nTEST C");
+			getchar();
 			while((tempElement != NULL) && (tempDir->phoneNum != tempDouble)){
+				tempDir = tempElement->structPtr;
 				if(tempDir->phoneNum == tempDouble){
 					printf("\nFound something:");
 					printDir(tempDir);
 				}else{
 					tempElement = tempElement->next;
-					tempDir = tempElement->structPtr;
 				}
 				if(tempElement == NULL){
 					printf("\nThat Phone Number does not exist");
