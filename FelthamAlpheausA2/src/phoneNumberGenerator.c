@@ -6,7 +6,7 @@
 
 char * nameGen ();
 
-int main (void){
+int main (int argc char * argv[]){
 	FILE * outputFile;
 	char * tempString;
 	char * tempStringTwo;
@@ -15,6 +15,7 @@ int main (void){
 	int i;
 	time_t t;
 	srand((unsigned)time(&t));
+	int numNames = 100;
 	
 	tempString = malloc(sizeof(char) * 256);
 	tempStringTwo = malloc(sizeof(char) * 256);
@@ -26,7 +27,7 @@ int main (void){
 	}else{
 		printf("\nBeginning name generation");
 	}
-	for(i=0;i<102;i++){
+	for(i=0;i<numNames;i++){
 		name = nameGen();
 		printf("\nName generated: %s",name);
 		sleep(2);
