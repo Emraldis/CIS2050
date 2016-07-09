@@ -123,11 +123,13 @@ int main(int argc, char * argv[]){
 				printf("\nPlease Enter a Last Name:\n");
 				fgets(lastName,128,stdin);
 				printf("\nPlease Enter a Phone Number:\n");
-				fgets(tempDouble,10,stdin);
+				fgets(tempString,10,stdin);
 				strcat(searchKey,firstName);
+				strcat(searchKey,",");
 				strcat(searchKey,lastName);
-				sprintf(tempString,"%f",tempDouble);
+				strcat(searchKey,",");
 				strcat(searchKey,tempString);
+				strcat(searchKey,"\n");
 				tempDir = newEntry(searchKey);
 				nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
 				hashTable = addToHashTable(hashTable,tempDir,dirSize);
