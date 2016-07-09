@@ -83,7 +83,7 @@ int main(int argc, char * argv[]){
 		getchar();
 		if((menu == 'q') || (menu == 'Q')){
 			menu = 'q';
-			printf("\nQuitting");
+			printf("\nQuitting\n");
 			exit(0);
 		}
 		switch(menu){
@@ -120,10 +120,13 @@ int main(int argc, char * argv[]){
 			case'2':
 				printf("\nPlease Enter a First Name:\n");
 				fgets(firstName,128,stdin);
+				firstName = strtok(firstName,"\n");
 				printf("\nPlease Enter a Last Name:\n");
 				fgets(lastName,128,stdin);
+				lastName = strtok(lastName,"\n");
 				printf("\nPlease Enter a Phone Number:\n");
 				fgets(tempString,10,stdin);
+				tempString = strtok(tempString,"\n");
 				strcat(searchKey,firstName);
 				strcat(searchKey,",");
 				strcat(searchKey,lastName);
@@ -135,6 +138,10 @@ int main(int argc, char * argv[]){
 				hashTable = addToHashTable(hashTable,tempDir,dirSize);
 				break;
 			case'3':
+				printf("\nPlease enter the file name:\n");
+				fgets(fileName,256,stdin);
+				dirFile = fopen(fileName,"r");
+				nameList = addToNameList(dirFile,nameList);
 				break;
 			case'4':
 				hashSize = getSize(hashTable);
