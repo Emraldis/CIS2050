@@ -16,7 +16,7 @@ int main(int argc, char * argv[]){
 	int hashSize;
 	int dirSize;
 	double tempDouble;
-	char menu;
+	char menu = ' ';
 	char * searchKey;
 	int tempKey;
 	
