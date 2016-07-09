@@ -75,6 +75,7 @@ int newHashKey(double keyBase, int tableSize){
 			tempInt = a;
 		}else{
 			tempInt = (tempInt * (1 + a));
+			printf("\nSTEP %d",tempInt);
 		}
 	}
 	key = ((tempInt) % (tableSize / 2));
