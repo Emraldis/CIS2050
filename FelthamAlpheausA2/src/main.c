@@ -93,6 +93,7 @@ int main(int argc, char * argv[]){
 	}
 	
 	printf("\n\fFinished setting up Phone Directory");
+	getchar();
 	
 	while(menu != 'q'){
 		printf("\nEnter the Phone Number you wish to search:\n");
