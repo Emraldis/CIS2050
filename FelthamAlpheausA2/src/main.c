@@ -104,21 +104,19 @@ int main(int argc, char * argv[]){
 		}
 		printf("\n%s",searchKey);
 		tempDouble = atof(searchKey);
-		printf("\nTEST A");
-		getchar();
 		tempKey = newHashKey(tempDouble,dirSize);
-		printf("\nTEST B");
-		getchar();
 		tempHash = keyExists(tempKey,hashTable);
-		printf("\nTEST C");
-		getchar();
 		if(tempHash == NULL){
 			printf("\nThat Phone Number does not exist");
 		}else{
 			printf("\nSearching through similar phone numbers");
 			getchar();
 			tempElement = tempHash->subList;
+			printf("\nTEST A");
+			getchar();
 			tempDir = tempElement->structPtr;
+			printf("\nTEST B");
+			getchar();
 			if(tempDir->phoneNum == tempDouble){
 				printf("\nFound something:");
 				printDir(tempDir);
