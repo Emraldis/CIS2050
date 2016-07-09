@@ -51,11 +51,15 @@ int main(int argc, char * argv[]){
 		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
 		printDir(tempDir);
 		tempDouble = tempDir->phoneNum;
-		printf("\nGenerating a key from %f",tempDouble);
+		printf("\nGenerating a key from %.0f",tempDouble);
 		tempHash = createHashEntry(tempDouble,tempDir,hashTable,dirSize,sizeof(DirEntry));
 		if(tempHash != NULL){
-			printf("\nCreating new hash");
-			hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
+			if(hashTable == NULL){
+				hashTable = createList(tempHash,sizeof(HashEntry));
+			}else{
+				printf("\nCreating new hash");
+				hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
+			}
 		}
 		tempElement = tempElement->next;
 	}
