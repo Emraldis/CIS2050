@@ -32,7 +32,7 @@ int newHashKey(double keyBase, int tableSize){
 	printf("\nCreating Hash key");
 	tempString = malloc(sizeof(char) * 16);
 	tempInt = 0;
-	sprintf(tempString,"%f",keyBase);
+	sprintf(tempString,"%.0f",keyBase);
 	for(i=0;i<(strlen(tempString));i++){
 		switch(tempString[i]){
 			case'0':
@@ -67,6 +67,7 @@ int newHashKey(double keyBase, int tableSize){
 				break;
 			case'.':
 				key = ((tempInt) % (tableSize / 2));
+				printf("\nKey generatred: %d",key);
 				return(key);
 				
 		}
