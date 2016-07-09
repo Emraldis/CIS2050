@@ -116,3 +116,17 @@ double pwr(int base, int exponent){
 	
 	return(output);
 }
+
+Element * createNameList(FILE * inputFile, Element * nameList){
+	DirEntry * tempDir;
+	
+	tempDir = malloc(sizeof(DirEntry));
+	
+	while(fgets(data,256,inputFile) != NULL){
+		tempDir = newEntry(data);
+		nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
+		printDir(tempDir);
+		printf("\nDirectory Added to list");
+	}
+	return(nameList);
+}

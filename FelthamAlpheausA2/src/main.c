@@ -38,19 +38,15 @@ int main(int argc, char * argv[]){
 		exit(0);
 	}
 	
-	while(fgets(data,256,dirFile) != NULL){
-		tempDir = newEntry(data);
-		nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
-		printDir(tempDir);
-		printf("\nDirectory Added to list");
-	}
+	nameList = createNameList(dirFile,nameList);
+	
 	fclose(dirFile);
 	
 	dirSize = getSize(nameList);
 	
 	printf("\n\nList is %d entries large\n",dirSize);
 	tempElement = nameList;
-	//hashTable = NULL;
+	hashTable = NULL;
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
 		printDir(tempDir);
