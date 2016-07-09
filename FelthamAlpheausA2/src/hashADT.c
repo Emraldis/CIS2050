@@ -79,8 +79,7 @@ int newHashKey(double keyBase, int tableSize){
 	tempInt = (tempInt/tableSize);
 	key = ((tempInt) % (tableSize / 2));
 	
-	return(0);
-	//return(key);
+	return(key);
 }
 
 HashEntry * keyExists(int key, Element * table){

@@ -78,7 +78,7 @@ int main(int argc, char * argv[]){
 	printf("\n\fFinished setting up Phone Directory");
 	
 	while(menu != 'q'){
-		printf("\n1)Search by Phone number\n2) Add a Phone Number \n3)Import Numbers from a File\nEnter 'q' to quit.\n");
+		printf("\n1)Search by Phone number\n2) Add a Phone Number \n3)Import Numbers from a File\n4)Print Directory\nEnter 'q' to quit.\n");
 		fgets(searchKey,256,stdin);
 		if((searchKey[0] == 'q') || (searchKey[0] == 'Q')){
 			menu = 'q';
@@ -135,6 +135,21 @@ int main(int argc, char * argv[]){
 				hashTable = addToHashTable(hashTable,tempDir,dirSize);
 				break;
 			case'3':
+				break;
+			case'4':
+				hashSize = getSize(hashTable);
+				printf("\nHash Table is %d entries large", hashSize);
+				tempElement = hashTable;
+				
+				while(tempElement != NULL){
+					if(tempElement != NULL){
+						tempHash = tempElement->structPtr;
+						printTableEntry(tempHash);
+						tempElement = tempElement->next;
+					}else{
+						printf("\nERROR");
+					}
+				}
 				break;
 		}
 		getchar();
