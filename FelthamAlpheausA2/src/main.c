@@ -79,13 +79,13 @@ int main(int argc, char * argv[]){
 	
 	while(menu != 'q'){
 		printf("\n1)Search by Phone number\n2) Add a Phone Number \n3)Import Numbers from a File\n4)Print Directory\nEnter 'q' to quit.\n");
-		fgets(searchKey,256,stdin);
-		if((searchKey[0] == 'q') || (searchKey[0] == 'Q')){
+		menu = getchar();
+		if((menu == 'q') || (menu == 'Q')){
 			menu = 'q';
 			printf("\nQuitting");
-			break;
+			exit(0);
 		}
-		switch(searchKey[0]){
+		switch(menu){
 			case'1':
 				printf("\nPlease enter the phone number for which you wish to search:\n");
 				fgets(searchKey,256,stdin);
