@@ -107,11 +107,15 @@ int main(int argc, char * argv[]){
 		tempKey = newHashKey(tempDouble,dirSize);
 		tempHash = keyExists(tempKey,hashTable);
 		if(tempHash == NULL){
-			printf("\nThat phone Number does not exist");
+			printf("\nThat Phone Number does not exist");
 		}else{
 			printf("\nSearching through similar phone numbers");
 			tempElement = tempHash->subList;
 			tempDir = tempElement->structPtr;
+			if(tempDir->phoneNum == tempDouble){
+				printf("\nFound something:");
+				printDir(tempDir);
+			}	
 			while((tempElement != NULL) && (tempDir->phoneNum != tempDouble)){
 				if(tempDir->phoneNum == tempDouble){
 					printf("\nFound something:");
@@ -121,7 +125,7 @@ int main(int argc, char * argv[]){
 					tempDir = tempElement->structPtr;
 				}
 				if(tempElement == NULL){
-					printf("\nThat phone Number does not exist");
+					printf("\nThat Phone Number does not exist");
 				}
 			}
 		}

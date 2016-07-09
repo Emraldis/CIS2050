@@ -30,7 +30,6 @@ int newHashKey(double keyBase, int tableSize){
 	int a = 0;
 	int i;
 	
-	printf("\nCreating Hash key");
 	tempString = malloc(sizeof(char) * 16);
 	tempInt = 0;
 	sprintf(tempString,"%.0f",keyBase);
@@ -68,7 +67,6 @@ int newHashKey(double keyBase, int tableSize){
 				break;
 			default:
 				key = ((tempInt) % (tableSize / 2));
-				printf("\nKey generatred: %d",key);
 				return(key);
 				
 		}
@@ -81,7 +79,6 @@ int newHashKey(double keyBase, int tableSize){
 	tempInt = (tempInt/tableSize);
 	key = ((tempInt) % (tableSize / 2));
 	
-	printf("\nKey generatred: %d",key);
 	
 	return(key);
 }
