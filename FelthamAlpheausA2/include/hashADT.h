@@ -7,13 +7,13 @@ typedef struct HashTableEntry{
 	struct ListElement * subList;
 }HashEntry;
 
-HashEntry * createHashEntry(int keyBase, void * element, Element * table, int dataSize);
+HashEntry * createHashEntry(int keyBase, void * element, Element * table, int tableSize, int dataSize);
 
-int newHashKey(int keyBase, int dataSize);
+int newHashKey(int keyBase, int tableSize);
 
 HashEntry * keyExists(int key, Element * table);
 
-HashEntry * addToSubList(HashEntry * entry, void * element);
+HashEntry * addToSubList(HashEntry * entry, void * element, int size);
 
 int subListSize(HashEntry * entry);
 

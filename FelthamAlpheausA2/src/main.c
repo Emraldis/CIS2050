@@ -54,7 +54,7 @@ int main(int argc, char * argv[]){
 		tempDouble = (tempDir->phoneNum - 6045000000);
 		tempInt = (tempDouble * 1);
 		printf("\nGenerating a key from %d",tempInt);
-		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize);
+		tempHash = createHashEntry(tempInt,tempDir,hashTable,dirSize,sizeof(DirEntry));
 		if(tempHash != NULL){
 			hashTable = addToFront(tempHash,hashTable,sizeof(tempHash));
 		}
@@ -69,7 +69,6 @@ int main(int argc, char * argv[]){
 	while(tempElement != NULL){
 		if(tempElement != NULL){
 			tempHash = tempElement->structPtr;
-			printf("\nFor key: %d",tempHash->hashKey);
 			printTableEntry(tempHash);
 			tempElement = tempElement->next;
 		}else{

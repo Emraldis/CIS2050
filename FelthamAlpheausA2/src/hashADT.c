@@ -1,28 +1,28 @@
 #include "hashADT.h"
 
-HashEntry * createHashEntry(int keyBase, void * element, Element * table, int dataSize){
+HashEntry * createHashEntry(int keyBase, void * element, Element * table, int tableSize, int dataSize){
 	HashEntry * newHash;
 	int key;
 	
 	newHash = malloc(sizeof(HashEntry));
 	
-	key = newHashKey(keyBase,dataSize);
+	key = newHashKey(keyBase,tableSize);
 	if(table == NULL){
 		newHash->hashKey = key;
 		return(newHash);
 	}
 	if(keyExists(key,table) != NULL){
 		newHash = keyExists(key,table);
-		newHash->subList = addToFront(element,newHash->subList,sizeof(element));
+		newHash->subList = addToFront(element,newHash->subList,dataSize);
 		return(NULL);
 	}else{
 		newHash->hashKey = key;
-		newHash->subList = createList(element,sizeof(element));
+		newHash->subList = createList(element,dataSize);
 	}
 	return(newHash);
 }
 
-int newHashKey(int keyBase, int dataSize){
+int newHashKey(int keyBase, int tableSize){
 	int key;
 	int tempInt;
 	char * tempString;
@@ -72,7 +72,7 @@ int newHashKey(int keyBase, int dataSize){
 			tempInt = (tempInt * (1 + a));
 		}
 	}
-	key = ((tempInt) % (dataSize / 2));
+	key = ((tempInt) % (tableSize / 2));
 	
 	printf("\nKey generatred: %d",key);
 	
@@ -100,7 +100,7 @@ HashEntry * keyExists(int key, Element * table){
 	return(NULL);
 }
 
-HashEntry * addToSubList(HashEntry * entry, void * element){
+HashEntry * addToSubList(HashEntry * entry, void * element, int size){
 	printf("test");
 	getchar();
 	if(entry->subList == NULL){
