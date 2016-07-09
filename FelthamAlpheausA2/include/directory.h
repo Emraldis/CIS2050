@@ -23,6 +23,6 @@ double pwr(int base, int exponent);
 
 Element * addToNameList(FILE * inputFile, Element * nameList);
 
-Element * addToHashTable(Element * hashTable,DirEntry * entry);
+Element * addToHashTable(Element * hashTable,DirEntry * entry, int dirSize);
 
 #endif

@@ -51,21 +51,7 @@ int main(int argc, char * argv[]){
 		printDir(tempDir);
 		tempDouble = tempDir->phoneNum;
 		printf("\nGenerating a key from %.0f",tempDouble);
-		tempHash = createHashEntry(tempDouble,tempDir,hashTable,dirSize,sizeof(DirEntry));
-		if(hashTable == NULL){
-			printf("\nCreating new hash");
-			hashTable = createList(tempHash,sizeof(HashEntry));
-			hashTable->next = NULL;
-			if(tempHash == NULL){
-				printf("\nERROR\n");
-				exit(0);
-			}
-		}else{
-			if(tempHash != NULL){
-				printf("\nCreating new hash");
-				hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
-			}
-		}
+		hashTable = addToHashTable(hashTable,tempDir,dirSize);
 		tempElement = tempElement->next;
 	}
 	printf("\nHash Table completed, verifying");
@@ -77,11 +63,7 @@ int main(int argc, char * argv[]){
 		if(tempElement != NULL){
 			tempHash = tempElement->structPtr;
 			printTableEntry(tempHash);
-			if(tempElement->next){
-				tempElement = tempElement->next;
-			}else{
-				break;
-			}
+			tempElement = tempElement->next;
 		}else{
 			printf("\nERROR");
 		}

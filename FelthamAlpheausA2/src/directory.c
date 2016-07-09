@@ -133,8 +133,25 @@ Element * addToNameList(FILE * inputFile, Element * nameList){
 	return(nameList);
 }
 
-Element * addToHashTable(Element * hashTable,DirEntry * entry){
+Element * addToHashTable(Element * hashTable,DirEntry * entry, int dirSize){
+	HashEntry * tempHash;
 	
+	tempHash = malloc(sizeof(HashEntry));
 	
+	tempHash = createHashEntry(dirEntry->phoneNum,entry,hashTable,dirSize,sizeof(DirEntry));
+	if(hashTable == NULL){
+		printf("\nCreating new hash");
+		hashTable = createList(tempHash,sizeof(HashEntry));
+		hashTable->next = NULL;
+		if(tempHash == NULL){
+			printf("\nERROR\n");
+			exit(0);
+		}
+	}else{
+		if(tempHash != NULL){
+			printf("\nCreating new hash");
+			hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
+		}
+	}
 	return(hashTable);
 }
