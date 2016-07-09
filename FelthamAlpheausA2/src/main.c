@@ -50,7 +50,7 @@ int main(int argc, char * argv[]){
 	
 	printf("\n\nList is %d entries large\n",dirSize);
 	tempElement = nameList;
-	hashTable = NULL;
+	//hashTable = NULL;
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
 		printDir(tempDir);
@@ -95,7 +95,7 @@ int main(int argc, char * argv[]){
 	printf("\n\fFinished setting up Phone Directory");
 	
 	while(menu != 'q'){
-		printf("\nEnter the Phone Number you wish to search, or enter 'q' to quit.\n");
+		printf("\n1)Search by Phone number\n2) Add a Phone Number 3)Import Numbers from a File\n");
 		fgets(searchKey,256,stdin);
 		if((searchKey[0] == 'q') || (searchKey[0] == 'Q')){
 			menu = 'q';
