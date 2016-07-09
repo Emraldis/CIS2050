@@ -115,7 +115,7 @@ int main(int argc, char * argv[]){
 						}
 					}
 				}
-				searchKey = " ";
+				searchKey = NULL;
 				break;
 			case'2':
 				printf("\nPlease Enter a First Name:\n");
@@ -133,10 +133,10 @@ int main(int argc, char * argv[]){
 				tempDir = newEntry(searchKey);
 				nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
 				hashTable = addToHashTable(hashTable,tempDir,dirSize);
-				searchKey = " ";
+				searchKey = NULL;
 				break;
 			case'3':
-				searchKey = " ";
+				searchKey = NULL;
 				break;
 			case'4':
 				hashSize = getSize(hashTable);
@@ -152,7 +152,7 @@ int main(int argc, char * argv[]){
 						printf("\nERROR");
 					}
 				}
-				searchKey = " ";
+				searchKey = NULL;
 				break;
 		}
 		getchar();
