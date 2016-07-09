@@ -16,11 +16,14 @@ int main(int argc, char * argv[]){
 	int hashSize;
 	int dirSize;
 	double tempDouble;
+	char menu;
+	char * searchKey;
 	
 	fileName = malloc(sizeof(char) * 256);
 	data = malloc(sizeof(char) * 256);
 	tempDir = malloc(sizeof(DirEntry));
 	tempElement = malloc(sizeof(Element));
+	searchKey = malloc(sizeof(char) * 256);
 	
 	if(argc != 1){
 		strcpy(fileName,argv[1]);
@@ -87,5 +90,13 @@ int main(int argc, char * argv[]){
 			printf("\nERROR");
 		}
 	}
+	
+	printf("\n\fFinished setting up Phone Directory");
+	
+	while(menu != 'q'){
+		printf("\nEnter the Phone Number you wish to search");
+		fgets(searchKey,256,stdin);
+	}
+	
 	return(0);
 }
