@@ -65,6 +65,10 @@ int newHashKey(double keyBase, int tableSize){
 			case'9':
 				a = 9;
 				break;
+			case'.':
+				key = ((tempInt) % (tableSize / 2));
+				return(key);
+				
 		}
 		if(tempInt == 0){
 			tempInt = a;
