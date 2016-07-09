@@ -75,11 +75,10 @@ int newHashKey(double keyBase, int tableSize){
 		if(tempInt == 0){
 			tempInt = a;
 		}else{
-			printf("\nMATH: %d * (1 + %d)",tempInt,a);
 			tempInt = (tempInt * (1 + a));
-			printf("\nSTEP %d",tempInt);
 		}
 	}
+	tempInt = (tempInt/tableSize);
 	key = ((tempInt) % (tableSize / 2));
 	
 	printf("\nKey generatred: %d",key);
