@@ -21,6 +21,6 @@ double decode(char * phoneNum);
 
 double pwr(int base, int exponent);
 
-Element * createNameList(FILE * inputFile, Elemebt * nameList);
+Element * createNameList(FILE * inputFile, Element * nameList);
 
 #endif

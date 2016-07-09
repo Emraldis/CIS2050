@@ -119,8 +119,10 @@ double pwr(int base, int exponent){
 
 Element * createNameList(FILE * inputFile, Element * nameList){
 	DirEntry * tempDir;
+	char * data;
 	
 	tempDir = malloc(sizeof(DirEntry));
+	data = malloc(sizeof(char) * 256);
 	
 	while(fgets(data,256,inputFile) != NULL){
 		tempDir = newEntry(data);
