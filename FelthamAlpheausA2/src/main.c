@@ -37,10 +37,7 @@ int main(int argc, char * argv[]){
 		exit(0);
 	}
 	nameList = NULL;
-	nameList = createNameList(dirFile,nameList);
-	
-	printf("\nTEST");
-	getchar();
+	nameList = addToNameList(dirFile,nameList);
 	
 	fclose(dirFile);
 	
@@ -69,15 +66,9 @@ int main(int argc, char * argv[]){
 				hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
 			}
 		}
-		if(tempElement->next != NULL){
-			tempElement = tempElement->next;
-		}else{
-			break;
-		}
+		tempElement = tempElement->next;
 	}
-	getchar();
 	printf("\nHash Table completed, verifying");
-	getchar();
 	hashSize = getSize(hashTable);
 	printf("\nHash Table is %d entries large", hashSize);
 	tempElement = hashTable;

@@ -117,7 +117,7 @@ double pwr(int base, int exponent){
 	return(output);
 }
 
-Element * createNameList(FILE * inputFile, Element * nameList){
+Element * addToNameList(FILE * inputFile, Element * nameList){
 	DirEntry * tempDir;
 	char * data;
 	
@@ -131,4 +131,10 @@ Element * createNameList(FILE * inputFile, Element * nameList){
 		printf("\nDirectory Added to list");
 	}
 	return(nameList);
+}
+
+Element * addToHashTable(Element * hashTable,DirEntry * entry){
+	
+	
+	return(hashTable);
 }
