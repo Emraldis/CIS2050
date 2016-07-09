@@ -36,7 +36,7 @@ int main(int argc, char * argv[]){
 		printf("\nError opening file");
 		exit(0);
 	}
-	
+	nameList = NULL;
 	nameList = createNameList(dirFile,nameList);
 	
 	printf("\nTEST");
