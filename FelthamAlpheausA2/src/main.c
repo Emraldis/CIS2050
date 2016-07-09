@@ -59,7 +59,7 @@ int main(int argc, char * argv[]){
 			hashTable->next = NULL;
 			if(tempHash == NULL){
 				printf("\nERROR\n");
-				exit();
+				exit(0);
 			}
 		}else{
 			if(tempHash != NULL){
