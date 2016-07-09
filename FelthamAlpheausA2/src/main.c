@@ -99,6 +99,13 @@ int main(int argc, char * argv[]){
 		fgets(searchKey,256,stdin);
 		printf("\n%s",searchKey);
 		tempKey = newHashKey(atof(searchKey),dirSize);
+		tempHash = keyExists(tempKey,hashTable);
+		if(tempHash == NULL){
+			printf("\nThat phone Number does not exist");
+		}else{
+			printf("\nSearching through similar phone numbers");
+			tempElement = tempHash->subList;
+		}
 		
 	}
 	
