@@ -7,7 +7,7 @@ typedef struct HashTableEntry{
 	struct ListElement * subList;
 }HashEntry;
 
-HashEntry * createHashEntry(int keyBase, void * element, Element * table, int tableSize, int dataSize);
+HashEntry * createHashEntry(double keyBase, void * element, Element * table, int tableSize, int dataSize);
 
 int newHashKey(double keyBase, int tableSize);
 
