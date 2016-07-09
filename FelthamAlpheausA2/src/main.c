@@ -129,8 +129,8 @@ int main(int argc, char * argv[]){
 				}
 			}
 		}
-		
+		printf("\f");
 	}
-	
+	printf("\n");
 	return(0);
 }
