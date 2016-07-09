@@ -69,7 +69,11 @@ int main(int argc, char * argv[]){
 				hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
 			}
 		}
-		tempElement = tempElement->next;
+		if(tempElement->next != NULL){
+			tempElement = tempElement->next;
+		}else{
+			break;
+		}
 	}
 	getchar();
 	printf("\nHash Table completed, verifying");
