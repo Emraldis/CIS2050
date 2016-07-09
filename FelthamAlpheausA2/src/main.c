@@ -18,12 +18,18 @@ int main(int argc, char * argv[]){
 	char menu = ' ';
 	char * searchKey;
 	int tempKey;
+	char * firstName;
+	char * lastName;
+	char * tempString;
 	
 	fileName = malloc(sizeof(char) * 256);
 	tempDir = malloc(sizeof(DirEntry));
 	tempElement = malloc(sizeof(Element));
 	searchKey = malloc(sizeof(char) * 256);
 	nameList = malloc(sizeof(Element));
+	firstName = malloc(sizeof(char) * 128);
+	lastName = malloc(sizeof(char) * 128);
+	tempString = malloc(sizeof(char) * 16);
 	
 	if(argc != 1){
 		strcpy(fileName,argv[1]);
@@ -72,39 +78,62 @@ int main(int argc, char * argv[]){
 	printf("\n\fFinished setting up Phone Directory");
 	
 	while(menu != 'q'){
-		printf("\n1)Search by Phone number\n2) Add a Phone Number 3)Import Numbers from a File\n");
+		printf("\n1)Search by Phone number\n2) Add a Phone Number \n3)Import Numbers from a File\nEnter 'q' to quit.\n");
 		fgets(searchKey,256,stdin);
 		if((searchKey[0] == 'q') || (searchKey[0] == 'Q')){
 			menu = 'q';
 			printf("\nQuitting");
 			break;
 		}
-		printf("\n%s",searchKey);
-		tempDouble = atof(searchKey);
-		tempKey = newHashKey(tempDouble,dirSize);
-		tempHash = keyExists(tempKey,hashTable);
-		if(tempHash == NULL){
-			printf("\nThat Phone Number does not exist");
-		}else{
-			printf("\nSearching through similar phone numbers");
-			tempElement = tempHash->subList;
-			tempDir = tempElement->structPtr;
-			if(tempDir->phoneNum == tempDouble){
-				printf("\nFound something:");
-				printDir(tempDir);
-			}
-			while((tempElement != NULL) && (tempDir->phoneNum != tempDouble)){
-				tempDir = tempElement->structPtr;
-				if(tempDir->phoneNum == tempDouble){
-					printf("\nFound something:");
-					printDir(tempDir);
-				}else{
-					tempElement = tempElement->next;
-				}
-				if(tempElement == NULL){
+		switch(searchKey[0]){
+			case'1':
+				printf("\nPlease enter the phone number for which you wish to search:\n");
+				fgets(searchKey,256,stdin);
+				tempDouble = atof(searchKey);
+				tempKey = newHashKey(tempDouble,dirSize);
+				tempHash = keyExists(tempKey,hashTable);
+				if(tempHash == NULL){
 					printf("\nThat Phone Number does not exist");
+				}else{
+					printf("\nSearching through similar phone numbers");
+					tempElement = tempHash->subList;
+					tempDir = tempElement->structPtr;
+					if(tempDir->phoneNum == tempDouble){
+						printf("\nFound something:");
+						printDir(tempDir);
+					}
+					while((tempElement != NULL) && (tempDir->phoneNum != tempDouble)){
+						tempDir = tempElement->structPtr;
+						if(tempDir->phoneNum == tempDouble){
+							printf("\nFound something:");
+							printDir(tempDir);
+						}else{
+							tempElement = tempElement->next;
+						}
+						if(tempElement == NULL){
+							printf("\nThat Phone Number does not exist");
+						}
+					}
 				}
-			}
+				searchKey = " ";
+				break;
+			case'2':
+				printf("\nPlease Enter a First Name:\n");
+				fgets(firstName,128,stdin);
+				printf("\nPlease Enter a Last Name:\n");
+				fgets(lastName,128,stdin);
+				printf("\nPlease Enter a Phone Number:\n");
+				fgets(tempDouble,10,stdin);
+				strcat(searchKey,firstName);
+				strcat(searchKey,lastName);
+				sprintf(tempString,"%f",tempDouble);
+				strcat(searchKey,tempString);
+				tempDir = newEntry(searchKey);
+				nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
+				hashTable = addToHashTable(hashTable,tempDir,dirSize);
+				break;
+			case'3':
+				break;
 		}
 		getchar();
 		printf("\f");
