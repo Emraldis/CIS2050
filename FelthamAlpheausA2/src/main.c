@@ -74,6 +74,7 @@ int main(int argc, char * argv[]){
 		tempElement = tempElement->next;
 	}
 	printf("\nHash Table completed, verifying");
+	getchar();
 	hashSize = getSize(hashTable);
 	printf("\nHash Table is %d entries large", hashSize);
 	tempElement = hashTable;
