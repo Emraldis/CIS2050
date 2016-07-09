@@ -133,8 +133,10 @@ int main(int argc, char * argv[]){
 				tempDir = newEntry(searchKey);
 				nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
 				hashTable = addToHashTable(hashTable,tempDir,dirSize);
+				searchKey = " ";
 				break;
 			case'3':
+				searchKey = " ";
 				break;
 			case'4':
 				hashSize = getSize(hashTable);
@@ -150,6 +152,7 @@ int main(int argc, char * argv[]){
 						printf("\nERROR");
 					}
 				}
+				searchKey = " ";
 				break;
 		}
 		getchar();
