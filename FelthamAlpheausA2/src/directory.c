@@ -35,9 +35,11 @@ void printTableEntry(HashEntry * entry){
 	printf("\nFor Hash Key %d:",entry->hashKey);
 	
 	while(tempElement != NULL){
-		tempDir = tempElement->structPtr;
-		printDir(tempDir);
-		tempElement = tempElement->next;
+		if(tempElement != NULL){
+			tempDir = tempElement->structPtr;
+			printDir(tempDir);
+			tempElement = tempElement->next;
+		}
 	}
 	
 }

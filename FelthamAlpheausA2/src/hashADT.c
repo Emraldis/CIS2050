@@ -22,7 +22,7 @@ HashEntry * createHashEntry(int keyBase, void * element, Element * table, int ta
 	return(newHash);
 }
 
-int newHashKey(int keyBase, int tableSize){
+int newHashKey(double keyBase, int tableSize){
 	int key;
 	int tempInt;
 	char * tempString;
@@ -32,7 +32,7 @@ int newHashKey(int keyBase, int tableSize){
 	printf("\nCreating Hash key");
 	tempString = malloc(sizeof(char) * 16);
 	tempInt = 0;
-	sprintf(tempString,"%d",keyBase);
+	sprintf(tempString,"%f",keyBase);
 	for(i=0;i<(strlen(tempString));i++){
 		switch(tempString[i]){
 			case'0':
@@ -98,21 +98,6 @@ HashEntry * keyExists(int key, Element * table){
 	}
 	
 	return(NULL);
-}
-
-HashEntry * addToSubList(HashEntry * entry, void * element, int size){
-	printf("test");
-	getchar();
-	if(entry->subList == NULL){
-		printf("\nit should be null");
-	}else{
-		printf("\nBut it's not");
-	}
-	entry->subList = addToBack(element,entry->subList,sizeof(element));
-	printf("test");
-	getchar();
-	
-	return(entry);
 }
 
 int subListSize(HashEntry * entry){

@@ -13,8 +13,6 @@ int newHashKey(int keyBase, int tableSize);
 
 HashEntry * keyExists(int key, Element * table);
 
-HashEntry * addToSubList(HashEntry * entry, void * element, int size);
-
 int subListSize(HashEntry * entry);
 
 
