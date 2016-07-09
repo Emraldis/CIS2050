@@ -18,6 +18,7 @@ int main(int argc, char * argv[]){
 	double tempDouble;
 	char menu;
 	char * searchKey;
+	int tempKey;
 	
 	fileName = malloc(sizeof(char) * 256);
 	data = malloc(sizeof(char) * 256);
@@ -97,6 +98,8 @@ int main(int argc, char * argv[]){
 		printf("\nEnter the Phone Number you wish to search:\n");
 		fgets(searchKey,256,stdin);
 		printf("\n%s",searchKey);
+		tempKey = newHashKey(atof(searchKey),dirSize);
+		
 	}
 	
 	return(0);
