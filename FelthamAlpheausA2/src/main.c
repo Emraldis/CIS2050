@@ -99,6 +99,7 @@ int main(int argc, char * argv[]){
 		fgets(searchKey,256,stdin);
 		if((searchKey[0] == 'q') || (searchKey[0] == 'Q')){
 			menu = 'q';
+			printf("\nQuitting");
 			break;
 		}
 		printf("\n%s",searchKey);
@@ -112,12 +113,12 @@ int main(int argc, char * argv[]){
 			tempElement = tempHash->subList;
 			tempDir = tempElement->structPtr;
 			while((tempElement != NULL) && (tempDir->phoneNum != tempDouble)){
-				tempDir = tempElement->structPtr;
 				if(tempDir->phoneNum == tempDouble){
 					printf("\nFound something:");
 					printDir(tempDir);
 				}else{
 					tempElement = tempElement->next;
+					tempDir = tempElement->structPtr;
 				}
 				if(tempElement == NULL){
 					printf("\nThat phone Number does not exist");
