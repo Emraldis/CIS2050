@@ -9,6 +9,7 @@ HashEntry * createHashEntry(double keyBase, void * element, Element * table, int
 	key = newHashKey(keyBase,tableSize);
 	if(table == NULL){
 		newHash->hashKey = key;
+		newHash->subList = createList(element,dataSize);
 		return(newHash);
 	}
 	if(keyExists(key,table) != NULL){
