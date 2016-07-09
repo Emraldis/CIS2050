@@ -65,7 +65,7 @@ int newHashKey(double keyBase, int tableSize){
 			case'9':
 				a = 9;
 				break;
-			case'.':
+			default:
 				key = ((tempInt) % (tableSize / 2));
 				printf("\nKey generatred: %d",key);
 				return(key);
