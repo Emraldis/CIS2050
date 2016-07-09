@@ -138,7 +138,7 @@ Element * addToHashTable(Element * hashTable,DirEntry * entry, int dirSize){
 	
 	tempHash = malloc(sizeof(HashEntry));
 	
-	tempHash = createHashEntry(dirEntry->phoneNum,entry,hashTable,dirSize,sizeof(DirEntry));
+	tempHash = createHashEntry(entry->phoneNum,entry,hashTable,dirSize,sizeof(DirEntry));
 	if(hashTable == NULL){
 		printf("\nCreating new hash");
 		hashTable = createList(tempHash,sizeof(HashEntry));
