@@ -104,13 +104,13 @@ int main(int argc, char * argv[]){
 		}
 		printf("\n%s",searchKey);
 		tempDouble = atof(searchKey);
-		printf("\TEST A");
+		printf("\nTEST A");
 		getchar();
 		tempKey = newHashKey(tempDouble,dirSize);
-		printf("\TEST B");
+		printf("\nTEST B");
 		getchar();
 		tempHash = keyExists(tempKey,hashTable);
-		printf("\TEST C");
+		printf("\nTEST C");
 		getchar();
 		if(tempHash == NULL){
 			printf("\nThat Phone Number does not exist");
