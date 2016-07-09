@@ -8,7 +8,6 @@ int main(int argc, char * argv[]){
 	FILE * dirFile;
 	char * fileName;
 	Element * nameList;
-	char * data;
 	DirEntry * tempDir;
 	Element * hashTable;
 	HashEntry * tempHash;
@@ -51,7 +50,7 @@ int main(int argc, char * argv[]){
 	tempElement = nameList;
 	hashTable = NULL;
 	while(tempElement != NULL){
-		if(tempElement->next == NULL){
+		if(tempElement == NULL){
 			printf("\nTHIS IS THE LAST ONE");
 		}
 		getchar();
