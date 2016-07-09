@@ -37,7 +37,7 @@ void printTableEntry(HashEntry * entry){
 	while(tempElement != NULL){
 		if(tempElement->next == NULL){
 			printf("\nTHIS IS THE LAST ELEMENT");
-			gethcar();
+			getchar();
 		}
 		if(tempElement != NULL){
 			tempDir = tempElement->structPtr;
