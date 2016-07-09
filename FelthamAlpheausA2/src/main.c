@@ -110,19 +110,12 @@ int main(int argc, char * argv[]){
 			printf("\nThat Phone Number does not exist");
 		}else{
 			printf("\nSearching through similar phone numbers");
-			getchar();
 			tempElement = tempHash->subList;
-			printf("\nTEST A");
-			getchar();
 			tempDir = tempElement->structPtr;
-			printf("\nTEST B");
-			getchar();
 			if(tempDir->phoneNum == tempDouble){
 				printf("\nFound something:");
 				printDir(tempDir);
 			}
-			printf("\nTEST C");
-			getchar();
 			while((tempElement != NULL) && (tempDir->phoneNum != tempDouble)){
 				tempDir = tempElement->structPtr;
 				if(tempDir->phoneNum == tempDouble){
