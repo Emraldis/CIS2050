@@ -80,6 +80,7 @@ int main(int argc, char * argv[]){
 	while(menu != 'q'){
 		printf("\n1)Search by Phone number\n2) Add a Phone Number \n3)Import Numbers from a File\n4)Print Directory\nEnter 'q' to quit.\n");
 		menu = getchar();
+		getchar();
 		if((menu == 'q') || (menu == 'Q')){
 			menu = 'q';
 			printf("\nQuitting");
@@ -115,7 +116,6 @@ int main(int argc, char * argv[]){
 						}
 					}
 				}
-				searchKey = NULL;
 				break;
 			case'2':
 				printf("\nPlease Enter a First Name:\n");
@@ -133,10 +133,8 @@ int main(int argc, char * argv[]){
 				tempDir = newEntry(searchKey);
 				nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
 				hashTable = addToHashTable(hashTable,tempDir,dirSize);
-				searchKey = NULL;
 				break;
 			case'3':
-				searchKey = NULL;
 				break;
 			case'4':
 				hashSize = getSize(hashTable);
@@ -152,7 +150,9 @@ int main(int argc, char * argv[]){
 						printf("\nERROR");
 					}
 				}
-				searchKey = NULL;
+				break;
+			default:
+				printf("\nInput not recognized, please try again");
 				break;
 		}
 		getchar();
