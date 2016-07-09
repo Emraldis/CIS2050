@@ -51,7 +51,7 @@ int main(int argc, char * argv[]){
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
 		printDir(tempDir);
-		tempDouble = tempDir->phoneNum - 6045000000
+		tempDouble = tempDir->phoneNum;
 		printf("\nGenerating a key from %f",tempDouble);
 		tempHash = createHashEntry(tempDouble,tempDir,hashTable,dirSize,sizeof(DirEntry));
 		if(tempHash != NULL){
