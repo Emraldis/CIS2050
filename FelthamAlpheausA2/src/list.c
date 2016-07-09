@@ -116,16 +116,9 @@ int getSize(Element * list){
 	
 	tempElement = list;
 	if(tempElement != NULL){
-		count = 1;
 		while(tempElement!= NULL){
 			count++;
 			tempElement = tempElement->next;
-			if(tempElement != NULL){
-				if((count > 95) && (tempElement->next != NULL)){
-					printf("\n@%d, next is not null",count);
-					getchar();
-				}
-			}
 		}
 	}
 	return(count);

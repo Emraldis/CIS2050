@@ -16,7 +16,6 @@ int main(int argc, char * argv[]){
 	int hashSize;
 	int dirSize;
 	double tempDouble;
-	int tempInt;
 	
 	fileName = malloc(sizeof(char) * 256);
 	data = malloc(sizeof(char) * 256);
