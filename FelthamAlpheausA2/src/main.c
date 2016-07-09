@@ -73,7 +73,11 @@ int main(int argc, char * argv[]){
 		if(tempElement != NULL){
 			tempHash = tempElement->structPtr;
 			printTableEntry(tempHash);
-			tempElement = tempElement->next;
+			if(tempElement->next){
+				tempElement = tempElement->next;
+			}else{
+				break;
+			}
 		}else{
 			printf("\nERROR");
 		}
