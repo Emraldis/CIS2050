@@ -21,7 +21,6 @@ int main(int argc, char * argv[]){
 	int tempKey;
 	
 	fileName = malloc(sizeof(char) * 256);
-	data = malloc(sizeof(char) * 256);
 	tempDir = malloc(sizeof(DirEntry));
 	tempElement = malloc(sizeof(Element));
 	searchKey = malloc(sizeof(char) * 256);
@@ -52,6 +51,10 @@ int main(int argc, char * argv[]){
 	tempElement = nameList;
 	hashTable = NULL;
 	while(tempElement != NULL){
+		if(tempElement->next == NULL){
+			printf("\nTHIS IS THE LAST ONE");
+		}
+		getchar();
 		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
 		printDir(tempDir);
 		tempDouble = tempDir->phoneNum;
