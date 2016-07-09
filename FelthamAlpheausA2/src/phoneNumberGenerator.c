@@ -21,6 +21,11 @@ int main (int argc char * argv[]){
 	tempStringTwo = malloc(sizeof(char) * 256);
 	name = malloc(sizeof(char) * 256);
 	outputFile = fopen("PhoneNumbers.txt","w");
+	
+	if(argc > 1){
+		numNames = atoi(argv[1]);
+	}
+	
 	if(outputFile == NULL){
 		printf("\nERROR OPENING FILE");
 		exit(0);
