@@ -54,8 +54,13 @@ int main(int argc, char * argv[]){
 		printf("\nGenerating a key from %.0f",tempDouble);
 		tempHash = createHashEntry(tempDouble,tempDir,hashTable,dirSize,sizeof(DirEntry));
 		if(hashTable == NULL){
+			printf("\nCreating new hash");
 			hashTable = createList(tempHash,sizeof(HashEntry));
 			hashTable->next = NULL;
+			if(tempHash == NULL){
+				printf("\nERROR\n");
+				exit();
+			}
 		}else{
 			if(tempHash != NULL){
 				printf("\nCreating new hash");
