@@ -93,13 +93,13 @@ int main(int argc, char * argv[]){
 	}
 	
 	printf("\n\fFinished setting up Phone Directory");
-	getchar();
 	
 	while(menu != 'q'){
-		printf("\nEnter the Phone Number you wish to search:\n");
+		printf("\nEnter the Phone Number you wish to search, or enter 'q' to quit.\n");
 		fgets(searchKey,256,stdin);
 		if((searchKey[0] == 'q') || (searchKey[0] == 'Q')){
 			menu = 'q';
+			break;
 		}
 		printf("\n%s",searchKey);
 		tempDouble = atof(searchKey);
