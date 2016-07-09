@@ -70,6 +70,7 @@ int main(int argc, char * argv[]){
 		tempHash = tempElement->structPtr;
 		tempInt = getSize(tempHash->subList);
 		printf("\nFor key: %d, there are %d entries",tempHash->hashKey,tempInt);
+		getchar();
 		tempElement = tempElement->next;
 	}
 	return(0);
