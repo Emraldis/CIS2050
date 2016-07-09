@@ -26,7 +26,7 @@ int main (void){
 	}else{
 		printf("\nBeginning name generation");
 	}
-	for(i=0;i<100;i++){
+	for(i=0;i<102;i++){
 		name = nameGen();
 		printf("\nName generated: %s",name);
 		sleep(2);
