@@ -17,6 +17,5 @@ HashEntry * addToSubList(HashEntry * entry, void * element);
 
 int subListSize(HashEntry * entry);
 
-void printTableEntry(HashEntry * entry);
 
 #endif
