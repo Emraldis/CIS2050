@@ -50,10 +50,6 @@ int main(int argc, char * argv[]){
 	tempElement = nameList;
 	hashTable = NULL;
 	while(tempElement != NULL){
-		if(tempElement == NULL){
-			printf("\nTHIS IS THE LAST ONE");
-		}
-		getchar();
 		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
 		printDir(tempDir);
 		tempDouble = tempDir->phoneNum;
@@ -75,6 +71,7 @@ int main(int argc, char * argv[]){
 		}
 		tempElement = tempElement->next;
 	}
+	getchar();
 	printf("\nHash Table completed, verifying");
 	getchar();
 	hashSize = getSize(hashTable);
