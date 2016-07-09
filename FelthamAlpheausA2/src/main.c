@@ -56,6 +56,7 @@ int main(int argc, char * argv[]){
 		if(tempHash != NULL){
 			if(hashTable == NULL){
 				hashTable = createList(tempHash,sizeof(HashEntry));
+				hashTable->next = NULL;
 			}else{
 				printf("\nCreating new hash");
 				hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
