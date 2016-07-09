@@ -35,6 +35,10 @@ void printTableEntry(HashEntry * entry){
 	printf("\nFor Hash Key %d:",entry->hashKey);
 	
 	while(tempElement != NULL){
+		if(tempElement->next == NULL){
+			printf("\nTHIS IS THE LAST ELEMENT");
+			gethcar();
+		}
 		if(tempElement != NULL){
 			tempDir = tempElement->structPtr;
 			printDir(tempDir);
