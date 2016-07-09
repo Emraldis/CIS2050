@@ -83,7 +83,7 @@ int newHashKey(double keyBase, int tableSize){
 	
 	printf("\nKey generatred: %d",key);
 	
-	return(key);
+	return(0);
 }
 
 HashEntry * keyExists(int key, Element * table){

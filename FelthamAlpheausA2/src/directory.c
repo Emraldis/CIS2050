@@ -38,11 +38,7 @@ void printTableEntry(HashEntry * entry){
 		if(tempElement != NULL){
 			tempDir = tempElement->structPtr;
 			printDir(tempDir);
-			if(tempElement->next != NULL){
-				tempElement = tempElement->next;
-			}else{
-				break;
-			}
+			tempElement = tempElement->next;
 		}
 	}
 	
