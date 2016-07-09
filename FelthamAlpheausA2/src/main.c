@@ -112,6 +112,7 @@ int main(int argc, char * argv[]){
 			tempElement = tempHash->subList;
 			tempDir = tempElement->structPtr;
 			while((tempElement != NULL) && (tempDir->phoneNum != tempDouble)){
+				tempDir = tempElement->structPtr;
 				if(tempDir->phoneNum == tempDouble){
 					printf("\nFound something:");
 					printDir(tempDir);
