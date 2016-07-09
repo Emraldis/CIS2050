@@ -43,6 +43,7 @@ void printTableEntry(HashEntry * entry){
 			tempDir = tempElement->structPtr;
 			printDir(tempDir);
 			tempElement = tempElement->next;
+			getchar();
 		}
 	}
 	
