@@ -94,8 +94,9 @@ int main(int argc, char * argv[]){
 	printf("\n\fFinished setting up Phone Directory");
 	
 	while(menu != 'q'){
-		printf("\nEnter the Phone Number you wish to search");
+		printf("\nEnter the Phone Number you wish to search:\n");
 		fgets(searchKey,256,stdin);
+		printf("\n%s",searchKey);
 	}
 	
 	return(0);
