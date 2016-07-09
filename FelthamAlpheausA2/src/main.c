@@ -25,6 +25,7 @@ int main(int argc, char * argv[]){
 	tempDir = malloc(sizeof(DirEntry));
 	tempElement = malloc(sizeof(Element));
 	searchKey = malloc(sizeof(char) * 256);
+	nameList = malloc(sizeof(Element));
 	
 	if(argc != 1){
 		strcpy(fileName,argv[1]);
@@ -39,6 +40,9 @@ int main(int argc, char * argv[]){
 	}
 	
 	nameList = createNameList(dirFile,nameList);
+	
+	printf("\nTEST");
+	getchar();
 	
 	fclose(dirFile);
 	
