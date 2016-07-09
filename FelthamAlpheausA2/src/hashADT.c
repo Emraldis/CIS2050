@@ -33,7 +33,6 @@ int newHashKey(double keyBase, int tableSize){
 	tempString = malloc(sizeof(char) * 16);
 	tempInt = 0;
 	sprintf(tempString,"%.0f",keyBase);
-	printf("\nTEST %s",tempString);
 	for(i=0;i<(strlen(tempString));i++){
 		switch(tempString[i]){
 			case'0':

@@ -53,11 +53,11 @@ int main(int argc, char * argv[]){
 		tempDouble = tempDir->phoneNum;
 		printf("\nGenerating a key from %.0f",tempDouble);
 		tempHash = createHashEntry(tempDouble,tempDir,hashTable,dirSize,sizeof(DirEntry));
-		if(tempHash != NULL){
-			if(hashTable == NULL){
-				hashTable = createList(tempHash,sizeof(HashEntry));
-				hashTable->next = NULL;
-			}else{
+		if(hashTable == NULL){
+			hashTable = createList(tempHash,sizeof(HashEntry));
+			hashTable->next = NULL;
+		}else{
+			if(tempHash != NULL){
 				printf("\nCreating new hash");
 				hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
 			}
