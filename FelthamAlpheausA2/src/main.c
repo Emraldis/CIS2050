@@ -102,7 +102,8 @@ int main(int argc, char * argv[]){
 			menu = 'q';
 		}
 		printf("\n%s",searchKey);
-		tempKey = newHashKey(atof(searchKey),dirSize);
+		tempDouble = atof(searchKey);
+		tempKey = newHashKey(tempDouble,dirSize);
 		tempHash = keyExists(tempKey,hashTable);
 		if(tempHash == NULL){
 			printf("\nThat phone Number does not exist");
@@ -110,8 +111,8 @@ int main(int argc, char * argv[]){
 			printf("\nSearching through similar phone numbers");
 			tempElement = tempHash->subList;
 			tempDir = tempElement->structPtr;
-			while((tempElement != NULL) && (tempDir->phoneNum != atof(searchKey))){
-				if(tempDir->phoneNum != atof(searchKey)){
+			while((tempElement != NULL) && (tempDir->phoneNum != tempDouble)){
+				if(tempDir->phoneNum != tempDouble){
 					printf("\nFound something:");
 					printDir(tempDir);
 				}else{
