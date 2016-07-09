@@ -69,7 +69,8 @@ int main(int argc, char * argv[]){
 	while(tempElement != NULL){
 		if(tempElement != NULL){
 			tempHash = tempElement->structPtr;
-			printf("\nFor key: %d, there are %d entries",tempHash->hashKey,tempInt);
+			printf("\nFor key: %d",tempHash->hashKey);
+			printTableEntry(tempHash);
 			tempElement = tempElement->next;
 		}else{
 			printf("\nERROR");
