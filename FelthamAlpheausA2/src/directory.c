@@ -93,9 +93,9 @@ double decode(char * phoneNum){
 			printf("\nERROR DECODING");
 				exit(1);
 		}
+		printf("\nDECODED: %f",output);
 		j++;
 	}
-	printf("\nDECODED: %f",output);
 	return(output);
 }
 
