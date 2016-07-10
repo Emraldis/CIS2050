@@ -12,6 +12,8 @@ int main (void){
 	char * fileName;
 	Element * nameList;
 	int dirSize;
+	double tempDouble;
+	int hashSize;
 	
 	fileName = malloc(sizeof(char) * 256);
 	strcpy(fileName,"PhoneNumbers.txt");
@@ -39,11 +41,13 @@ int main (void){
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,sizeof(DirEntry));
 		tempDouble = tempDir->phoneNum;
-		hashTable = addToHashTable(hashTable,TempDir,dirSize);
+		hashTable = addToHashTable(hashTable,tempDir,dirSize);
 		tempElement = tempElement->next;
 	}
 	
 	tempElement = hashTable;
+	
+	hashSize = getSize(hashTable);
 	
 	printf("\nFinished Creating Hash Table. Hash Table is %d entries large", hashSize);
 	while(tempElement != NULL){

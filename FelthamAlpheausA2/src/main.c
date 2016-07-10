@@ -4,6 +4,8 @@
 #include "directory.h"
 #include "list.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 int main(int argc, char * argv[]){
 	FILE * dirFile;
 	char * fileName;

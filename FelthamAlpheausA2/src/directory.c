@@ -1,5 +1,7 @@
 #include "directory.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 DirEntry * newEntry(char * input){
 	DirEntry * newDir;
 	char * tempString;

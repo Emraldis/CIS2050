@@ -2,6 +2,8 @@
 #define _AFELTHAM_HEADERH_HASH
 #include "list.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 typedef struct HashTableEntry{
 	int hashKey;
 	struct ListElement * subList;

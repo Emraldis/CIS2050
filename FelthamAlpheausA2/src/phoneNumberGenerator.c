@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/*Alpheaus Feltham, 0903594*/
+
 char * nameGen ();
 
 int main (int argc, char * argv[]){

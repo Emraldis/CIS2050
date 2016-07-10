@@ -1,5 +1,7 @@
 #include "hashADT.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 HashEntry * createHashEntry(double keyBase, void * element, Element * table, int tableSize, int dataSize){
 	HashEntry * newHash;
 	int key;
