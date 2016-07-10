@@ -22,13 +22,19 @@ HashEntry * createHashEntry(double keyBase, void * element, Element * table, int
 	printf("TESTd");
 	getchar();
 	if(keyExists(key,table) != NULL){
+		printf("TESTd1");
+		getchar();
 		newHash = keyExists(key,table);
 		newHash->subList = addToFront(element,newHash->subList,dataSize);
 		return(NULL);
 	}else{
+		printf("TESTd2");
+		getchar();
 		newHash->hashKey = key;
 		newHash->subList = createList(element,dataSize);
 	}
+	printf("TESTe");
+	getchar();
 	return(newHash);
 }
 
