@@ -79,6 +79,6 @@ int main (void){
 	getchar();
 	printf("\nSublist Size:%d",subListSize(hashTable->structPtr));
 	
-	printf("\nIf nothing has segfaulted by now, the ADT should be stable");
+	printf("\nIf nothing has segfaulted by now, the ADT should be stable\n");
 	return(0);
 }
