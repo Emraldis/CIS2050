@@ -12,7 +12,6 @@ int main (void){
 	char * fileName;
 	Element * nameList;
 	int dirSize;
-	double tempDouble;
 	int hashSize;
 	
 	fileName = malloc(sizeof(char) * 256);
@@ -36,11 +35,13 @@ int main (void){
 	
 	dirSize = getSize(nameList);
 	
+	printf("\nCreated Namelist, converting to hash table");
+	getchar();
+	
 	tempElement = nameList;
 	
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,sizeof(DirEntry));
-		tempDouble = tempDir->phoneNum;
 		hashTable = addToHashTable(hashTable,tempDir,dirSize);
 		tempElement = tempElement->next;
 	}
