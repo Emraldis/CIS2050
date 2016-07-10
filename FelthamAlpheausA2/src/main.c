@@ -141,6 +141,10 @@ int main(int argc, char * argv[]){
 				printf("\nPlease enter the file name:\n");
 				fgets(fileName,256,stdin);
 				dirFile = fopen(fileName,"r");
+				if(dirFile == NULL){
+					printf("\nERROR READING FROM FILE");
+					break;
+				}
 				printf("\nTEST A");
 				getchar();
 				nameList = addToNameList(dirFile,nameList);
