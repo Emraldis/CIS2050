@@ -6,7 +6,7 @@
 
 char * nameGen ();
 
-int main (int argc char * argv[]){
+int main (int argc, char * argv[]){
 	FILE * outputFile;
 	char * tempString;
 	char * tempStringTwo;
