@@ -36,7 +36,7 @@ int main (void){
 	
 	dirSize = getSize(nameList);
 	
-	printf("\nCreated Namelist, converting to hash table");
+	printf("\nCreated Namelist (size %d), converting to hash table", dirSize);
 	getchar();
 	
 	tempElement = nameList;

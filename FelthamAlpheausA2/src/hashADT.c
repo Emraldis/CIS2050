@@ -19,6 +19,8 @@ HashEntry * createHashEntry(double keyBase, void * element, Element * table, int
 		newHash->subList = createList(element,dataSize);
 		return(newHash);
 	}
+	printf("TESTd");
+	getchar();
 	if(keyExists(key,table) != NULL){
 		newHash = keyExists(key,table);
 		newHash->subList = addToFront(element,newHash->subList,dataSize);
