@@ -29,19 +29,21 @@ void printTableEntry(HashEntry * entry){
 	tempDir = malloc(sizeof(DirEntry));
 	tempDir->firstName = malloc(sizeof(char) * 32);
 	tempDir->lastName = malloc(sizeof(char) * 32);
-	
-	tempElement = entry->subList;
-	
-	printf("\nFor Hash Key %d:",entry->hashKey);
-	
-	while(tempElement != NULL){
-		if(tempElement != NULL){
-			tempDir = tempElement->structPtr;
-			printDir(tempDir);
-			tempElement = tempElement->next;
+	if(entry != NULL){
+		tempElement = entry->subList;
+		
+		printf("\nFor Hash Key %d:",entry->hashKey);
+		
+		while(tempElement != NULL){
+			if(tempElement != NULL){
+				tempDir = tempElement->structPtr;
+				printDir(tempDir);
+				tempElement = tempElement->next;
+			}
 		}
+	}else{
+		printf("\nEmpty Hash Entry");
 	}
-	
 }
 
 void printDir(DirEntry * directory){

@@ -112,7 +112,9 @@ int subListSize(HashEntry * entry){
 }
 
 HashEntry * deleteHash(HashEntry * entry){
-	entry->subList = deleteList(entry->subList);
-	free(entry);
+	if (entry != NULL){
+		entry->subList = deleteList(entry->subList);
+		free(entry);
+	}
 	return(NULL);
 }
