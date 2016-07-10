@@ -76,7 +76,7 @@ int main (void){
 		tempElement = tempElement->next;
 	}
 	printf("\nAttempting to query the size of the Hash Entry's Sublist");
-	getchar();
+	getchar()
 	printf("\nSublist Size:%d",subListSize(hashTable->structPtr));
 	
 	printf("\nIf nothing has segfaulted by now, the ADT should be stable\n");
