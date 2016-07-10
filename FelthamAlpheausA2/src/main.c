@@ -140,6 +140,7 @@ int main(int argc, char * argv[]){
 			case'3':
 				printf("\nPlease enter the file name:\n");
 				fgets(fileName,256,stdin);
+				fileName = strtok(fileName,"\n");
 				dirFile = fopen(fileName,"r");
 				if(dirFile == NULL){
 					printf("\nERROR READING FROM FILE");
