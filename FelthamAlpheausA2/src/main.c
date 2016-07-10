@@ -144,12 +144,18 @@ int main(int argc, char * argv[]){
 				printf("\nPlease enter the file name:\n");
 				fgets(fileName,256,stdin);
 				dirFile = fopen(fileName,"r");
+				printf("\nTEST A");
+				getchar();
 				nameList = addToNameList(dirFile,nameList);
 				tempElement = hashTable;
+				printf("\nTEST B");
+				getchar();
 				while(tempElement != NULL){
 					tempElement->structPtr = deleteHash(tempElement->structPtr);
 					tempElement = tempElement->next;
 				}
+				printf("\nTEST C");
+				getchar();
 				hashTable = deleteList(hashTable);
 				tempElement = nameList;
 				while(tempElement != NULL){
