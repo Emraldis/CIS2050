@@ -39,7 +39,6 @@ int main (void){
 	dirSize = getSize(nameList);
 	
 	printf("\nCreated Namelist (size %d), converting to hash table", dirSize);
-	getchar();
 	
 	tempElement = nameList;
 	
@@ -55,7 +54,6 @@ int main (void){
 	hashSize = getSize(hashTable);
 	
 	printf("\nFinished Creating Hash Table. Hash Table is %d entries large", hashSize);
-	getchar();
 	while(tempElement != NULL){
 		tempHash = tempElement->structPtr;
 		printTableEntry(tempHash);
@@ -78,6 +76,7 @@ int main (void){
 		tempElement = tempElement->next;
 	}
 	printf("\nAttempting to query the size of the Hash Entry's Sublist");
+	getchar();
 	printf("\nSublist Size:%d",subListSize(hashTable->structPtr));
 	
 	printf("\nIf nothing has segfaulted by now, the ADT should be stable");
