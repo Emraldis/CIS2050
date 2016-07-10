@@ -93,8 +93,6 @@ double decode(char * phoneNum){
 			printf("\nERROR DECODING");
 				exit(1);
 		}
-		printf("\nDECODED: %f",output);
-		printf("\n%d",i);
 		j++;
 	}
 	return(output);
@@ -106,7 +104,6 @@ double pwr(int base, int exponent){
 	
 	output = base;
 	if(exponent == 0){
-		printf("\nExponent was 0");
 		return(1);
 	}else if(exponent == 1){
 		return(base);

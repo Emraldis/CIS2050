@@ -126,7 +126,6 @@ int main(int argc, char * argv[]){
 				lastName = strtok(lastName,"\n");
 				printf("\nPlease Enter a Phone Number:\n");
 				fgets(tempString,16,stdin);
-				getchar();
 				tempString = strtok(tempString,"\n");
 				strcat(searchKey,firstName);
 				strcat(searchKey,",");
