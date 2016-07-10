@@ -51,6 +51,7 @@ int main (void){
 	hashSize = getSize(hashTable);
 	
 	printf("\nFinished Creating Hash Table. Hash Table is %d entries large", hashSize);
+	getchar();
 	while(tempElement != NULL){
 		tempHash = tempElement->structPtr;
 		printTableEntry(tempHash);
