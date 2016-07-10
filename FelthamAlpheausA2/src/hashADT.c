@@ -104,9 +104,15 @@ HashEntry * keyExists(int key, Element * table){
 	tempEntry = malloc(sizeof(HashEntry));
 	currentLoc = malloc(sizeof(Element));
 	
+	printf("testA");
+	getchar();
 	currentLoc = table;
 	if(currentLoc != NULL){
+		printf("testB");
+		getchar();
 		while(currentLoc != NULL){
+			printf("testB1");
+			getchar();
 			tempEntry = currentLoc->structPtr;
 			if(tempEntry->hashKey == key){
 				return(tempEntry);
@@ -115,6 +121,8 @@ HashEntry * keyExists(int key, Element * table){
 		}
 	}
 	
+	printf("testC");
+	getchar();
 	return(NULL);
 }
 
