@@ -41,7 +41,9 @@ int main (void){
 	tempElement = nameList;
 	
 	while(tempElement != NULL){
-		memcpy(tempDir,tempElement->structPtr,sizeof(DirEntry));
+		tempDir = tempElement->structPtr;
+		printf("\nTEST");
+		getchar();
 		hashTable = addToHashTable(hashTable,tempDir,dirSize);
 		tempElement = tempElement->next;
 	}
