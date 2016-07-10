@@ -5,36 +5,22 @@
 HashEntry * createHashEntry(double keyBase, void * element, Element * table, int tableSize, int dataSize){
 	HashEntry * newHash;
 	int key;
-	printf("TESTa");
-	getchar();
 	newHash = malloc(sizeof(HashEntry));
 	
-	printf("TESTb");
-	getchar();
 	key = newHashKey(keyBase,tableSize);
-	printf("TESTc");
-	getchar();
 	if(table == NULL){
 		newHash->hashKey = key;
 		newHash->subList = createList(element,dataSize);
 		return(newHash);
 	}
-	printf("TESTd");
-	getchar();
 	if(keyExists(key,table) != NULL){
-		printf("TESTd1");
-		getchar();
 		newHash = keyExists(key,table);
 		newHash->subList = addToFront(element,newHash->subList,dataSize);
 		return(NULL);
 	}else{
-		printf("TESTd2");
-		getchar();
 		newHash->hashKey = key;
 		newHash->subList = createList(element,dataSize);
 	}
-	printf("TESTe");
-	getchar();
 	return(newHash);
 }
 
@@ -104,15 +90,9 @@ HashEntry * keyExists(int key, Element * table){
 	tempEntry = malloc(sizeof(HashEntry));
 	currentLoc = malloc(sizeof(Element));
 	
-	printf("testA");
-	getchar();
 	currentLoc = table;
 	if(currentLoc != NULL){
-		printf("testB");
-		getchar();
 		while(currentLoc != NULL){
-			printf("testB1");
-			getchar();
 			tempEntry = currentLoc->structPtr;
 			if(tempEntry->hashKey == key){
 				return(tempEntry);
@@ -121,8 +101,6 @@ HashEntry * keyExists(int key, Element * table){
 		}
 	}
 	
-	printf("testC");
-	getchar();
 	return(NULL);
 }
 

@@ -142,15 +142,9 @@ Element * addToHashTable(Element * hashTable,DirEntry * entry, int dirSize){
 	HashEntry * tempHash;
 	
 	tempHash = malloc(sizeof(HashEntry));
-	printf("\nTest1");
-	getchar();
 	
 	tempHash = createHashEntry(entry->phoneNum,entry,hashTable,dirSize,sizeof(DirEntry));
-	printf("\nTest2");
-	getchar();
 	if(hashTable == NULL){
-		printf("\nTest3");
-		getchar();
 		printf("\nCreating new hash");
 		hashTable = createList(tempHash,sizeof(HashEntry));
 		hashTable->next = NULL;
@@ -159,14 +153,10 @@ Element * addToHashTable(Element * hashTable,DirEntry * entry, int dirSize){
 			exit(0);
 		}
 	}else{
-		printf("\nTest4");
-		getchar();
 		if(tempHash != NULL){
 			printf("\nCreating new hash");
 			hashTable = addToFront(tempHash,hashTable,sizeof(HashEntry));
 		}
 	}
-	printf("\nTest5");
-	getchar();
 	return(hashTable);
 }
