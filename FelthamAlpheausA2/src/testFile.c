@@ -4,7 +4,7 @@
 #include "directory.h"
 
 int main (void){
-	File * testFile;
+	FILE * testFile;
 	Element * hashTable;
 	DirEntry * tempDir;
 	HashEntry * tempHash;
