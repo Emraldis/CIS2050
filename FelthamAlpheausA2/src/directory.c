@@ -57,7 +57,7 @@ double decode(char * phoneNum){
 	int i;
 	int j = 0;
 	
-	for(i=(strlen(phoneNum));i>0;i--){
+	for(i=(strlen(phoneNum));i>=0;i--){
 		switch(phoneNum[j]){
 			case '0':
 				output = (output + 0);
