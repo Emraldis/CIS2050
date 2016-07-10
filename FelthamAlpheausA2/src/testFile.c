@@ -20,6 +20,7 @@ int main (void){
 	tempElement = malloc(sizeof(Element));
 	tempDir = malloc(sizeof(DirEntry));
 	tempHash = malloc(sizeof(HashEntry));
+	hashTable = malloc(sizeof(Element));
 	
 	testFile = fopen(fileName,"r");
 	
