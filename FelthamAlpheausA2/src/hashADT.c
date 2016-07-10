@@ -106,7 +106,9 @@ HashEntry * keyExists(int key, Element * table){
 
 int subListSize(HashEntry * entry){
 	int count;
-	
+	if(entry == NULL){
+		return (0);
+	}
 	count = getSize(entry->subList);
 	
 	return(count);
