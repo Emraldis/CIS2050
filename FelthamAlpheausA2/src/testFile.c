@@ -43,6 +43,7 @@ int main (void){
 	
 	while(tempElement != NULL){
 		tempDir = tempElement->structPtr;
+		printDir(tempDir);
 		printf("\nTESTA");
 		getchar();
 		hashTable = addToHashTable(hashTable,tempDir,dirSize);
