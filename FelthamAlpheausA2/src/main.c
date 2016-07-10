@@ -50,8 +50,8 @@ int main(int argc, char * argv[]){
 	dirSize = getSize(nameList);
 	
 	printf("\n\nList is %d entries large\n",dirSize);
-	tempElement = nameList;
 	hashTable = NULL;
+	tempElement = nameList;
 	while(tempElement != NULL){
 		memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
 		printDir(tempDir);
@@ -142,6 +142,21 @@ int main(int argc, char * argv[]){
 				fgets(fileName,256,stdin);
 				dirFile = fopen(fileName,"r");
 				nameList = addToNameList(dirFile,nameList);
+				tempElement = hashTable;
+				while(tempElement != NULL){
+					tempElement->structPtr = deleteHash(tempElement->structPtr);
+					tempElement = tempElement->next;
+				}
+				hashTable = deleteList(hashTable);
+				tempElement = nameList;
+				while(tempElement != NULL){
+					memcpy(tempDir,tempElement->structPtr,(sizeof(DirEntry)));
+					printDir(tempDir);
+					tempDouble = tempDir->phoneNum;
+					printf("\nGenerating a key from %.0f",tempDouble);
+					hashTable = addToHashTable(hashTable,tempDir,dirSize);
+					tempElement = tempElement->next;
+				}
 				break;
 			case'4':
 				hashSize = getSize(hashTable);

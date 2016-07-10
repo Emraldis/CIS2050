@@ -110,3 +110,9 @@ int subListSize(HashEntry * entry){
 	
 	return(count);
 }
+
+HashEntry * deleteHash(HashEntry * entry){
+	entry->subList = deleteList(entry->subList);
+	free(entry);
+	return(NULL);
+}

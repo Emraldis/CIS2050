@@ -15,5 +15,6 @@ HashEntry * keyExists(int key, Element * table);
 
 int subListSize(HashEntry * entry);
 
+HashEntry * deleteHash(HashEntry * entry);
 
 #endif
