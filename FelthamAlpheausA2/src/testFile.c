@@ -23,6 +23,8 @@ int main (void){
 	hashTable = malloc(sizeof(Element));
 	
 	testFile = fopen(fileName,"r");
+	nameList = NULL;
+	hashTable = NULL;
 	
 	if(testFile == NULL){
 		printf("\nError Opening Test File");
