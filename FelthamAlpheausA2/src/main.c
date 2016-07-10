@@ -120,14 +120,12 @@ int main(int argc, char * argv[]){
 			case'2':
 				printf("\nPlease Enter a First Name:\n");
 				fgets(firstName,128,stdin);
-				getchar();
 				firstName = strtok(firstName,"\n");
 				printf("\nPlease Enter a Last Name:\n");
 				fgets(lastName,128,stdin);
-				getchar();
 				lastName = strtok(lastName,"\n");
 				printf("\nPlease Enter a Phone Number:\n");
-				fgets(tempString,10,stdin);
+				fgets(tempString,16,stdin);
 				getchar();
 				tempString = strtok(tempString,"\n");
 				strcat(searchKey,firstName);
