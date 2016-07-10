@@ -1,0 +1,1 @@
+All testing was completed successfully. The Hash ADT works correctly (with void pointers as well). It was tested thouroughly, with each function tested when the table was empty, as well as when it was filled with large quantities of elements.

@@ -126,7 +126,9 @@ Element * addToNameList(FILE * inputFile, Element * nameList){
 	
 	tempDir = malloc(sizeof(DirEntry));
 	data = malloc(sizeof(char) * 256);
-	
+	if(inputFIle == NULL){
+		return(NULL);
+	}
 	while(fgets(data,256,inputFile) != NULL){
 		tempDir = newEntry(data);
 		nameList = addToFront(tempDir,nameList,sizeof(DirEntry));
