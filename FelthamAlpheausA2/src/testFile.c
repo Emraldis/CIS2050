@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdin.h>
+#include <stdlib.h>
 #include "hashADT.h"
 #include "directory.h"
 
@@ -59,7 +59,7 @@ int main (void){
 		printTableEntry(tempHash);
 		tempElement = tempElement->next;
 	}
-	printf("\nAttempting to delete the same Hash Entry");
+	printf("\nAttempting to delete an empty Hash Entry");
 	hashTable->structPtr = deleteHash(hashTable->structPtr);
 	
 	while(tempElement != NULL){
