@@ -5,10 +5,15 @@
 HashEntry * createHashEntry(double keyBase, void * element, Element * table, int tableSize, int dataSize){
 	HashEntry * newHash;
 	int key;
-	
+	printf("TESTa");
+	getchar();
 	newHash = malloc(sizeof(HashEntry));
 	
+	printf("TESTb");
+	getchar();
 	key = newHashKey(keyBase,tableSize);
+	printf("TESTc");
+	getchar();
 	if(table == NULL){
 		newHash->hashKey = key;
 		newHash->subList = createList(element,dataSize);
