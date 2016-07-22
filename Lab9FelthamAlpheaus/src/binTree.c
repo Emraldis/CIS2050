@@ -18,6 +18,12 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void * dat
 	currentBranch = malloc(sizeof(Branch));
 	
 	currentBranch = root;
+	printf("\nTEST");
+	getchar();
+	if(compare != NULL){
+		printf("\nERROR");
+		exit(0);
+	}
 	while(currentBranch != NULL){
 		switch(compare(currentBranch->data,toBeAdded->data)){
 			case -1:
