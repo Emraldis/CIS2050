@@ -15,6 +15,7 @@ int main(void){
 	Branch * treeName;
 	Branch * treeRating;
 	Branch * tempBranch;
+	int i;
 	
 	tempResName = malloc(sizeof(char) * 64);
 	tempFoodType = malloc(sizeof(char) * 64);
@@ -31,8 +32,10 @@ int main(void){
 		printf("\nError opening data file");
 		exit(0);
 	}
-	
+	getchar();
+	i =0;
 	while(fgets(tempString,128,dataFile) != NULL){
+		i++;
 		tempResName = strtok(tempString,",");
 		tempFoodType = strtok(NULL,",");
 		tempIntString = strtok(NULL,"\n");
@@ -41,7 +44,8 @@ int main(void){
 		tempBranch = createBranch(tempRestaurant);
 		treeName = addBranch(treeName,tempBranch,compareName);
 		treeRating = addBranch(treeRating,tempBranch,compareRating);
-		
+		printf("\n%d",i);
+		getchar();
 	}
 	printf("\nTrees complete");
 	
