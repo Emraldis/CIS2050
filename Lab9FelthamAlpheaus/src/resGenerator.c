@@ -17,7 +17,7 @@ int main (int argc, char * argv[]){
 	int i;
 	time_t t;
 	srand((unsigned)time(&t));
-	int numNames = 100;
+	int numNames = 10;
 	
 	tempString = malloc(sizeof(char) * 256);
 	tempStringTwo = malloc(sizeof(char) * 256);
@@ -32,7 +32,7 @@ int main (int argc, char * argv[]){
 		printf("\nERROR OPENING FILE");
 		exit(0);
 	}else{
-		printf("\nBeginning name generation");
+		printf("\nBeginning Restaurant generation");
 	}
 	for(i=0;i<numNames;i++){
 		name = nameGen();
@@ -43,7 +43,7 @@ int main (int argc, char * argv[]){
 		tempInt = (rand() % 101);
 		sprintf(tempStringTwo,"%d",tempInt);
 		strcat(tempString,tempStringTwo);
-		printf("\nPhone number generated: %s",tempString);
+		printf("\nRating generated: %s",tempString);
 		strcat(tempString,"\n");
 		fputs(tempString,outputFile);
 	}
@@ -93,7 +93,7 @@ char * nameGen(){
 			}
 		}
 	}
-	printf("\n%d Available First names detected",firstNameLimit);
+	printf("\n%d Available Restaurant names detected",firstNameLimit);
 	fgets(lastNameList,4096,nameFile);
 	strcpy(tempList,lastNameList);
 	if(tempList != NULL){
@@ -109,7 +109,7 @@ char * nameGen(){
 		tempString = NULL;
 		free(tempString);
 	}
-	printf("\n%d Available Last names detected",lastNameLimit);
+	printf("\n%d Available Food Types detected",lastNameLimit);
 	fclose(nameFile);
 	
 	nameFile = fopen("ResDataList.txt","r");
