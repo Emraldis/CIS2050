@@ -11,7 +11,7 @@ typedef struct BranchInfo{
 
 Branch * createBranch(void * data);
 
-Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const *, void const *);
+Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void * data, void * data);
 
 void traverseTree (Branch * root, void (* run) (void const *));
 
