@@ -21,20 +21,14 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	currentBranch = root;
 	if (currentBranch == NULL){
 		printf("\nCurrent Branch is NULL");
-		getchar();
 		return(toBeAdded);
 	}
-	printf("\nTEST");
-	getchar();
 	if(compare == NULL){
 		printf("\nERROR");
 		exit(0);
 	}
-	printf("\nBeginning Comparrison");
-	getchar();
 	while(currentBranch != NULL){
 		printf("\nComparing with current Branch");
-		getchar();
 		comp = compare(currentBranch->data,toBeAdded->data);
 		printf("\nComparisson made");
 		switch(comp){
