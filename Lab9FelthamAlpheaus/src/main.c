@@ -46,7 +46,7 @@ int main(void){
 	fclose(dataFile);
 	getchar();
 	printf("\nTrees complete");
-	printf("\nTraversing Tree");
+	printf("\nTraversing Tree\n");
 	traverseTree(treeName,printRestaurant,0);
 	getchar();
 	printf("\nTraversing Complete");
@@ -75,7 +75,7 @@ int main(void){
 	fclose(dataFile);
 	getchar();
 	printf("\nTrees complete");
-	printf("\nTraversing Tree");
+	printf("\nTraversing Tree\n");
 	traverseTree(treeRating,printRestaurant,0);
 	getchar();
 	printf("\nTraversing Complete");
