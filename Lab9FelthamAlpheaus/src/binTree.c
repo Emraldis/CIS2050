@@ -56,6 +56,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	}
 	if (currentBranch == NULL){
 		printf("\nCurrent Branch is NULL");
+		getchar();
 	}
 	
 	return(toBeAdded);
