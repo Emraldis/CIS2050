@@ -27,6 +27,8 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	while(currentBranch != NULL){
 		switch(compare(currentBranch->data,toBeAdded->data)){
 			case -1:
+				printf("\nCase -1");
+				getchar();
 				if(currentBranch->leftBranch == NULL){
 					currentBranch->leftBranch = toBeAdded;
 					return(root);
@@ -34,9 +36,13 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 				currentBranch = currentBranch->leftBranch;
 				break;
 			case 0:
+				printf("\nCase 0");
+				getchar();
 				printf("\nData already exists within the tree");
 				return(root);
 			case 1:
+				printf("\nCase 1");
+				getchar();
 				if(currentBranch->rightBranch == NULL){
 					currentBranch->rightBranch = toBeAdded;
 					return(root);
@@ -48,8 +54,11 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 				exit(0);
 		}
 	}
+	if (currentBranch == NULL){
+		printf("\nCurrent Branch is NULL");
+	}
 	
-	return(root);
+	return(toBeAdded);
 }
 
 void traverseTree (Branch * root, void (* run) (void const *)){
