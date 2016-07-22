@@ -46,7 +46,7 @@ int compareName (void const * first, void const * second){
 	memcpy(restA,first,sizeof(Restaurant));
 	memcpy(restB,second,sizeof(Restaurant));
 	
-	printf("\nComparisson Beginning");
+	printf("\nName Comparisson Beginning");
 	getchar();
 	
 	if(strcmp(restA->name,restB->name) > 0){
@@ -71,7 +71,7 @@ int compareRating (void const * first, void const * second){
 	memcpy(restA,first,sizeof(Restaurant));
 	memcpy(restB,second,sizeof(Restaurant));
 	
-	printf("\nComparisson Beginning");
+	printf("\nRating Comparisson Beginning");
 	getchar();
 	
 	if(restA->rating > restB->rating){
