@@ -51,7 +51,7 @@ int main(void){
 	getchar();
 	printf("\nTraversing Complete");
 	printf("\nDeleting Tree");
-	deleteTree(treeName,deleteRestaurant,0);
+	deleteTree(treeName,deleteRestaurant);
 	printf("\nDeleting Completed");
 	
 	
@@ -80,7 +80,7 @@ int main(void){
 	getchar();
 	printf("\nTraversing Complete");
 	printf("\nDeleting Tree");
-	deleteTree(treeRating,deleteRestaurant,0);
+	deleteTree(treeRating,deleteRestaurant);
 	printf("\nDeleting Completed");
 	return(0);
 }

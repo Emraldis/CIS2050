@@ -13,7 +13,7 @@ Branch * createBranch(void * data);
 
 Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const *, void const *));
 
-void traverseTree (Branch * root, void (* run) (void const *));
+void traverseTree (Branch * root, void (* run) (void const *),int depth);
 
 void deleteTree (Branch * root, void (* deleteData) (void const *));
 

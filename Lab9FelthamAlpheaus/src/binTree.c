@@ -94,5 +94,5 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 }
 
 void deleteTree (Branch * root, void (* deleteData) (void const *)){
-	traverseTree(root,deleteData);
+	traverseTree(root,deleteData,0);
 }
