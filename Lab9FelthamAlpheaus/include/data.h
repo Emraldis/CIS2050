@@ -18,6 +18,6 @@ int compareName (void * first, void * second);
 
 int compareRating (void * first, void * second);
 
-void printRestaurant(Restaurant * input);
+void printRestaurant(void * input);
 
 #endif

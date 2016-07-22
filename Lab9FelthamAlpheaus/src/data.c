@@ -46,13 +46,11 @@ int compareName (void * first, void * second){
 	memcpy(restA,first,sizeof(Restaurant));
 	memcpy(restB,second,sizeof(Restaurant));
 	
-	output = 0;
-	
-	if(strcmp(restA,restB) > 0){
+	if(strcmp(restA->name,restB->name) > 0){
 		return(-1);
-	}else if(strcmp(restA,restB) == 0){
+	}else if(strcmp(restA->name,restB->name) == 0){
 		return(0);
-	}else if(strcmp(restA,restB) < 0){
+	}else if(strcmp(restA->name,restB->name) < 0){
 		return(1);
 	}else{
 		printf("\nError comparing names");
@@ -61,8 +59,8 @@ int compareName (void * first, void * second){
 }
 int compareRating (void * first, void * second){
 
-	Restaurant restA;
-	Restaurant restB;
+	Restaurant * restA;
+	Restaurant * restB;
 	
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
@@ -82,6 +80,6 @@ int compareRating (void * first, void * second){
 	return(0);	
 }
 
-void * printRestaurant(Restaurant * input){
+void printRestaurant(void * input){
 	
 }
