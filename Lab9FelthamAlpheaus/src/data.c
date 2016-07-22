@@ -37,8 +37,8 @@ void deleteRestaurant (Restaurant * input){
 }
 
 int compareName (void * first, void * second){
-	Restaurant restA;
-	Restaurant restB;
+	Restaurant * restA;
+	Restaurant * restB;
 	
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
