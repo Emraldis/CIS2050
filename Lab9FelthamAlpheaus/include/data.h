@@ -10,7 +10,7 @@ typedef struct RestaurantInfo{
 
 Restaurant * createRestaurant (int rating, char * name, char * foodType);
 
-void deleteRestaurant (Restaurant * input);
+void deleteRestaurant (void const * input);
 
 int compareName (void const * first, void const * second);
 
