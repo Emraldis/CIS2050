@@ -49,8 +49,13 @@ int compareName (void const * first, void const * second){
 	printf("\nCopying Data");
 	getchar();
 	
-	memcpy(restA,first,sizeof(Restaurant));
-	memcpy(restB,second,sizeof(Restaurant));
+	if((first != NULL) && (second != NULL)){
+		memcpy(restA,first,sizeof(Restaurant));
+		memcpy(restB,second,sizeof(Restaurant));
+	}else{
+		printf("\nError copying Data");
+		exit(0);
+	}
 	
 	printf("\nName Comparisson Beginning");
 	getchar();
