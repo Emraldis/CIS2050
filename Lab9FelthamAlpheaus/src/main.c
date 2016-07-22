@@ -58,6 +58,10 @@ int main(void){
 	getchar();
 	traverseTree(treeRating,printRestaurant);
 	printf("\nTraversing Complete");
+	printf("\nDeleting Trees");
+	deleteTree(treeName,deleteRestaurant);
+	deleteTree(treeRating,deleteRestaurant);
+	printf("\nDeleting Completed");
 	
 	return(0);
 }
