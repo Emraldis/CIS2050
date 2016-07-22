@@ -50,6 +50,7 @@ int main(void){
 		treeRating = addBranch(treeRating,tempBranch,compareRating);
 		printf("\n%d",i);
 	}
+	getchar();
 	printf("\nTrees complete");
 	printf("\nTraversing Tree");
 	traverseTree(treeName,printRestaurant);
