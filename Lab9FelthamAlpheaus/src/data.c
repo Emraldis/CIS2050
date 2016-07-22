@@ -40,6 +40,9 @@ int compareName (void const * first, void const * second){
 	Restaurant * restA;
 	Restaurant * restB;
 	
+	printf("\nSetting Data");
+	getchar();
+	
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
 	
@@ -61,9 +64,11 @@ int compareName (void const * first, void const * second){
 	return(0);	
 }
 int compareRating (void const * first, void const * second){
-
 	Restaurant * restA;
 	Restaurant * restB;
+	
+	printf("\nSetting Data");
+	getchar();
 	
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
