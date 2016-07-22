@@ -12,7 +12,7 @@ Branch * createBranch(void * data){
 	return(newBranch);
 }
 
-Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void * data1, void * data2)){
+Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const *, void const *)){
 	Branch * currentBranch;
 	
 	currentBranch = malloc(sizeof(Branch));
