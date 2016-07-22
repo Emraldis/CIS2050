@@ -46,7 +46,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void * dat
 	return(root);
 }
 
-void * traverseTree (Branch * root, void * searchData,int (* compare) (void * data1, void * data2), void (* run) (void * data)){
+void * traverseTree (Branch * root, void (* run) (void * data)){
 	
 }
 
