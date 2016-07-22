@@ -46,7 +46,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void * dat
 	return(root);
 }
 
-void traverseTree (Branch * root, void (* run) (void * data)){
+void traverseTree (Branch * root, void (* run) (void const *)){
 	Branch * currentBranch;
 	
 	currentBranch = malloc(sizeof(Branch));
