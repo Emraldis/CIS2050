@@ -24,7 +24,11 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 		printf("\nERROR");
 		exit(0);
 	}
+	printf("\nBeginning Comparrison");
+	getchar();
 	while(currentBranch != NULL){
+		printf("\nComparing with current Branch");
+		getchar();
 		switch(compare(currentBranch->data,toBeAdded->data)){
 			case -1:
 				printf("\nCase -1");
