@@ -90,5 +90,5 @@ void printRestaurant(void const * input){
 	
 	memcpy(toPrint,input,sizeof(Restaurant));
 	
-	printf("\n%s,%s (Rating: %d)",toPrint->name,toPrint->foodType,toPrint->rating);
+	printf("%s,%s (Rating: %d)",toPrint->name,toPrint->foodType,toPrint->rating);
 }
