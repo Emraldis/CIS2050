@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 typedef struct BranchInfo{
-	struct Branchinfo * leftBranch;
-	struct Branchinfo * rightBranch;
+	struct BranchInfo * leftBranch;
+	struct BranchInfo * rightBranch;
 	void * data;
 }Branch;
 
