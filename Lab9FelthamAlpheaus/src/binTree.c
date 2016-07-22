@@ -47,7 +47,19 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void * dat
 }
 
 void traverseTree (Branch * root, void (* run) (void * data)){
-	void (* usrFunc) (void * data) = &run;
+	Branch * currentBranch;
+	
+	currentBranch = malloc(sizeof(Branch));
+	
+	currentBranch = root;
+	
+	if(currentBranch != NULL){
+		traverseTree(currentBranch->left,run);
+		traverseTree(currentBranch->right,run);
+	}
+	if(run != NULL){
+		run(currentBranch->data);
+	}
 }
 
 void removeBranch (Branch * root, void * searchData, int (* compare) (void * data1, void * data2), void (* deleteData) (void const *)){
