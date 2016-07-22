@@ -81,7 +81,7 @@ void traverseTree (Branch * root, void (* run) (void const *)){
 		}
 		traverseTree(currentBranch->leftBranch,run);
 	}else{
-		printf("\nEMPTY");
+		printf("EMPTY");
 	}
 }
 
