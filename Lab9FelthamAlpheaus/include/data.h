@@ -12,8 +12,8 @@ Restaurant * createRestaurant (int rating, char * name, char * foodType);
 
 void deleteRestaurant (Restaurant * input);
 
-int compareName (void * first, void * second);
+int compareName (void const * first, void const * second);
 
-int compareRating (void * first, void * second);
+int compareRating (void const * first, void const *second);
 
 void printRestaurant(void * input);

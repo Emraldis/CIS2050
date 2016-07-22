@@ -36,7 +36,7 @@ void deleteRestaurant (Restaurant * input){
 	}
 }
 
-int compareName (void * first, void * second){
+int compareName (void const * first, void const * second){
 	Restaurant * restA;
 	Restaurant * restB;
 	
@@ -57,7 +57,7 @@ int compareName (void * first, void * second){
 	}
 	return(0);	
 }
-int compareRating (void * first, void * second){
+int compareRating (void const * first, void const * second){
 
 	Restaurant * restA;
 	Restaurant * restB;
