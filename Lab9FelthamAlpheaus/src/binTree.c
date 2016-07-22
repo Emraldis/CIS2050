@@ -28,9 +28,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 		exit(0);
 	}
 	while(currentBranch != NULL){
-		printf("\nComparing with current Branch");
 		comp = compare(currentBranch->data,toBeAdded->data);
-		printf("\nComparisson made");
 		switch(comp){
 			case -1:
 				printf("\nLEFT");
