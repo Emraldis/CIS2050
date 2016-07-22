@@ -44,7 +44,6 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 			case 0:
 				printf("\nCase 0");
 				printf("\nData already exists within the tree");
-				printf("\nAdded value");
 				return(root);
 			case 1:
 				printf("\nCase 1");
