@@ -112,7 +112,7 @@ char * nameGen(){
 	printf("\n%d Available Last names detected",lastNameLimit);
 	fclose(nameFile);
 	
-	nameFile = fopen("NameList.txt","r");
+	nameFile = fopen("ResDataList.txt","r");
 	
 	if(nameFile == NULL){
 		printf("\nERROR OPENING FILE");
