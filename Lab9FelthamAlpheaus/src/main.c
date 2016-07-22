@@ -36,14 +36,32 @@ int main(void){
 	i =0;
 	while(fgets(tempString,128,dataFile) != NULL){
 		i++;
+		printf("\nStarting");
+		getchar();
 		tempResName = strtok(tempString,",");
+		printf("\n1");
+		getchar();
 		tempFoodType = strtok(NULL,",");
+		printf("\n2");
+		getchar();
 		tempIntString = strtok(NULL,"\n");
+		printf("\n3");
+		getchar();
 		tempInt = atoi(tempIntString);
+		printf("\n4");
+		getchar();
 		tempRestaurant = createRestaurant(tempInt,tempResName,tempFoodType);
+		printf("\n5");
+		getchar();
 		tempBranch = createBranch(tempRestaurant);
+		printf("\n6");
+		getchar();
 		treeName = addBranch(treeName,tempBranch,compareName);
+		printf("\n7");
+		getchar();
 		treeRating = addBranch(treeRating,tempBranch,compareRating);
+		printf("\n8");
+		getchar();
 		printf("\n%d",i);
 		getchar();
 	}
