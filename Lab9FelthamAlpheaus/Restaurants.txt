@@ -2,12 +2,12 @@ Thai Palace,Seafood,31
 EbolaFud,Pizza,89
 Red Lobster,Ice Cream,72
 McFranky's,Pizza,40
-McFranky's,Seafood,8
+McFishy's,Seafood,8
 Vanillashakes,Pizza,20
-Red Lobster,Fast Food,45
-Vanillashakes,Indian Food,72
-McFranky's,Hot Dogs,29
+Red Lubester,Fast Food,45
+Chocoshakes,Indian Food,71
+McWeenie's,Hot Dogs,29
 Travoltian,Ice Cream,84
 Big Murty's,Pizza,16
-Thai Palace,Ice Cream,87
+Thai Place,Ice Cream,87
 Las Tortillas,Fast Food,60

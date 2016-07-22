@@ -16,4 +16,4 @@ int compareName (void const * first, void const * second);
 
 int compareRating (void const * first, void const *second);
 
-void printRestaurant(void * input);
+void printRestaurant(void const * input);

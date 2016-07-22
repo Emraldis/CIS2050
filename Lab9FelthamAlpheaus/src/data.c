@@ -83,6 +83,12 @@ int compareRating (void const * first, void const * second){
 	return(0);	
 }
 
-void printRestaurant(void * input){
+void printRestaurant(void const * input){
+	Restaurant * toPrint;
 	
+	toPrint = malloc(sizeof(Restaurant));
+	
+	memcpy(toPrint,input,sizeof(Restaurant));
+	
+	printf("\n%s,%s (Rating: %d)",toPrint->name,toPrint->foodType,toPrint->rating);
 }
