@@ -46,8 +46,8 @@ int main(void){
 		tempBranch = createBranch(tempRestaurant);
 		printf("\nAdding name Branch");
 		treeName = addBranch(treeName,tempBranch,compareName);
-		printf("\nAdding rating Branch");
-		treeRating = addBranch(treeRating,tempBranch,compareRating);
+		//printf("\nAdding rating Branch");
+		//treeRating = addBranch(treeRating,tempBranch,compareRating);
 		printf("\n%d",i);
 	}
 	getchar();
@@ -56,12 +56,12 @@ int main(void){
 	traverseTree(treeName,printRestaurant);
 	getchar();
 	printf("\n__________________________________________________________\n");
-	getchar();
-	traverseTree(treeRating,printRestaurant);
+	//getchar();
+	//traverseTree(treeRating,printRestaurant);
 	printf("\nTraversing Complete");
 	printf("\nDeleting Trees");
 	deleteTree(treeName,deleteRestaurant);
-	deleteTree(treeRating,deleteRestaurant);
+	//deleteTree(treeRating,deleteRestaurant);
 	printf("\nDeleting Completed");
 	
 	return(0);
