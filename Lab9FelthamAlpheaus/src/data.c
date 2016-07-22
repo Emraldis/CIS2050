@@ -55,9 +55,13 @@ int compareName (void const * first, void const * second){
 	}else{
 		if(first == NULL){
 			printf("\nCurrent Branch was NULL");
+		}else if (first != NULL){
+			printf("\nCurrent Branch was not NULL");
 		}
 		if(second == NULL){
 			printf("\nData to be added was NULL");
+		}else if (second != NULL){
+			printf("\nData to be added was not NULL");
 		}
 		printf("\nError copying Data");
 		exit(0);
