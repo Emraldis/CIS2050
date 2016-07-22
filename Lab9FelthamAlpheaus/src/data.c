@@ -46,6 +46,9 @@ int compareName (void const * first, void const * second){
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
 	
+	printf("\nCopying Data");
+	getchar();
+	
 	memcpy(restA,first,sizeof(Restaurant));
 	memcpy(restB,second,sizeof(Restaurant));
 	
@@ -72,6 +75,9 @@ int compareRating (void const * first, void const * second){
 	
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
+	
+	printf("\nCopying Data");
+	getchar();
 	
 	memcpy(restA,first,sizeof(Restaurant));
 	memcpy(restB,second,sizeof(Restaurant));
