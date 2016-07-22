@@ -62,7 +62,7 @@ int main(void){
 		printf("\nError opening data file");
 		exit(0);
 	}
-	treeName = NULL;
+	treeRating = NULL;
 	while(fgets(tempString,128,dataFile) != NULL){
 		i++;
 		printf("\nStarting");
