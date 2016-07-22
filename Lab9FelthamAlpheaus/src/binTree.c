@@ -62,22 +62,32 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 
 void traverseTree (Branch * root, void (* run) (void const *)){
 	Branch * currentBranch;
+	int depth;
+	int i;
 	
 	currentBranch = malloc(sizeof(Branch));
 	
 	currentBranch = root;
+	depth = 0;
 	
+	if(run != NULL){
+		for(i=0;i<depth;i++){
+			printf("\t");
+		}
+	}
 	if(currentBranch != NULL){
 		if(run != NULL){
-			printf("\t");
+			i++;
 		}
 		traverseTree(currentBranch->rightBranch,run);
 		if(run != NULL){
-			//printf("\n");
+			printf("\n");
+			i--;
 			run(currentBranch->data);
 		}
 		if(run != NULL){
-			//printf("\n\t");
+			i++;
+			printf("\n");
 		}
 		traverseTree(currentBranch->leftBranch,run);
 	}else{
