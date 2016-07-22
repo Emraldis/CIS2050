@@ -54,18 +54,14 @@ void traverseTree (Branch * root, void (* run) (void * data)){
 	currentBranch = root;
 	
 	if(currentBranch != NULL){
-		traverseTree(currentBranch->left,run);
-		traverseTree(currentBranch->right,run);
+		traverseTree(currentBranch->leftBranch,run);
+		if(run != NULL){
+			run(currentBranch->data);
+		}
+		traverseTree(currentBranch->rightBranch,run);
 	}
-	if(run != NULL){
-		run(currentBranch->data);
-	}
-}
-
-void removeBranch (Branch * root, void * searchData, int (* compare) (void * data1, void * data2), void (* deleteData) (void const *)){
-	
 }
 
 void deleteTree (Branch * root, void (* deleteData) (void const *)){
-	
+	traverseTree(root,deleteData);
 }
