@@ -1,3 +1,5 @@
+#ifndef _AFELTHAM_HEADERH_HASH
+#define _AFELTHAM_HEADERH_HASH
 #include <stdlib.h>
 
 typedef struct BranchInfo{
@@ -15,3 +17,5 @@ void * traverseTree (Branch * root, void * searchData,int (* compare) (void * da
 void * removeBranch (Branch * root, void * searchData, int (* compare) (void * data1, void * data2), void (* deleteData) (void * data));
 
 void * deleteTree (Branch * root, void (* deleteData) (void * data));
+
+#endif

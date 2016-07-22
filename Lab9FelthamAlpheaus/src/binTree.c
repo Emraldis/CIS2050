@@ -21,12 +21,20 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void * dat
 	while(currentBranch != NULL){
 		switch(compare(currentBranch->data,toBeAdded->data)){
 			case -1:
+				if(currentBranch->leftBranch == NULL){
+					currentBranch->leftBranch = toBeAdded;
+					return(root);
+				}
 				currentBranch = currentBranch->leftBranch;
 				break;
 			case 0:
 				printf("\nData already exists within the tree");
 				return(root);
 			case 1:
+				if(currentBranch->rightBranch == NULL){
+					currentBranch->rightBranch = toBeAdded;
+					return(root);
+				}
 				currentBranch = currentBranch->rightBranch;
 				break;
 			default:
