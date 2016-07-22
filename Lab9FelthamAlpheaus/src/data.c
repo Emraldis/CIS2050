@@ -53,6 +53,12 @@ int compareName (void const * first, void const * second){
 		memcpy(restA,first,sizeof(Restaurant));
 		memcpy(restB,second,sizeof(Restaurant));
 	}else{
+		if(first == NULL){
+			printf("\nCurrent Branch was NULL");
+		}
+		if(second == NULL){
+			printf("\nData to be added was NULL");
+		}
 		printf("\nError copying Data");
 		exit(0);
 	}
