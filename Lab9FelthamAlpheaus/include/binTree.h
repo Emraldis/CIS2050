@@ -15,8 +15,8 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void * dat
 
 void traverseTree (Branch * root, void (* run) (void * data));
 
-void removeBranch (Branch * root, void * searchData, int (* compare) (void * data1, void * data2), void (* deleteData) (void * data));
+void removeBranch (Branch * root, void * searchData, int (* compare) (void * data1, void * data2), void (* deleteData) (void const *));
 
-void deleteTree (Branch * root, void (* deleteData) (void * data));
+void deleteTree (Branch * root, void (* deleteData) (void const *));
 
 #endif
