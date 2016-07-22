@@ -34,7 +34,6 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 		switch(comp){
 			case -1:
 				printf("\nCase -1");
-				getchar();
 				if(currentBranch->leftBranch == NULL){
 					currentBranch->leftBranch = toBeAdded;
 					return(root);
@@ -43,12 +42,10 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 				break;
 			case 0:
 				printf("\nCase 0");
-				getchar();
 				printf("\nData already exists within the tree");
 				return(root);
 			case 1:
 				printf("\nCase 1");
-				getchar();
 				if(currentBranch->rightBranch == NULL){
 					currentBranch->rightBranch = toBeAdded;
 					return(root);

@@ -53,6 +53,7 @@ int main(void){
 	printf("\nTrees complete");
 	printf("\nTraversing Tree");
 	traverseTree(treeName,printRestaurant);
+	printf("\n__________________________________________________________\n"0;
 	traverseTree(treeRating,printRestaurant);
 	printf("\nTraversing Complete");
 	
