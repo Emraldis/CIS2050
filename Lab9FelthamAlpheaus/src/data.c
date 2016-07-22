@@ -47,7 +47,7 @@ int compareName (void const * first, void const * second){
 		memcpy(restA,first,sizeof(Restaurant));
 		memcpy(restB,second,sizeof(Restaurant));
 	}
-	printf("\n%s"restA->name);
+	printf("\nTEST:%s"restA->name);
 	if(strcmp(restA->name,restB->name) > 0){
 		return(-1);
 	}else if(strcmp(restA->name,restB->name) == 0){
