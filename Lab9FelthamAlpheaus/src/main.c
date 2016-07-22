@@ -47,11 +47,11 @@ int main(void){
 	getchar();
 	printf("\nTrees complete");
 	printf("\nTraversing Tree");
-	traverseTree(treeName,printRestaurant);
+	traverseTree(treeName,printRestaurant,0);
 	getchar();
 	printf("\nTraversing Complete");
 	printf("\nDeleting Tree");
-	deleteTree(treeName,deleteRestaurant);
+	deleteTree(treeName,deleteRestaurant,0);
 	printf("\nDeleting Completed");
 	
 	
@@ -76,11 +76,11 @@ int main(void){
 	getchar();
 	printf("\nTrees complete");
 	printf("\nTraversing Tree");
-	traverseTree(treeRating,printRestaurant);
+	traverseTree(treeRating,printRestaurant,0);
 	getchar();
 	printf("\nTraversing Complete");
 	printf("\nDeleting Tree");
-	deleteTree(treeRating,deleteRestaurant);
+	deleteTree(treeRating,deleteRestaurant,0);
 	printf("\nDeleting Completed");
 	return(0);
 }

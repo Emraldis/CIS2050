@@ -60,15 +60,13 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	return(root);
 }
 
-void traverseTree (Branch * root, void (* run) (void const *)){
+void traverseTree (Branch * root, void (* run) (void const *),int depth){
 	Branch * currentBranch;
-	int depth;
 	int i;
 	
 	currentBranch = malloc(sizeof(Branch));
 	
 	currentBranch = root;
-	depth = 0;
 	
 	if(run != NULL){
 		for(i=0;i<depth;i++){
@@ -79,7 +77,7 @@ void traverseTree (Branch * root, void (* run) (void const *)){
 		if(run != NULL){
 			depth++;
 		}
-		traverseTree(currentBranch->rightBranch,run);
+		traverseTree(currentBranch->rightBranch,run,depth);
 		if(run != NULL){
 			printf("\n");
 			depth--;
@@ -89,7 +87,7 @@ void traverseTree (Branch * root, void (* run) (void const *)){
 			depth++;
 			printf("\n");
 		}
-		traverseTree(currentBranch->leftBranch,run);
+		traverseTree(currentBranch->leftBranch,run,depth);
 	}else{
 		printf("EMPTY");
 	}
