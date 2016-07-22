@@ -1,6 +1,7 @@
 #ifndef _AFELTHAM_HEADERH_HASH
 #define _AFELTHAM_HEADERH_HASH
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef struct BranchInfo{
 	struct BranchInfo * leftBranch;
