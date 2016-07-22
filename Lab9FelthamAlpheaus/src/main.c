@@ -33,7 +33,6 @@ int main(void){
 	}
 	treeName = NULL;
 	while(fgets(tempString,128,dataFile) != NULL){
-		i++;
 		printf("\nStarting");
 		tempResName = strtok(tempString,",");
 		tempFoodType = strtok(NULL,",");
@@ -64,7 +63,6 @@ int main(void){
 	}
 	treeRating = NULL;
 	while(fgets(tempString,128,dataFile) != NULL){
-		i++;
 		printf("\nStarting");
 		tempResName = strtok(tempString,",");
 		tempFoodType = strtok(NULL,",");
