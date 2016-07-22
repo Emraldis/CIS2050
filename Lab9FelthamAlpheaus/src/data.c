@@ -13,8 +13,8 @@ Restaurant * createRestaurant (int rating, char * name, char * foodType){
 	newRest->foodType = malloc(sizeof(char) * 64);
 	
 	newRest->rating = rating;
-	newRest->name = name;
-	newRest->foodType = foodType;
+	strcpy(newRest->name,name);
+	strcpy(newRest->foodType,foodType);
 	
 	return(newRest);
 }
