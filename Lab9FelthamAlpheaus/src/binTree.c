@@ -71,12 +71,12 @@ void traverseTree (Branch * root, void (* run) (void const *)){
 	currentBranch = root;
 	
 	if(currentBranch != NULL){
-		printf("\nLEFT");
-		traverseTree(currentBranch->leftBranch,run);
 		printf("\nCENTRE");
 		if(run != NULL){
 			run(currentBranch->data);
 		}
+		printf("\nLEFT");
+		traverseTree(currentBranch->leftBranch,run);
 		printf("\nRIGHT");
 		traverseTree(currentBranch->rightBranch,run);
 	}else{
