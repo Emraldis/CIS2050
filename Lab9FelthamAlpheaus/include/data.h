@@ -1,5 +1,3 @@
-#ifndef _AFELTHAM_HEADERH_HASH
-#define _AFELTHAM_HEADERH_HASH
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,5 +17,3 @@ int compareName (void * first, void * second);
 int compareRating (void * first, void * second);
 
 void printRestaurant(void * input);
-
-#endif
