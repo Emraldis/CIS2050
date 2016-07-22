@@ -73,11 +73,11 @@ void traverseTree (Branch * root, void (* run) (void const *)){
 		}
 		traverseTree(currentBranch->rightBranch,run);
 		if(run != NULL){
-			printf("\n");
+			//printf("\n");
 			run(currentBranch->data);
 		}
 		if(run != NULL){
-			printf("\n\t");
+			//printf("\n\t");
 		}
 		traverseTree(currentBranch->leftBranch,run);
 	}else{
