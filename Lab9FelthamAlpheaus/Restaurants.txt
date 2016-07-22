@@ -1,0 +1,13 @@
+Red Lobster,Hot Dogs,15
+Cellulite 4 U,Seafood,82
+Big Murty's,Pizza,20
+EbolaFud,Fast Food,86
+Red Lobster,Burgers,20
+EbolaFud,Pizza,78
+Fatman's Food,Pizza,27
+McFranky's,Burgers,45
+Bobbie's,Pizza,94
+Vanillashakes,Hot Dogs,15
+EbolaFud,Indian Food,90
+Las Tortillas,Indian Food,4
+Vegan Barn,Fast Food,63
