@@ -33,6 +33,8 @@ int main(void){
 		exit(0);
 	}
 	i =0;
+	treeRating = NULL;
+	treeName = NULL;
 	while(fgets(tempString,128,dataFile) != NULL){
 		i++;
 		printf("\nStarting");
