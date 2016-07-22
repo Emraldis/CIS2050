@@ -40,14 +40,8 @@ int compareName (void const * first, void const * second){
 	Restaurant * restA;
 	Restaurant * restB;
 	
-	printf("\nSetting Data");
-	getchar();
-	
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
-	
-	printf("\nCopying Data");
-	getchar();
 	
 	if((first != NULL) && (second != NULL)){
 		memcpy(restA,first,sizeof(Restaurant));
@@ -67,9 +61,6 @@ int compareName (void const * first, void const * second){
 		exit(0);
 	}
 	
-	printf("\nName Comparisson Beginning");
-	getchar();
-	
 	if(strcmp(restA->name,restB->name) > 0){
 		return(-1);
 	}else if(strcmp(restA->name,restB->name) == 0){
@@ -85,20 +76,11 @@ int compareRating (void const * first, void const * second){
 	Restaurant * restA;
 	Restaurant * restB;
 	
-	printf("\nSetting Data");
-	getchar();
-	
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
 	
-	printf("\nCopying Data");
-	getchar();
-	
 	memcpy(restA,first,sizeof(Restaurant));
 	memcpy(restB,second,sizeof(Restaurant));
-	
-	printf("\nRating Comparisson Beginning");
-	getchar();
 	
 	if(restA->rating > restB->rating){
 		return(-1);
