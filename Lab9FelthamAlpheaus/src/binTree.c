@@ -14,6 +14,7 @@ Branch * createBranch(void * data){
 
 Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const *, void const *)){
 	Branch * currentBranch;
+	int comp;
 	
 	currentBranch = malloc(sizeof(Branch));
 	
@@ -29,7 +30,8 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	while(currentBranch != NULL){
 		printf("\nComparing with current Branch");
 		getchar();
-		switch(compare(currentBranch->data,toBeAdded->data)){
+		comp = compare(currentBranch->data,toBeAdded->data);
+		switch(comp){
 			case -1:
 				printf("\nCase -1");
 				getchar();
