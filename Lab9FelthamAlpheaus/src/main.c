@@ -32,7 +32,6 @@ int main(void){
 		printf("\nError opening data file");
 		exit(0);
 	}
-	getchar();
 	i =0;
 	while(fgets(tempString,128,dataFile) != NULL){
 		i++;

@@ -19,6 +19,11 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	currentBranch = malloc(sizeof(Branch));
 	
 	currentBranch = root;
+	if (currentBranch == NULL){
+		printf("\nCurrent Branch is NULL");
+		getchar();
+		return(toBeAdded);
+	}
 	printf("\nTEST");
 	getchar();
 	if(compare == NULL){
@@ -61,12 +66,8 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 				exit(0);
 		}
 	}
-	if (currentBranch == NULL){
-		printf("\nCurrent Branch is NULL");
-		getchar();
-	}
 	
-	return(toBeAdded);
+	return(root);
 }
 
 void traverseTree (Branch * root, void (* run) (void const *)){
