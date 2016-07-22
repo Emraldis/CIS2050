@@ -15,7 +15,6 @@ int main(void){
 	Branch * treeName;
 	Branch * treeRating;
 	Branch * tempBranch;
-	int i;
 	
 	tempResName = malloc(sizeof(char) * 64);
 	tempFoodType = malloc(sizeof(char) * 64);
@@ -32,8 +31,6 @@ int main(void){
 		printf("\nError opening data file");
 		exit(0);
 	}
-	i =0;
-	treeRating = NULL;
 	treeName = NULL;
 	while(fgets(tempString,128,dataFile) != NULL){
 		i++;
@@ -46,23 +43,46 @@ int main(void){
 		tempBranch = createBranch(tempRestaurant);
 		printf("\nAdding name Branch");
 		treeName = addBranch(treeName,tempBranch,compareName);
-		//printf("\nAdding rating Branch");
-		//treeRating = addBranch(treeRating,tempBranch,compareRating);
-		printf("\n%d",i);
 	}
+	fclose(dataFile);
 	getchar();
 	printf("\nTrees complete");
 	printf("\nTraversing Tree");
 	traverseTree(treeName,printRestaurant);
 	getchar();
-	printf("\n__________________________________________________________\n");
-	//getchar();
-	//traverseTree(treeRating,printRestaurant);
 	printf("\nTraversing Complete");
-	printf("\nDeleting Trees");
+	printf("\nDeleting Tree");
 	deleteTree(treeName,deleteRestaurant);
-	//deleteTree(treeRating,deleteRestaurant);
 	printf("\nDeleting Completed");
 	
+	
+	dataFile = fopen("Restaurants.txt","r");
+	
+	if(dataFile == NULL){
+		printf("\nError opening data file");
+		exit(0);
+	}
+	treeName = NULL;
+	while(fgets(tempString,128,dataFile) != NULL){
+		i++;
+		printf("\nStarting");
+		tempResName = strtok(tempString,",");
+		tempFoodType = strtok(NULL,",");
+		tempIntString = strtok(NULL,"\n");
+		tempInt = atoi(tempIntString);
+		tempRestaurant = createRestaurant(tempInt,tempResName,tempFoodType);
+		tempBranch = createBranch(tempRestaurant);printf("\nAdding rating Branch");
+		treeRating = addBranch(treeRating,tempBranch,compareRating);
+	}
+	fclose(dataFile);
+	getchar();
+	printf("\nTrees complete");
+	printf("\nTraversing Tree");
+	traverseTree(treeRating,printRestaurant);
+	getchar();
+	printf("\nTraversing Complete");
+	printf("\nDeleting Tree");
+	deleteTree(treeRating,deleteRestaurant);
+	printf("\nDeleting Completed");
 	return(0);
 }
