@@ -20,7 +20,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	currentBranch = root;
 	printf("\nTEST");
 	getchar();
-	if(compare != NULL){
+	if(compare == NULL){
 		printf("\nERROR");
 		exit(0);
 	}
