@@ -22,7 +22,7 @@ Restaurant * createRestaurant (int rating, char * name, char * foodType){
 void deleteRestaurant (void * input){
 	Restaurant * toDelete;
 	
-	&toDelete = &input;
+	toDelete = input;
 	
 	if(toDelete != NULL){
 		toDelete->name = NULL;
@@ -57,6 +57,7 @@ int compareName (void * first, void * second){
 	}else{
 		printf("\nError comparing names");
 	}
+	return(0);	
 }
 int compareRating (void * first, void * second){
 
@@ -77,7 +78,8 @@ int compareRating (void * first, void * second){
 		return(1);
 	}else{
 		printf("\nError processing comparisson");
-	}	
+	}
+	return(0);	
 }
 
 void * printRestaurant(Restaurant * input){
