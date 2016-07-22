@@ -19,7 +19,7 @@ Restaurant * createRestaurant (int rating, char * name, char * foodType){
 	return(newRest);
 }
 
-void deleteRestaurant (void * input){
+void deleteRestaurant (Restaurant * input){
 	Restaurant * toDelete;
 	
 	toDelete = input;
@@ -29,7 +29,7 @@ void deleteRestaurant (void * input){
 		toDelete->foodType = NULL;
 		
 		free(toDelete->name);
-		free(toDelete->foodTpye);
+		free(toDelete->foodType);
 		free(toDelete);
 	}else{
 		printf("\nNothing to delete");
