@@ -1,5 +1,7 @@
 #include "data.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 Restaurant * createRestaurant (int rating, char * name, char * foodType){
 	Restaurant * newRest;
 	
