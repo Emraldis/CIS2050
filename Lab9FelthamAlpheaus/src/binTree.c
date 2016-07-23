@@ -73,9 +73,16 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 		}
 	}*/
 	if(currentBranch != NULL){
+		printf("\n");
+		if(run !+ NULL){
+			for(i=0;i<depth;i++){
+				printf("\t");
+			}
+		}
+		printf{"/");
 		traverseTree(currentBranch->rightBranch,run,(depth + 1));
 	}
-	printf("/");
+	//printf("/");
 	if(run != NULL){
 		printf("\n");
 		if(run != NULL){
@@ -90,8 +97,15 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 			run(NULL);
 		}
 	}
-	printf("\\");
+	//printf("\\");
 	if(currentBranch != NULL){
+		printf("\n");
+		if(run !+ NULL){
+			for(i=0;i<depth;i++){
+				printf("\t");
+			}
+		}
+		printf{"\\");
 		traverseTree(currentBranch->leftBranch,run,(depth + 1));
 	}
 }
