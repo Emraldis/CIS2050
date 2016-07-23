@@ -42,6 +42,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 			case 0:
 				printf("\nCENTRE");
 				printf("\nData already exists within the tree");
+				getchar();
 				return(root);
 			case 1:
 				printf("\nRIGHT");
