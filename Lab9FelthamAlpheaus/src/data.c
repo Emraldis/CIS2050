@@ -89,9 +89,9 @@ void printRestaurant(void const * input){
 	toPrint = malloc(sizeof(Restaurant));
 	
 	if(input == NULL){
-		printf("EMPTY");
+		printf("EMPTY\n");
 	}else{
 		memcpy(toPrint,input,sizeof(Restaurant));
-		printf("%s,%s (Rating: %d)",toPrint->name,toPrint->foodType,toPrint->rating);
+		printf("%s,%s (Rating: %d)\n",toPrint->name,toPrint->foodType,toPrint->rating);
 	}
 }
