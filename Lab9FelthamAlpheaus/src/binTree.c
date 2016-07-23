@@ -79,7 +79,7 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 				printf("\t");
 			}
 		}
-		printf{"/");
+		printf("/");
 		traverseTree(currentBranch->rightBranch,run,(depth + 1));
 	}
 	//printf("/");
@@ -105,7 +105,7 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 				printf("\t");
 			}
 		}
-		printf{"\\");
+		printf("\\");
 		traverseTree(currentBranch->leftBranch,run,(depth + 1));
 	}
 }
