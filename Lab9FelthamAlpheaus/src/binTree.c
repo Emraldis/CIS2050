@@ -83,7 +83,11 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 			}
 		}*/
 		printf("-");
-		run(currentBranch->data);
+		if(currentBranch != NULL)
+			run(currentBranch->data);
+		}else{
+			run(NULL);
+		}
 		printf("\n");
 	}
 	printf("\\");
