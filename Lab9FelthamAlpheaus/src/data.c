@@ -32,7 +32,7 @@ void deleteRestaurant (void const * input){
 		free(toDelete->foodType);
 		free(toDelete);
 	}else{
-		printf("\nNothing to delete");
+		//printf("\nNothing to delete");
 	}
 }
 

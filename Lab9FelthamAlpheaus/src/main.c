@@ -47,7 +47,7 @@ int main(void){
 	getchar();
 	printf("\nTrees complete");
 	printf("\nTraversing Tree\n");
-	traverseTree(treeName,printRestaurant,0);
+	traverseTree(treeName,printRestaurant,0,1);
 	getchar();
 	printf("\nTraversing Complete");
 	printf("\nDeleting Tree");

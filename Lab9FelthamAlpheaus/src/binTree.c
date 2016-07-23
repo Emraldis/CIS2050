@@ -31,7 +31,6 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 		comp = compare(currentBranch->data,toBeAdded->data);
 		switch(comp){
 			case -1:
-				printf("\nLEFT");
 				if(currentBranch->leftBranch == NULL){
 					currentBranch->leftBranch = toBeAdded;
 					printf("\nAdded value");
@@ -40,12 +39,9 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 				currentBranch = currentBranch->leftBranch;
 				break;
 			case 0:
-				printf("\nCENTRE");
 				printf("\nData already exists within the tree");
-				getchar();
 				return(root);
 			case 1:
-				printf("\nRIGHT");
 				if(currentBranch->rightBranch == NULL){
 					currentBranch->rightBranch = toBeAdded;
 					printf("\nAdded value");
@@ -69,7 +65,7 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 	
 	currentBranch = root;
 	if(currentBranch != NULL){
-		traverseTree(currentBranch->rightBranch,run,(depth + 1));
+		traverseTree(currentBranch->rightBranch,run,(depth + 1),bool);
 		printf("\n");
 		if(run != NULL){
 			for(i=-1;i<depth;i++){
@@ -108,7 +104,7 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 		if(bool == 1){
 			printf("\\");
 		}
-		traverseTree(currentBranch->leftBranch,run,(depth + 1));
+		traverseTree(currentBranch->leftBranch,run,(depth + 1),bool);
 	}
 }
 
