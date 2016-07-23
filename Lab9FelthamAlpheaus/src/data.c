@@ -51,8 +51,10 @@ int compareName (void const * first, void const * second){
 	memcpy(restB,second,sizeof(Restaurant));
 	printf("\nTEST");
 	getchar();
-	testA = strcat(restA->name,restA->foodType);
-	testB = strcat(restB->name,restB->foodType);
+	strcpy(testA,restA->name);
+	strcpy(testB,restB->name);
+	strcat(testA,restA->foodType);
+	strcat(testB,restB->foodType);
 	printf("\n%s =?= %s",testA,testB);
 	getchar();
 	if(strcmp(testA,testB) > 0){
