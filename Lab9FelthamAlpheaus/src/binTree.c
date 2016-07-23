@@ -77,15 +77,14 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 		traverseTree(currentBranch->rightBranch,run,(depth + 1));
 		if(run != NULL){
 			run(currentBranch->data);
+			printf("\n");
 		}
 		traverseTree(currentBranch->leftBranch,run,(depth + 1));
 	}else{
 		if(run != NULL){
 			printf("EMPTY");
+			printf("\n");
 		}
-	}
-	if(run != NULL){
-		printf("\n");
 	}
 }
 
