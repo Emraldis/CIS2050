@@ -69,15 +69,18 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 	currentBranch = root;
 	if(currentBranch != NULL){
 		traverseTree(currentBranch->rightBranch,run,(depth + 1));
+		printf("/");
 		if(run != NULL){
 			if(run != NULL){
 				for(i=0;i<depth;i++){
 					printf("\t");
 				}
 			}
+			printf("-");
 			run(currentBranch->data);
 			printf("\n");
 		}
+		printf("\\");
 		traverseTree(currentBranch->leftBranch,run,(depth + 1));
 	}else{
 		if(run != NULL){
