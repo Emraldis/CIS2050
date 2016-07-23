@@ -39,20 +39,25 @@ void deleteRestaurant (void const * input){
 int compareName (void const * first, void const * second){
 	Restaurant * restA;
 	Restaurant * restB;
+	char * testA;
+	char * testB;
 	
 	restA = malloc(sizeof(Restaurant));
 	restB = malloc(sizeof(Restaurant));
+	testA = malloc(sizeof(char ) * 128);
+	testB = malloc(sizeof(char ) * 128);
 	
 	memcpy(restA,first,sizeof(Restaurant));
 	memcpy(restB,second,sizeof(Restaurant));
 	
-	//printf("\nTEST A: %s",restA->name);
-	//printf("\nTEST B: %s",restB->name);
-	if(strcmp(strcat(restA->name,restA->foodType),strcat(restB->name,restB->foodType)) > 0){
+	testA = strcat(restA->name,restA->foodType);
+	testB = strcat(restB->name,restB->foodType);
+	
+	if(strcmp(testA,testB) > 0){
 		return(-1);
-	}else if(strcmp(strcat(restA->name,restA->foodType),strcat(restB->name,restB->foodType)) == 0){
+	}else if(strcmp(testA,testB) == 0){
 		return(0);
-	}else if(strcmp(strcat(restA->name,restA->foodType),strcat(restB->name,restB->foodType)) < 0){
+	}else if(strcmp(testA,testB) < 0){
 		return(1);
 	}else{
 		printf("\nError comparing names");
