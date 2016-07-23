@@ -61,18 +61,13 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	return(root);
 }
 
-void traverseTree (Branch * root, void (* run) (void const *),int depth){
+void traverseTree (Branch * root, void (* run) (void const *),int depth, int bool){
 	Branch * currentBranch;
 	int i;
 	
 	currentBranch = malloc(sizeof(Branch));
 	
 	currentBranch = root;
-/*	if(run != NULL){
-		for(i=0;i<depth;i++){
-			printf("\t");
-		}
-	}*/
 	if(currentBranch != NULL){
 		traverseTree(currentBranch->rightBranch,run,(depth + 1));
 		printf("\n");
@@ -81,7 +76,9 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 				printf("\t");
 			}
 		}
-		printf("/");
+		if(bool == 1){
+			printf("/");
+		}
 	}
 	//printf("/");
 	if(run != NULL){
@@ -91,7 +88,9 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 				printf("\t");
 			}
 		}
-		printf("-");
+		if(bool == 1){
+			printf("-");
+		}
 		if(currentBranch != NULL){
 			run(currentBranch->data);
 		}else{
@@ -106,11 +105,13 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 				printf("\t");
 			}
 		}
-		printf("\\");
+		if(bool == 1){
+			printf("\\");
+		}
 		traverseTree(currentBranch->leftBranch,run,(depth + 1));
 	}
 }
 
 void deleteTree (Branch * root, void (* deleteData) (void const *)){
-	traverseTree(root,deleteData,0);
+	traverseTree(root,deleteData,0,0);
 }
