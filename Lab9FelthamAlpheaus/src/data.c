@@ -62,6 +62,7 @@ int compareName (void const * first, void const * second){
 	}else{
 		printf("\nError comparing names");
 	}
+	getchar();
 	return(0);	
 }
 int compareRating (void const * first, void const * second){
