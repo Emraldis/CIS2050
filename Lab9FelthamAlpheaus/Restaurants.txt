@@ -1,13 +1,16 @@
+Indian Food,Ice Cream,3
+Mac-Mac's,Indian Food,60
+Vanillashakes,Ice Cream,65
+Triggolies,Seafood,40
+Fatman's Food,Hot Dogs,100
+EbolaFud,Ice Cream,42
+Thai Palace,Fast Food,3
+Fatman's Food,Seafood,42
 Thai Palace,Seafood,31
-EbolaFud,Pizza,89
-Red Lobster,Ice Cream,72
-McFranky's,Pizza,40
-McFishy's,Seafood,8
-Vanillashakes,Pizza,20
-Red Lubester,Fast Food,45
-Chocoshakes,Indian Food,71
-McWeenie's,Hot Dogs,29
-Travoltian,Ice Cream,84
-Big Murty's,Pizza,16
-Thai Place,Ice Cream,87
-Las Tortillas,Fast Food,60
+Fatman's Food,Ice Cream,27
+Triggolies,Ice Cream,35
+Cellulite 4 U,Hot Dogs,37
+Travoltian,Burgers,18
+Generic Food Place,Pizza,22
+Travoltian,Pizza,20
+Generic Food Place,Hot Dogs,100
