@@ -19,7 +19,7 @@ Restaurant * createRestaurant (int rating, char * name, char * foodType){
 	return(newRest);
 }
 
-void deleteRestaurant (void const * input){
+void deleteRestaurant (void * input){
 	Restaurant * toDelete;
 	
 	toDelete = input;
