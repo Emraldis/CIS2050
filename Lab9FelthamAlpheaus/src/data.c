@@ -48,11 +48,11 @@ int compareName (void const * first, void const * second){
 	
 	//printf("\nTEST A: %s",restA->name);
 	//printf("\nTEST B: %s",restB->name);
-	if(strcmp(restA->name,restB->name) > 0){
+	if(strcmp(strcat(restA->name,restA->foodType),strcat(restB->name,restB->foodType)) > 0){
 		return(-1);
-	}else if(strcmp(restA->name,restB->name) == 0){
+	}else if(strcmp(strcat(restA->name,restA->foodType),strcat(restB->name,restB->foodType)) == 0){
 		return(0);
-	}else if(strcmp(restA->name,restB->name) < 0){
+	}else if(strcmp(strcat(restA->name,restA->foodType),strcat(restB->name,restB->foodType)) < 0){
 		return(1);
 	}else{
 		printf("\nError comparing names");
