@@ -87,6 +87,7 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 			printf("EMPTY");
 		}
 	}
+	getchar();
 }
 
 void deleteTree (Branch * root, void (* deleteData) (void const *)){
