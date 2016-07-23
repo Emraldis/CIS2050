@@ -52,17 +52,20 @@ int compareName (void const * first, void const * second){
 	
 	testA = strcat(restA->name,restA->foodType);
 	testB = strcat(restB->name,restB->foodType);
-	
+	printf("\nTEST");
+	getchar();
 	if(strcmp(testA,testB) > 0){
+		getchar();
 		return(-1);
 	}else if(strcmp(testA,testB) == 0){
+		getchar();
 		return(0);
 	}else if(strcmp(testA,testB) < 0){
+		getchar();
 		return(1);
 	}else{
 		printf("\nError comparing names");
 	}
-	getchar();
 	return(0);	
 }
 int compareRating (void const * first, void const * second){
