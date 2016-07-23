@@ -67,22 +67,22 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth){
 	currentBranch = malloc(sizeof(Branch));
 	
 	currentBranch = root;
-	printf("\n");
-	if(run != NULL){
+/*	if(run != NULL){
 		for(i=0;i<depth;i++){
 			printf("\t");
 		}
-	}
+	}*/
 	if(currentBranch != NULL){
 		traverseTree(currentBranch->rightBranch,run,(depth + 1));
 	}
 	printf("/");
 	if(run != NULL){
-		/*if(run != NULL){
+		printf("\n");
+		if(run != NULL){
 			for(i=0;i<depth;i++){
 				printf("\t");
 			}
-		}*/
+		}
 		printf("-");
 		if(currentBranch != NULL){
 			run(currentBranch->data);
