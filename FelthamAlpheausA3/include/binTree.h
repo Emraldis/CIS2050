@@ -35,13 +35,4 @@ postcondition: Must have a properly deleted tree, with all the contents freed an
 */
 void deleteTree (Branch * root, void (* deleteData) (void const *));
 
-Branch * rotateRight(Branch * toRotate);
-
-Branch * rotateLeft(Branch * toRotate);
-
-Branch * balanceBranch(Branch * toBalance);
-
-int isBalanced(Branch * testBranch);
-
-Branch * balanceTree(Branch * root);
 #endif

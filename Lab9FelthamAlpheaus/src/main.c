@@ -52,6 +52,16 @@ int main(void){
 	traverseTree(treeName,printRestaurant,0,1);
 	getchar();
 	printf("\nTraversing Complete");
+	
+	printf("\nBalancing Tree");
+	treeName = balanceTree(treeName);
+	printf("\nBalancing Complete");
+	getchar();
+	printf("\nTraversing Tree\n");
+	traverseTree(treeName,printRestaurant,0,1);
+	getchar();
+	printf("\nTraversing Complete");
+	
 	printf("\nDeleting Tree");
 	deleteTree(treeName,deleteRestaurant);
 	printf("\nDeleting Completed");

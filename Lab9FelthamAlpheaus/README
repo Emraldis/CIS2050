@@ -1,0 +1,12 @@
+Alpheaus Feltham, 0903594
+
+Compiling:
+the test code can be compiled using the command: "gcc src/main.c src/binTree.c src/data.c -Wall -pedantic -std=c99 -Iinclude -o bin/runme
+
+Running:
+the program can be run using the command "./bin/runme" from the root folder.
+
+EXTRA:
+Includes a program for generating names, food types and ratings randomly. To compile, run the command: "gcc src/resGenerator.c -Wall -pedantic -std=c99 -o bin/generator", or alternatively, with the command "make generator"
+to run, use the command "./bin/generator" followed by a number (IE ./bin/runme 50) this will determine the number of names produced. If no number is added, the program defaults to 100. The main program uses a file generated
+by this generator by default, and running the generator will simply ovverwrite the names within.
