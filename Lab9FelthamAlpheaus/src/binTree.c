@@ -180,11 +180,11 @@ Branch * balanceBranch(Branch * toBalance){
 
 int isBalanced(Branch * testBranch){
 	if(testBranch->leftBranch != NULL){
-		if((testBranch->rightBranch == Null) && (((testBranch->leftBranch->rightBranch != NULL) && (testBranch->leftBranch->leftBranch == NULL)) || ((testBranch->leftBranch->leftBranch != NULL) && (testBranch->leftBranch->rightBranch == NULL)))){
+		if((testBranch->rightBranch == NULL) && (((testBranch->leftBranch->rightBranch != NULL) && (testBranch->leftBranch->leftBranch == NULL)) || ((testBranch->leftBranch->leftBranch != NULL) && (testBranch->leftBranch->rightBranch == NULL)))){
 			return(-1);
 		}
 	}else if(testBranch->rightBranch != NULL){
-		if((testBranch->leftBranch == Null) && (((testBranch->rightBranch->rightBranch != NULL) && (testBranch->rightBranch->leftBranch == NULL)) || ((testBranch->rightBranch->leftBranch != NULL) && (testBranch->rightBranch->rightBranch == NULL)))){
+		if((testBranch->leftBranch == NULL) && (((testBranch->rightBranch->rightBranch != NULL) && (testBranch->rightBranch->leftBranch == NULL)) || ((testBranch->rightBranch->leftBranch != NULL) && (testBranch->rightBranch->rightBranch == NULL)))){
 			return(1);
 		}
 	}
