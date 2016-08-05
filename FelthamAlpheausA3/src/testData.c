@@ -39,6 +39,7 @@ void deleteData(void const * input){
 	if(toDelete != NULL){
 		free(toDelete);
 	}
+	input = NULL;
 }
 
 void printData(void const * input){

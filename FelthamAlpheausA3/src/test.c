@@ -20,7 +20,7 @@ int main(void){
 		printf("\nCreated data with value: %d",random);
 		i++;
 	}
-	printf("\nTree Created");
+	printf("\nTree Created, size %d",limit);
 	getchar();
 	traverseTree(testTree,printData,0,1);
 	printf("\nSearching for values");
@@ -43,6 +43,7 @@ int main(void){
 	printf("\nTree Deleted, attempting a search in an empty tree");
 	getchar();
 	searchBranch = findBranch(compareData,testTree,createData(17));
+	runFunc(searchBranch,printData);
 	printf("\nIf the program has gotten this far without segfaulting, it should work without issue.\n");
 	
 	return(0);
