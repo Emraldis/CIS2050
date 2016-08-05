@@ -122,8 +122,9 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int mod
 	}
 }
 
-void deleteTree (Branch * root, void (* deleteData) (void const *)){
+Branch * deleteTree (Branch * root, void (* deleteData) (void const *)){
 	traverseTree(root,deleteData,0,2);
+	return(NULL);
 }
 
 Branch * findBranch (int (*compare) (void const *, void const *), Branch * root, void const * searchData){

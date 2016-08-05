@@ -34,7 +34,7 @@ void traverseTree(Branch * root, void (* run) (void const *),int depth, int mode
 precondition: none
 postcondition: Must have a properly deleted tree, with all the contents freed and removed.
 */
-void deleteTree (Branch * root, void (* deleteData) (void const *));
+Branch * deleteTree (Branch * root, void (* deleteData) (void const *));
 
 /*Finds the branch that contains the specified data, and, if applicable, runs a function on that branch.
 precondition: none

@@ -39,7 +39,7 @@ int main(void){
 	}
 	printf("\nDeleting Tree");
 	getchar();
-	deleteTree(testTree,deleteData);
+	testTree = deleteTree(testTree,deleteData);
 	printf("\nTree Deleted, attempting a search in an empty tree");
 	getchar();
 	traverseTree(testTree,printData,0,1);
