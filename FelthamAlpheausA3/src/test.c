@@ -39,7 +39,7 @@ int main(void){
 	}
 	printf("\nDeleting Tree");
 	getchar();
-	deleteTree(testTree,deleteData,0,0);
+	deleteTree(testTree,deleteData);
 	printf("\nTree Deleted, attempting a search in an empty tree");
 	getchar();
 	searchBranch = findBranch(compareData,testTree,createData(17));
