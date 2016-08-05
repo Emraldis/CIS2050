@@ -10,7 +10,7 @@ Data * createData(int input){
 	return(newData);
 }
 
-int compareData(void * dataA,void * dataB){
+int compareData(const void * dataA,const void * dataB){
 	Data * data1;
 	Data * data2;
 	
@@ -22,11 +22,13 @@ int compareData(void * dataA,void * dataB){
 	
 	if(data1->data < data2->data){
 		return(-1);
-	}else if(data1->data = data2->data){
+	}else if(data1->data == data2->data){
 		return(0);
 	}else if(data1->data > data2->data){
 		return(1);
 	}
+	printf("\nERROR");
+	exit(0);
 }
 
 void deleteData(Data * input){
@@ -34,5 +36,5 @@ void deleteData(Data * input){
 }
 
 void printData(Data * input){
-	printf("\nDATA: %d",input->input);
+	printf("\nDATA: %d",input->data);
 }

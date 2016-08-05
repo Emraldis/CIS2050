@@ -5,7 +5,7 @@
 int main(void){
 	time_t t;
 	int random;
-	int i;
+	int i = 0;
 	srand((unsigned)time(&t));
 	
 	Branch * testTree = NULL;
@@ -14,6 +14,7 @@ int main(void){
 		random = (rand() % 101);
 		testTree = addBranch(testTree,createBranch(createData(random)),compareData);
 		printf("\nCreated data with value: %d",random);
+		i++;
 	}
 	
 	traverseTree(testTree,printData,0,1);
