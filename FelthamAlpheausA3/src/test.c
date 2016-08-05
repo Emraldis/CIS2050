@@ -24,14 +24,17 @@ int main(void){
 	traverseTree(testTree,printData,0,1);
 	printf("\nSearching for values");
 	getchar();
+	i = 0;
 	while(i < 10){
 		random = (rand() % 101);
 		printf("\nSearching for %d",random);
 		searchBranch = findBranch(compareData,testTree,createData(random));
 		if(searchBranch != NULL){
 			runFunc(searchBranch,printData);
+		}else{
+			printf("\nValue does not exist within tree");
 		}
-		
+		i++;
 	}
 	
 	return(0);
