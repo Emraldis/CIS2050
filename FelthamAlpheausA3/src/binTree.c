@@ -98,6 +98,8 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 			printf("-");
 		}
 		if(currentBranch != NULL){
+			printf("\nABOUT TO RUN");
+			getchar();
 			run(currentBranch->data);
 		}else{
 			run(NULL);
