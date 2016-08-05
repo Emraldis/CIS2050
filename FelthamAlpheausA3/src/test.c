@@ -27,7 +27,7 @@ int main(void){
 	while(i < 10){
 		random = (rand() % 101);
 		printf("\nSearching for %d",random);
-		searchBranch = findBranch(compare,testTree,createData(random));
+		searchBranch = findBranch(compareData,testTree,createData(random));
 		if(searchBranch != NULL){
 			runFunc(searchBranch,printData);
 		}
