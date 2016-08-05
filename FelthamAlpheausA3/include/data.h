@@ -19,7 +19,7 @@ FileStorage * createStore(char * path, char * name);
 
 char * getPath(FileStorage * location);
 
-char * setPath(File * item);
+void setPath(File * item);
 
 void printFileData(File * item);
 

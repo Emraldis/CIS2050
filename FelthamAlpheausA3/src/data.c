@@ -4,7 +4,7 @@ File * createFile(char * path, char * name){
 	File * newFile;
 	
 	newFile = malloc(sizeof(File));
-	newFile->fileName = malloc(sizeof(char) 768);
+	newFile->fileName = malloc(sizeof(char) * 768);
 	
 	strcpy(newFile->fileName,path);
 	strcat(newFile->fileName,name);
@@ -37,7 +37,7 @@ void deleteFile(File * item){
 }
 
 File * renameFile(File * item){
-	
+	return(NULL);
 }
 
 void deleteFileStorage(FileStorage * location){
