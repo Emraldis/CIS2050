@@ -16,7 +16,8 @@ int main(void){
 		printf("\nCreated data with value: %d",random);
 		i++;
 	}
-	
+	printf("\nTree Created");
+	getchar();
 	traverseTree(testTree,printData,0,1);
 	
 	return(0);
