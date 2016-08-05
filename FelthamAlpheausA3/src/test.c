@@ -6,7 +6,6 @@ int main(void){
 	time_t t;
 	int random;
 	int i = 0;
-	int search;
 	srand((unsigned)time(&t));
 
 	Branch * searchBranch;

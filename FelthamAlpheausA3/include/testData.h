@@ -10,6 +10,6 @@ Data * createData(int input);
 
 int compareData(void const * dataA,void const * dataB);
 
-void deleteData(Data * input);
+void deleteData(void const * input);
 
 void printData(void const * input);
