@@ -10,7 +10,16 @@ Data * createData(int input){
 	return(newData);
 }
 
-int compareData(Data * data1,Data * data2){
+int compareData(void * dataA,void * dataB){
+	Data * data1;
+	Data * data2;
+	
+	data1 = malloc(sizeof(Data));
+	data2 = malloc(sizeof(Data));
+	
+	memcpy(data1,dataA,sizeof(Data));
+	memcpy(data2,dataB,sizeof(Data));
+	
 	if(data1->data < data2->data){
 		return(-1);
 	}else if(data1->data = data2->data){
