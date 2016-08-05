@@ -42,7 +42,7 @@ int main(void){
 	deleteTree(testTree,deleteData);
 	printf("\nTree Deleted, attempting a search in an empty tree");
 	getchar();
-	searchBranch = findBranch(compareData,testTree,createData(17));
+	searchBranch = findBranch(compareData,testTree,createData(999));
 	runFunc(searchBranch,printData);
 	printf("\nIf the program has gotten this far without segfaulting, it should work without issue.\n");
 	
