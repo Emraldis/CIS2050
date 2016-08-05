@@ -43,6 +43,8 @@ int main(void){
 	printf("\nTree Deleted, attempting a search in an empty tree");
 	getchar();
 	searchBranch = findBranch(compareData,testTree,createData(999));
+	printf("\nTEST");
+	getchar();
 	runFunc(searchBranch,printData);
 	printf("\nAttempting to print an empty tree");
 	getchar();
