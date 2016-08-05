@@ -154,6 +154,10 @@ Branch * findBranch (int (*compare) (void const *, void const *), Branch * root,
 
 void runFunc(Branch * root, void (* run) (void const *)){
 	if(run != NULL){
-		run(root->data);
+		if(root != NULL){
+			run(root->data);
+		}else{
+			printf("\nEMPTY BRANCH");
+		}
 	}
 }

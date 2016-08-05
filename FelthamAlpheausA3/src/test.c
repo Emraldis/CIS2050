@@ -21,10 +21,8 @@ int main(void){
 		i++;
 	}
 	printf("\nTree Created, size %d",limit);
-	getchar();
 	traverseTree(testTree,printData,0,1);
 	printf("\nSearching for values");
-	getchar();
 	i = 0;
 	while(i < 10){
 		random = (rand() % 101);
@@ -38,16 +36,15 @@ int main(void){
 		i++;
 	}
 	printf("\nDeleting Tree");
-	getchar();
 	testTree = deleteTree(testTree,deleteData);
 	printf("\nTree Deleted, attempting a search in an empty tree");
-	getchar();
 	searchBranch = findBranch(compareData,testTree,createData(999));
-	printf("\nTEST");
-	getchar();
+	if(searchBranch == NULL){
+		printf("\nNo results");
+	}
+	printf("\nAttempting to print an empty branch");
 	runFunc(searchBranch,printData);
 	printf("\nAttempting to print an empty tree");
-	getchar();
 	traverseTree(testTree,printData,0,1);
 	printf("\nIf the program has gotten this far without segfaulting, it should work without issue.\n");
 	
