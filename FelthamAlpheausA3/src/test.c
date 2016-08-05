@@ -22,7 +22,8 @@ int main(void){
 	printf("\nTree Created");
 	getchar();
 	traverseTree(testTree,printData,0,1);
-	
+	printf("\nSearching for values");
+	getchar();
 	while(i < 10){
 		random = (rand() % 101);
 		printf("\nSearching for %d",random);
