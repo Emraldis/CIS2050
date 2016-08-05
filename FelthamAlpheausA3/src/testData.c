@@ -36,7 +36,7 @@ void deleteData(Data * input){
 }
 
 void printData(const void * input){
-	Data * tempData
+	Data * tempData;
 	
 	tempData = malloc(sizeof(Data));
 	
