@@ -69,6 +69,8 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 	currentBranch = malloc(sizeof(Branch));
 	
 	currentBranch = root;
+	printf("\nTEST");
+	getchar();
 	if(currentBranch != NULL){
 		traverseTree(currentBranch->rightBranch,run,(depth + 1),bool);
 		if(bool == 1){
