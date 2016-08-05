@@ -6,14 +6,15 @@ int main(void){
 	time_t t;
 	int random;
 	int i = 0;
+	int limit;
 	srand((unsigned)time(&t));
 
 	Branch * searchBranch;
 	Branch * testTree = NULL;
 	
 	searchBranch = malloc(sizeof(Branch));
-	
-	while(i < 100){
+	limit = (rand() % 200);
+	while(i < limit){
 		random = (rand() % 101);
 		testTree = addBranch(testTree,createBranch(createData(random)),compareData);
 		printf("\nCreated data with value: %d",random);
@@ -27,7 +28,7 @@ int main(void){
 	i = 0;
 	while(i < 10){
 		random = (rand() % 101);
-		printf("\nSearching for %d",random);
+		printf("\nSearching for %d\n",random);
 		searchBranch = findBranch(compareData,testTree,createData(random));
 		if(searchBranch != NULL){
 			runFunc(searchBranch,printData);
@@ -36,6 +37,13 @@ int main(void){
 		}
 		i++;
 	}
+	printf("\nDeleting Tree");
+	getchar();
+	deleteTree(testTree,deleteData,0,0);
+	printf("\nTree Deleted, attempting a search in an empty tree");
+	getchar();
+	searchBranch = findBranch(compareData,testTree,createData(17));
+	printf("\nIf the program has gotten this far without segfaulting, it should work without issue.\n");
 	
 	return(0);
 }

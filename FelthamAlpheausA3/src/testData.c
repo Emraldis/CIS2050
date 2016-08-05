@@ -37,7 +37,7 @@ void deleteData(void const * input){
 	toDelete = input;
 	
 	if(toDelete != NULL){
-		free(input);
+		free(toDelete);
 	}
 }
 
