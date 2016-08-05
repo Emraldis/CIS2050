@@ -128,7 +128,7 @@ Branch * findBranch (int (*compare) (void const *, void const *), Branch * root,
 	currentBranch = malloc(sizeof(Branch));
 	tempBranch = malloc(sizeof(Branch));
 	
-	currentBranch == root;
+	currentBranch = root;
 	
 	if(currentBranch != NULL){
 		tempBranch = findBranch(compare,currentBranch->leftBranch,searchData);

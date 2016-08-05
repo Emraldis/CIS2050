@@ -1,3 +1,4 @@
+#include <time.h>
 #include "binTree.h"
 #include "testData.h"
 
