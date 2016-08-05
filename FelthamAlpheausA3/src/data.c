@@ -15,11 +15,15 @@ File * createFile(char * path, char * name){
 FileStorage * createStore(char * path, char * name){
 	FileStorage * newStorage;
 	
+	newStorage = NULL;
+	
 	return(newStorage);
 }
 
 char * getPath(FileStorage * location){
 	char * output;
+	
+	output = NULL;
 	
 	return(output);
 }
