@@ -98,6 +98,8 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int mod
 		if(currentBranch != NULL){
 			run(currentBranch->data);
 			if(mode == 2){
+				free(currentBranch->leftBranch);
+				free(currentBranch->rightBranch);
 				currentBranch = NULL;
 			}
 		}else{
