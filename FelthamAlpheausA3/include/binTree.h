@@ -40,12 +40,12 @@ void deleteTree (Branch * root, void (* deleteData) (void const *));
 precondition: none
 postcondition: Must properly find the branch.
 */
-Branch * findBranch (int (*compare) (void const *, void const *), Branch * root, void * searchData);
+Branch * findBranch (int (*compare) (void const *, void const *), Branch * root, void const* searchData);
 
 /*Runs a function on the given branch
 precondition: Must have a valid function and branch to run it on
 postcondition: Must properly execute the function.
 */
-void runFunc(Branch * root, void (* run) (void const *),void * runVar);
+void runFunc(Branch * root, void (* run) (void const *));
 
 #endif

@@ -10,7 +10,7 @@ Data * createData(int input){
 	return(newData);
 }
 
-int compareData(const void * dataA,const void * dataB){
+int compareData(void const * dataA,void const * dataB){
 	Data * data1;
 	Data * data2;
 	
@@ -31,11 +31,17 @@ int compareData(const void * dataA,const void * dataB){
 	exit(0);
 }
 
-void deleteData(Data * input){
-	free(input);
+void deleteData(void const * input){
+	Data * toDelete;
+	
+	toDelete = input;
+	
+	if(toDelete != NULL){
+		free(input);
+	}
 }
 
-void printData(const void * input){
+void printData(void const * input){
 	Data * tempData;
 	
 	if(input != NULL){

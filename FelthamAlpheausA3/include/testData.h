@@ -8,8 +8,8 @@ typedef struct DataInfo{
 
 Data * createData(int input);
 
-int compareData(const void * dataA,const void * dataB);
+int compareData(void const * dataA,void const * dataB);
 
 void deleteData(Data * input);
 
-void printData(const void * input);
+void printData(void const * input);

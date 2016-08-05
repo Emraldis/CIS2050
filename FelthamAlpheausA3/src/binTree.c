@@ -121,7 +121,7 @@ void deleteTree (Branch * root, void (* deleteData) (void const *)){
 	traverseTree(root,deleteData,0,0);
 }
 
-Branch * findBranch (int (*compare) (void const *, void const *), Branch * root, void * searchData){
+Branch * findBranch (int (*compare) (void const *, void const *), Branch * root, void const * searchData){
 	Branch * currentBranch;
 	Branch * tempBranch;
 	
@@ -146,6 +146,8 @@ Branch * findBranch (int (*compare) (void const *, void const *), Branch * root,
 	return(NULL);
 }
 
-void runFunc(Branch * root, void (* run) (void const *),void * runVar){
-	
+void runFunc(Branch * root, void (* run) (void const *)){
+	if(run != NULL){
+		run(root->data);
+	}
 }
