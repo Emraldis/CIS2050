@@ -62,7 +62,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 	return(root);
 }
 
-void traverseTree (Branch * root, void (* run) (void const *),int depth, int bool){
+void traverseTree (Branch * root, void (* run) (void const *),int depth, int mode){
 	Branch * currentBranch;
 	int i;
 	
@@ -70,8 +70,8 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 	
 	currentBranch = root;
 	if(currentBranch != NULL){
-		traverseTree(currentBranch->rightBranch,run,(depth + 1),bool);
-		if(bool == 1){
+		traverseTree(currentBranch->rightBranch,run,(depth + 1),mode);
+		if(mode == 1){
 			printf("\n");
 		}
 		if(run != NULL){
@@ -79,12 +79,12 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 				printf("\t");
 			}
 		}
-		if(bool == 1){
+		if(mode == 1){
 			printf("/");
 		}
 	}
 	if(run != NULL){
-		if(bool == 1){
+		if(mode == 1){
 			printf("\n");
 		}
 		if(run != NULL){
@@ -92,17 +92,21 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 				printf("\t");
 			}
 		}
-		if(bool == 1){
+		if(mode == 1){
 			printf("-");
 		}
 		if(currentBranch != NULL){
 			run(currentBranch->data);
+			if(mode == 2){
+				free(currentBranch->data);
+				currentBranch = NULL;
+			}
 		}else{
 			run(NULL);
 		}
 	}
 	if(currentBranch != NULL){
-		if(bool == 1){
+		if(mode == 1){
 			printf("\n");
 		}
 		if(run != NULL){
@@ -110,15 +114,15 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 				printf("\t");
 			}
 		}
-		if(bool == 1){
+		if(mode == 1){
 			printf("\\");
 		}
-		traverseTree(currentBranch->leftBranch,run,(depth + 1),bool);
+		traverseTree(currentBranch->leftBranch,run,(depth + 1),mode);
 	}
 }
 
 void deleteTree (Branch * root, void (* deleteData) (void const *)){
-	traverseTree(root,deleteData,0,0);
+	traverseTree(root,deleteData,0,2);
 }
 
 Branch * findBranch (int (*compare) (void const *, void const *), Branch * root, void const * searchData){

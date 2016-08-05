@@ -28,7 +28,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 precondition: Must have a valid tree
 postcondition: Must correctly visit each branch, and, if applicable, correctly run the given function.
 */
-void traverseTree(Branch * root, void (* run) (void const *),int depth, int bool);
+void traverseTree(Branch * root, void (* run) (void const *),int depth, int mode);
 
 /*Deletes the tree
 precondition: none
