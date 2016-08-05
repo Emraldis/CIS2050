@@ -38,11 +38,15 @@ void deleteData(Data * input){
 void printData(const void * input){
 	Data * tempData;
 	
-	tempData = malloc(sizeof(Data));
-	
-	memcpy(tempData,input,sizeof(Data));
-	
-	printf("\nDATA: %d",tempData->data);
-	
-	free(tempData);
+	if(input != NULL){
+		tempData = malloc(sizeof(Data));
+		
+		memcpy(tempData,input,sizeof(Data));
+		
+		printf("\nDATA: %d",tempData->data);
+		
+		free(tempData);
+	}else{
+		printf("\nEMPTY");
+	}
 }
