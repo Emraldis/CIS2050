@@ -12,4 +12,4 @@ int compareData(const void * dataA,const void * dataB);
 
 void deleteData(Data * input);
 
-void printData(Data * input);
+void printData(const void * input);

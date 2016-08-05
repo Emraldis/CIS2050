@@ -35,6 +35,14 @@ void deleteData(Data * input){
 	free(input);
 }
 
-void printData(Data * input){
-	printf("\nDATA: %d",input->data);
+void printData(const void * input){
+	Data * tempData
+	
+	tempData = malloc(sizeof(Data));
+	
+	memcpy(tempData,input,sizeof(Data));
+	
+	printf("\nDATA: %d",tempData->data);
+	
+	free(tempData);
 }
