@@ -43,10 +43,10 @@ void printData(const void * input){
 		
 		memcpy(tempData,input,sizeof(Data));
 		
-		printf("\nDATA: %d",tempData->data);
+		printf("DATA: %d",tempData->data);
 		
 		free(tempData);
 	}else{
-		printf("\nEMPTY");
+		printf("EMPTY");
 	}
 }
