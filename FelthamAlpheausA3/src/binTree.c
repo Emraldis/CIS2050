@@ -72,6 +72,8 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 	printf("\nTEST");
 	getchar();
 	if(currentBranch != NULL){
+		printf("\nA");
+		getchar();
 		traverseTree(currentBranch->rightBranch,run,(depth + 1),bool);
 		if(bool == 1){
 			printf("\n");
@@ -86,6 +88,8 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 		}
 	}
 	if(run != NULL){
+		printf("\nB");
+		getchar();
 		if(bool == 1){
 			printf("\n");
 		}
@@ -106,6 +110,8 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 		}
 	}
 	if(currentBranch != NULL){
+		printf("\nC");
+		getchar();
 		if(bool == 1){
 			printf("\n");
 		}
