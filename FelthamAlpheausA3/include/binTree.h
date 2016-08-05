@@ -8,6 +8,7 @@
 typedef struct BranchInfo{
 	struct BranchInfo * leftBranch;
 	struct BranchInfo * rightBranch;
+	struct BranchInfo * parent;
 	void * data;
 }Branch;
 
@@ -27,12 +28,24 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 precondition: Must have a valid tree
 postcondition: Must correctly visit each branch, and, if applicable, correctly run the given function.
 */
-void traverseTree (Branch * root, void (* run) (void const *),int depth, int bool);
+void traverseTree(Branch * root, void (* run) (void const *),int depth, int bool);
 
 /*Deletes the tree
 precondition: none
 postcondition: Must have a properly deleted tree, with all the contents freed and removed.
 */
 void deleteTree (Branch * root, void (* deleteData) (void const *));
+
+/*Finds the branch that contains the specified data, and, if applicable, runs a function on that branch.
+precondition: none
+postcondition: Must properly find the branch.
+*/
+Branch * findBranch (int (*compare) (void const *, void const *), Branch * root, void * searchData);
+
+/*Runs a function on the given branch
+precondition: Must have a valid function and branch to run it on
+postcondition: Must properly execute the function.
+*/
+void runFunc(Branch * root, void (* run) (void const *),void * runVar);
 
 #endif

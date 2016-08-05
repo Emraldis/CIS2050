@@ -10,6 +10,7 @@ Branch * createBranch(void * data){
 	newBranch->leftBranch = NULL;
 	newBranch->rightBranch = NULL;
 	newBranch->data = data;
+	newBranch->parent = NULL;
 	
 	return(newBranch);
 }
@@ -34,6 +35,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 		switch(comp){
 			case -1:
 				if(currentBranch->leftBranch == NULL){
+					toBeAdded->parent = currentBranch;
 					currentBranch->leftBranch = toBeAdded;
 					printf("\nAdded value");
 					return(root);
@@ -45,6 +47,7 @@ Branch * addBranch(Branch * root, Branch * toBeAdded,int (* compare) (void const
 				return(root);
 			case 1:
 				if(currentBranch->rightBranch == NULL){
+					toBeAdded->parent = currentBranch;
 					currentBranch->rightBranch = toBeAdded;
 					printf("\nAdded value");
 					return(root);
@@ -116,4 +119,33 @@ void traverseTree (Branch * root, void (* run) (void const *),int depth, int boo
 
 void deleteTree (Branch * root, void (* deleteData) (void const *)){
 	traverseTree(root,deleteData,0,0);
+}
+
+Branch * findBranch (int (*compare) (void const *, void const *), Branch * root, void * searchData){
+	Branch * currentBranch;
+	Branch * tempBranch;
+	
+	currentBranch = malloc(sizeof(Branch));
+	tempBranch = malloc(sizeof(Branch));
+	
+	currentBranch == root;
+	
+	if(currentBranch != NULL){
+		tempBranch = findBranch(compare,currentBranch->leftBranch,searchData);
+		if(tempBranch != NULL){
+			return(tempBranch);
+		}
+		tempBranch = findBranch(compare,currentBranch->rightBranch,searchData);
+		if(tempBranch != NULL){
+			return(tempBranch);
+		}
+		if(compare(currentBranch->data,searchData) == 0){
+			return(currentBranch);
+		}
+	}
+	return(NULL);
+}
+
+void runFunc(Branch * root, void (* run) (void const *),void * runVar){
+	
 }
