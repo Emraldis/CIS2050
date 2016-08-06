@@ -1,5 +1,7 @@
 #include "data.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 File * createFile(char * path, char * name){
 	File * newFile;
 	
@@ -26,10 +28,6 @@ char * getPath(FileStorage * location){
 	output = NULL;
 	
 	return(output);
-}
-
-void setPath(File * item){
-	
 }
 
 void printFileData(File * item){

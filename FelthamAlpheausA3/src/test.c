@@ -2,6 +2,8 @@
 #include "binTree.h"
 #include "testData.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 int main(void){
 	time_t t;
 	int random;

@@ -2,17 +2,13 @@ Alpheaus Feltham, 0903594
 
 Test code: Fully functional, see test report (in docs folder) for details on results
 
-Phone Directory code: Fully functional.
+File manager code: Not even started, had schedule wrong and started a week later than intended, giving me about a day to finish. Will finish this late and hand in regardless, just to make sure I understand the problem, and the methods required to solve it.
 
 Compiling:
-the test code can be compiled using the command: "gcc src/testFile.c src/hashADT.c src/list.c src/directory.c -Wall -pedantic -std=c99 -Iinclude -o bin/test", or alternatively, with the command: "make all"
-the Phone Directory code can be compiled using the command: "gcc src/main.c src/hashADT.c src/list.c src/directory.c -Wall -pedantic -std=c99 -Iinclude -o bin/runme", or alternatively, with the command: "make all"
+the test code can be compiled using the command: "gcc src/test.c src/binTree.c src/testData.c -Wall -pedantic -std=c99 -Iinclude -o bin/test", or alternatively, with the command: "make all"
+the Phone Directory code can be compiled using the command: "gcc src/main.c src/binTree.c src/data.c -Wall -pedantic -std=c99 -Iinclude -o bin/runme", or alternatively, with the command: "make all"
 alternatively, both can be compiled at the same time, with the command: "make all"
 
 Running:
 the test code can be run using the command: "./bin/test" from the "FelthamAlpheausA2" folder
-the test code can be run using the command: "./bin/runme" from the "FelthamAlpheausA2" folder
-
-EXTRA:
-Includes a program for generating names and phone numbers randomly. To compile, run the command: "gcc src/phoneNumberGenerator.c -Wall -pedantic -std=c99 -o bin/generator", or alternatively, with the command "make generator"
-to run, use the command "./bin/generator" followed by a number (IE ./bin/runme 50) this will determine the number of names produced. If no number is added, the program defaults to 100.
+the test code can be run using the command: "./bin/runme" from the "FelthamAlpheausA2" folder, but is currently essentially nothing.

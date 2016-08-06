@@ -1,5 +1,7 @@
 #include "testData.h"
 
+/*Alpheaus Feltham, 0903594*/
+
 Data * createData(int input){
 	Data * newData;
 	
